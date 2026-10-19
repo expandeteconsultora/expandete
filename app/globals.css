@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+:root { --background: #f2f7fe; --foreground: #051d43; }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-navy: #031f40;
+  --color-brand-blue: #064b9f;
+  --color-brand-green: #40ad2e;
+  --color-muted: #657595;
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { background: var(--background); color: var(--foreground); }
+button, a { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #40ad2e; outline-offset: 5px; }
+::selection { background: #40ad2e; color: #fff; }
+
+@layer components {
+  .page-container { @apply mx-auto w-[86.5%] max-w-[1280px]; }
+  .section-container { @apply mx-auto w-[92%] max-w-[1328px]; }
+  .brand { @apply inline-flex items-baseline whitespace-nowrap font-semibold leading-none tracking-[-0.065em] text-white; }
+  .brand-plus { @apply ml-0.5 font-black text-brand-green; }
+  .nav-link { @apply relative block py-3 text-sm font-semibold text-white transition-colors hover:text-green-300; }
+  .action-button { @apply inline-flex min-h-14 items-center justify-center gap-5 rounded-2xl px-8 py-4 text-base font-semibold text-white transition duration-200 hover:-translate-y-0.5 focus-visible:outline-offset-4; }
+  .light-pattern {
+    background-color: #f1f7ff;
+    background-image: radial-gradient(ellipse at 50% 30%, #ffffffaa, transparent 70%);
+    @apply relative isolate overflow-hidden;
   }
+  .light-pattern::before {
+    content: ""; position: absolute; z-index: -1; width: 440px; height: 350px;
+    left: -290px; top: -155px; border-radius: 43% 57% 65% 35%; background: #e1efff; transform: rotate(-35deg);
+  }
+  .light-pattern::after {
+    content: ""; position: absolute; z-index: -1; width: 540px; height: 330px;
+    right: -220px; bottom: -200px; border-radius: 48% 52% 36% 64%; background: #dcecff; transform: rotate(-25deg);
+  }
+  .hero-shade { background: linear-gradient(90deg, #031c3a 0%, #031e40f5 29%, #031e4080 49%, #031e4000 68%); }
+  .club-shade { background: linear-gradient(90deg, #031e40 0%, #031e40f5 31%, #031e40a6 44%, #031e4000 63%); }
+  .nav-link[aria-current="page"]::after { content: ""; @apply absolute inset-x-0 bottom-0 h-[3px] rounded-full bg-brand-green; }
+  .preview-dialog::backdrop { background: #00172cbf; backdrop-filter: blur(6px); }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 767px) {
+  .hero-shade { background: linear-gradient(180deg, #031e40 0%, #031e40 42%, #031e40d9 57%, #031e4022 79%, #031e4033 100%); }
+  .club-shade { background: linear-gradient(180deg, #031e40 0%, #031e40 48%, #031e40b3 63%, #031e4000 82%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

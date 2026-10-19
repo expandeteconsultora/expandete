@@ -1,0 +1,32 @@
+export const services = [
+  {
+    id: "impulsa",
+    name: "Impulsa tu negocio",
+    description: "Publicidad para atraer más clientes.",
+    image: "/images/marketing.webp",
+    imageAlt: "Creador audiovisual preparando una cámara para producir contenido de un negocio",
+    accent: "border-brand-blue",
+    detail: "Publicidad, estrategia y contenido para dar a conocer lo que haces y conectar con más clientes.",
+    features: ["Estrategia publicitaria", "Creación de contenido", "Comunicación para tu negocio"],
+  },
+  {
+    id: "sincroniza",
+    name: "SINCRONIZA",
+    description: "Personas, procesos y liderazgo.",
+    image: "/images/team.webp",
+    imageAlt: "Equipo de trabajo colaborando con un asesor en una oficina",
+    accent: "border-brand-green",
+    detail: "Alinea a tu equipo, organiza tus procesos y fortalece el liderazgo para avanzar en una misma dirección.",
+    features: ["Desarrollo de equipos", "Organización de procesos", "Liderazgo empresarial"],
+  },
+  {
+    id: "afina",
+    name: "AFINA",
+    description: "Capacitaciones para elevar el desempeño.",
+    image: "/images/training.webp",
+    imageAlt: "Facilitador compartiendo una capacitación práctica con un grupo de profesionales",
+    accent: "border-[#153eab]",
+    detail: "Formación práctica para desarrollar las habilidades que tu equipo necesita y llevar lo aprendido al trabajo de cada día.",
+    features: ["Capacitaciones prácticas", "Herramientas para tu equipo", "Aprendizaje aplicado"],
+  },
+] as const;

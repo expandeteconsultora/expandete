@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Expándete Más
 
-## Getting Started
+Portada basada en la referencia visual proporcionada. Next.js 16 (App Router), React, TypeScript y Tailwind CSS 4.
 
-First, run the development server:
+## Desarrollo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ejecutar `npm install` y `npm run dev`. Abrir http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Verificaciones: `npm run lint` y `npm run build`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+La configuración utiliza el modo `workerThreads` de Turbopack para procesar Tailwind sin puertos TCP internos. Verificado con Node.js 22.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estructura
 
-## Learn More
+- `app/page.tsx`: composición de la portada.
+- `app/layout.tsx`: idioma, metadatos, cabecera y pie compartidos.
+- `app/globals.css`: Tailwind, colores y estilos compartidos.
+- `components/home/`: hero, soluciones, Club y llamada a la acción.
+- `components/layout/`: cabecera responsive y pie de página.
+- `components/ui/`: marca, iconos y ventanas de vista previa.
+- `data/navigation.ts`: elementos del menú.
+- `data/services.ts`: contenido de las tres soluciones.
+- `public/images/`: fotografías de prueba generadas, optimizadas en WebP.
 
-To learn more about Next.js, take a look at the following resources:
+## Próximas páginas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Actualmente el menú navega por las secciones de la portada. Los servicios y el Club tienen ventanas de vista previa; Recursos y los textos legales muestran su estado pendiente. No se simulan registros, pagos ni formularios.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Al recibir las otras vistas, crear sus rutas en `app/`, actualizar `data/navigation.ts` y sustituir los botones de vista previa por enlaces. La cabecera, el pie y los componentes comunes ya están separados para reutilizarlos.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las fotografías son demostrativas y se sirven localmente. Para reemplazarlas, conservar los nombres en `public/images/` o actualizar los componentes y `data/services.ts`.
