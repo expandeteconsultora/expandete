@@ -66,20 +66,16 @@ export const courseTools = [
 
 export const trainingPhotos = [
   {
-    image: "/images/courses/classroom-01.webp",
+    image: "/images/courses/class-01.webp",
     alt: "Imagen referencial de emprendedores participando en una capacitación con sus laptops",
   },
   {
-    image: "/images/courses/classroom-02.webp",
+    image: "/images/courses/class-02.webp",
     alt: "Imagen referencial de un grupo de participantes con sus certificados de capacitación",
   },
   {
-    image: "/images/courses/classroom-03.webp",
+    image: "/images/courses/class-03.webp",
     alt: "Imagen referencial de una emprendedora y sus compañeros aprendiendo en clase",
-  },
-  {
-    image: "/images/courses/classroom-04.webp",
-    alt: "Imagen referencial de un instructor acompañando a emprendedores en un taller práctico",
   },
 ] as const;
 
