@@ -30,7 +30,7 @@ export default function BusinessProjectsPage() {
         <ProjectSectors />
       </main>
       <footer className={styles.footer}>
-        <p>© 2026 Expándete Más · Asesoría integral para fondos no reembolsables de ProInnóvate Perú.</p>
+        <p>© 2026 Expándete Más</p>
       </footer>
     </div>
   );
