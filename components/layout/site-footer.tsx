@@ -14,7 +14,7 @@ export function SiteFooter() {
         <div className="md:mt-2 md:border-l md:border-[#7796bc66] md:pl-10 lg:pl-20">
           <h2 className="mb-3 text-lg font-bold lg:text-[23px]">Servicios</h2>
           <ul className="space-y-2 text-sm lg:text-[19px]">
-            {services.map((service) => <li key={service.id}><PreviewButton preview={service.id} className="text-left transition-colors hover:text-green-300">{service.name}</PreviewButton></li>)}
+            {services.map((service) => <li key={service.id}>{"href" in service ? <Link href={service.href} className="text-left transition-colors hover:text-green-300">{service.name}</Link> : <PreviewButton preview={service.id} className="text-left transition-colors hover:text-green-300">{service.name}</PreviewButton>}</li>)}
           </ul>
         </div>
         <div className="md:mt-2 md:border-l md:border-[#7796bc66] md:pl-10 lg:pl-20">

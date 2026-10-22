@@ -15,6 +15,7 @@ La configuración utiliza el modo `workerThreads` de Turbopack para procesar Tai
 - `app/(site)/page.tsx`: composición de la portada; la URL sigue siendo `/`.
 - `app/layout.tsx`: idioma, tipografía, metadatos y acceso al contenido.
 - `app/(site)/layout.tsx`: cabecera y pie compartidos del sitio principal.
+- `app/(site)/impulsa-tu-negocio/page.tsx`: composición de la página de soluciones digitales; reutiliza el layout de la portada.
 - `app/cursos-de-marketing-digital/page.tsx`: landing independiente de cursos.
 - `app/globals.css`: Tailwind, colores y estilos compartidos.
 - `components/home/`: hero, soluciones, Club y llamada a la acción.
@@ -22,17 +23,27 @@ La configuración utiliza el modo `workerThreads` de Turbopack para procesar Tai
 - `components/ui/`: marca, iconos y ventanas de vista previa.
 - `data/navigation.ts`: elementos del menú.
 - `data/services.ts`: contenido de las tres soluciones.
+- `components/business-growth/`: presentación, tarjetas de servicios, proceso de trabajo, iconos y enlace de contacto de Impulsa tu negocio.
+- `data/business-growth.ts`: fotografías, textos de servicios, pasos de trabajo y configuración de WhatsApp de Impulsa tu negocio.
 - `components/courses/`: tarjetas, cinta continua y carrusel de fotos de la landing.
 - `data/marketing-courses.ts`: cursos, mensajes y número de WhatsApp, herramientas y fotos.
 - `public/images/`: fotografías de prueba generadas, optimizadas en WebP.
 
 ## Próximas páginas
 
-Actualmente el menú navega por las secciones de la portada. Los servicios y el Club tienen ventanas de vista previa; Recursos y los textos legales muestran su estado pendiente. No se simulan registros, pagos ni formularios.
+Actualmente el menú navega por las secciones de la portada. Impulsa tu negocio tiene su propia página, enlazada desde la tarjeta de la portada y el pie compartido. Los demás servicios y el Club tienen ventanas de vista previa; Recursos y los textos legales muestran su estado pendiente. No se simulan registros, pagos ni formularios.
 
 Al recibir las otras vistas, crear sus rutas en `app/`, actualizar `data/navigation.ts` y sustituir los botones de vista previa por enlaces. La cabecera, el pie y los componentes comunes ya están separados para reutilizarlos.
 
 Las fotografías son demostrativas y se sirven localmente. Para reemplazarlas, conservar los nombres en `public/images/` o actualizar los componentes y `data/services.ts`.
+
+## Impulsa tu negocio
+
+Ruta: `/impulsa-tu-negocio`.
+
+Editar `data/business-growth.ts` para actualizar los cuatro servicios, sus fotografías, los tres pasos de trabajo y el número o mensajes de WhatsApp. Los enlaces preparan la consulta y se abren en otra pestaña; no envían mensajes automáticamente.
+
+La página reutiliza las fotografías WebP, la tipografía y los colores de la portada. Sus estilos están aislados en `components/business-growth/business-growth.module.css` y usan las variables de marca de `app/globals.css`. Las tarjetas pasan de cuatro columnas a dos en tablet y a una en móvil; el proceso pasa de tres columnas a una. La cabecera y el pie se heredan de `app/(site)/layout.tsx`.
 
 ## Landing de cursos
 

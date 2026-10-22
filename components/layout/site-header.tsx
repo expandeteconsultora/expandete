@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/data/navigation";
 import { Brand } from "@/components/ui/brand";
@@ -8,6 +9,7 @@ import { CloseIcon } from "@/components/ui/icons";
 import { PreviewButton } from "@/components/ui/preview-provider";
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
 
@@ -31,7 +33,7 @@ export function SiteHeader() {
           {isOpen ? <CloseIcon /> : <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>}
         </button>
         <nav id="menu-principal" aria-label="Navegación principal" className={(isOpen ? "flex " : "hidden ") + "absolute inset-x-0 top-[calc(100%-4px)] flex-col gap-2 rounded-2xl border border-white/15 bg-navy p-5 shadow-xl md:static md:flex md:flex-row md:items-center md:gap-5 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none md:ml-auto lg:gap-8"}>
-          {navigation.map((item, index) => <Link key={item.label} href={item.href} className="nav-link w-fit whitespace-nowrap" aria-current={index === 0 ? "page" : undefined} onClick={() => setIsOpen(false)}>{item.label}</Link>)}
+          {navigation.map((item, index) => <Link key={item.label} href={item.href} className="nav-link w-fit whitespace-nowrap" aria-current={(index === 0 && pathname === "/") || item.href === pathname ? "page" : undefined} onClick={() => setIsOpen(false)}>{item.label}</Link>)}
           <PreviewButton preview="resources" className="nav-link w-fit" onClick={() => setIsOpen(false)}>Recursos</PreviewButton>
         </nav>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { services } from "@/data/services";
 import { ArrowIcon } from "@/components/ui/icons";
 import { PreviewButton } from "@/components/ui/preview-provider";
@@ -23,7 +24,11 @@ export function SolutionsSection() {
               <div className="flex flex-1 flex-col px-5 pb-2 pt-4 md:px-[clamp(20px,3.1vw,40px)] md:pb-0 lg:pb-3 lg:pt-5">
                 <h3 className="text-[23px] font-extrabold leading-tight tracking-[-0.045em] md:text-[clamp(21px,2.23vw,32px)]">{service.name}</h3>
                 <p className="mb-4 mt-2 md:mb-2 lg:mb-4 max-w-[290px] text-[20px] font-medium leading-[1.15] tracking-[-0.035em] text-muted lg:text-[26px]">{service.description}</p>
-                <PreviewButton preview={service.id} className="mt-auto flex min-h-10 md:min-h-8 lg:min-h-10 w-fit items-center gap-3 text-[18px] font-bold tracking-[-0.035em] text-brand-blue transition-colors hover:text-navy lg:text-[23px]" aria-label={"Conocer más sobre " + service.name}>Conocer más <ArrowIcon className="transition-transform group-hover:translate-x-1" /></PreviewButton>
+                {"href" in service ? (
+                  <Link href={service.href} className="mt-auto flex min-h-10 md:min-h-8 lg:min-h-10 w-fit items-center gap-3 text-[18px] font-bold tracking-[-0.035em] text-brand-blue transition-colors hover:text-navy lg:text-[23px]" aria-label={"Conocer más sobre " + service.name}>Conocer más <ArrowIcon className="transition-transform group-hover:translate-x-1" /></Link>
+                ) : (
+                  <PreviewButton preview={service.id} className="mt-auto flex min-h-10 md:min-h-8 lg:min-h-10 w-fit items-center gap-3 text-[18px] font-bold tracking-[-0.035em] text-brand-blue transition-colors hover:text-navy lg:text-[23px]" aria-label={"Conocer más sobre " + service.name}>Conocer más <ArrowIcon className="transition-transform group-hover:translate-x-1" /></PreviewButton>
+                )}
               </div>
             </article>
           ))}
