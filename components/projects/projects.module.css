@@ -1,0 +1,170 @@
+.landing {
+  --project-navy: #052649;
+  --project-blue: #0072ce;
+  --project-yellow: #ffde00;
+  width: 100%;
+  color: var(--project-navy);
+  background: #041a30;
+}
+
+.container { width: min(88%, 1120px); margin-inline: auto; }
+.header { background: #052649; color: white; }
+.headerInner { display: flex; width: min(90%, 1280px); min-height: 112px; margin-inline: auto; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { font-size: clamp(30px, 3.1vw, 46px); }
+.whatsapp { display: inline-flex; max-width: 100%; min-height: 58px; align-items: center; justify-content: center; gap: 12px; padding: 16px 30px; border-radius: 999px; color: white; background: #17b43c; box-shadow: 0 5px 16px #16a53735; font-size: 17px; font-weight: 800; line-height: 1.3; text-align: center; text-decoration: none; transition: background 200ms, transform 200ms, box-shadow 200ms; }
+.whatsapp > svg { width: 26px; height: 26px; flex: none; }
+.whatsapp:hover { transform: translateY(-2px); background: #139b33; box-shadow: 0 7px 22px #16a53750; }
+.headerContact { min-height: 48px; gap: 9px; padding: 11px 22px; font-size: 17px; }
+.headerContact > svg { width: 23px; height: 23px; }
+.hero { padding-block: 46px 76px; color: white; background: linear-gradient(180deg, #052649, #02111f); }
+.heroGrid { display: grid; grid-template-columns: 1.08fr 1fr; align-items: center; gap: clamp(36px, 6vw, 90px); }
+.heroCopy { min-width: 0; padding-block: 20px; }
+.heroBadge { display: inline-block; margin-bottom: 26px; padding: 9px 19px; border: 2px solid #dceaf2b3; border-radius: 999px; font-size: 12px; font-weight: 800; line-height: 1.4; letter-spacing: .035em; text-transform: uppercase; }
+.heroTitle { margin: 0; font-family: var(--font-project-title), sans-serif; font-size: clamp(38px, 4vw, 56px); font-weight: 900; line-height: 1.04; letter-spacing: -.045em; text-transform: uppercase; }
+.heroTitle > span { display: block; }
+.heroTitle > strong { display: block; margin-block: 4px; color: var(--project-yellow); font-size: clamp(50px, 5.3vw, 74px); font-weight: 900; letter-spacing: -.055em; white-space: nowrap; }
+.heroTitle .heroQuestion { font-size: .67em; line-height: 1.12; letter-spacing: -.035em; }
+.heroDescription { max-width: 440px; margin-block: 24px 30px; font-size: 20px; font-weight: 600; line-height: 1.45; }
+.heroPhoto, .supportPhoto { position: relative; min-width: 0; overflow: hidden; border: 2px solid #ffffff40; border-radius: 17px; background: #0a2941; box-shadow: 0 18px 36px #00000026; }
+.heroPhoto { width: 100%; height: 600px; }
+.portrait { object-fit: cover; object-position: 50% 25%; }
+.heroPhoto::after { position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, #02111fa6); content: ""; pointer-events: none; }
+.photoCaption { position: absolute; z-index: 1; right: 14px; bottom: 14px; left: 14px; display: flex; min-height: 38px; align-items: center; justify-content: center; gap: 9px; padding: 9px 10px; border: 1px solid #ffffff38; border-radius: 11px; color: white; background: #052649e8; font-size: 12px; font-weight: 700; line-height: 1.4; text-align: center; }
+.statusDot { width: 8px; height: 8px; flex: none; border-radius: 50%; background: #34d399; }
+.lightSection { padding-block: 70px; border-bottom: 1px solid #e2e8f0; background: white; text-align: center; }
+.sectionHeading { margin-bottom: 40px; }
+.sectionHeading h2, .sectorsContent > h2 { font-family: var(--font-project-title), sans-serif; font-size: clamp(26px, 2.8vw, 37px); font-weight: 900; line-height: 1.2; letter-spacing: -.035em; text-transform: uppercase; text-wrap: balance; }
+.sectionHeading h2 > span { color: var(--project-blue); }
+.sectionHeading > p { margin-top: 14px; color: #59697f; font-size: 17px; font-weight: 600; line-height: 1.6; }
+.cardGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; }
+.serviceCard, .stepCard { display: flex; align-items: center; flex-direction: column; padding: 30px 24px; border: 2px solid #e0effc; border-radius: 17px; background: #f4f8fd; }
+.iconCircle, .stepNumber { display: inline-flex; width: 62px; height: 62px; flex: none; align-items: center; justify-content: center; margin-bottom: 19px; border-radius: 50%; color: white; background: var(--project-blue); box-shadow: 0 3px 5px #005ab21a; }
+.iconCircle svg { width: 27px; height: 27px; }
+.serviceCard h3, .stepCard h3, .benefitCard h3 { font-family: var(--font-project-title), sans-serif; font-size: 19px; font-weight: 800; line-height: 1.35; letter-spacing: -.035em; }
+.serviceCard p, .stepCard p { max-width: 280px; margin-top: 12px; color: #506077; font-size: 15px; font-weight: 600; line-height: 1.55; text-wrap: pretty; }
+.centerCta { margin-top: 40px; }
+.supportSection { padding-block: 68px; color: white; background: linear-gradient(125deg, #0d2847, #154374 65%, #1c528f); }
+.supportGrid { display: grid; grid-template-columns: .85fr 1.4fr; align-items: center; gap: 56px; }
+.supportPhoto { width: 100%; max-width: 370px; height: 460px; justify-self: center; border: 4px solid white; }
+.supportPhoto .portrait { object-position: 45% 50%; }
+.supportPhoto .photoCaption { right: 10px; bottom: 10px; left: 10px; font-size: 11px; }
+.supportCopy { min-width: 0; }
+.supportCopy > h2 { margin-bottom: 26px; font-family: var(--font-project-title), sans-serif; font-size: clamp(26px, 2.55vw, 34px); font-weight: 900; line-height: 1.2; letter-spacing: -.035em; text-wrap: pretty; }
+.supportCopy > h2 > span { color: var(--project-yellow); }
+.benefitGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 30px; }
+.benefitCard { padding: 20px 17px; border: 1px solid #dbeafe; border-radius: 13px; color: var(--project-navy); background: white; }
+.benefitCard .iconCircle { width: 47px; height: 47px; margin-bottom: 14px; }
+.benefitCard .iconCircle svg { width: 22px; height: 22px; }
+.benefitCard h3 { font-size: 15px; }
+.benefitCard p { margin-top: 8px; color: #59697f; font-size: 13px; font-weight: 500; line-height: 1.5; }
+.sectionHeading > .sectionBadge { display: inline-block; margin: 0 0 16px; padding: 6px 16px; border: 1px solid #bfe4ff; border-radius: 999px; color: var(--project-blue); background: #f0f9ff; font-size: 12px; font-weight: 800; line-height: 1.5; letter-spacing: .035em; text-transform: uppercase; }
+.stepCard { padding-block: 28px; border-color: #e2e8f0; background: #f8fafc; }
+.stepNumber { width: 56px; height: 56px; margin-bottom: 13px; font-size: 25px; font-weight: 800; }
+.stepIcon { display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; margin-bottom: 14px; border-radius: 10px; }
+.stepIcon svg { width: 21px; height: 21px; }
+.stepIcon1 { color: #0072ce; background: #e0f2fe; }
+.stepIcon2 { color: #b77b00; background: #fff1c2; }
+.stepIcon3 { color: #059669; background: #d1fae5; }
+.stepCard h3 { font-size: 18px; }
+.stepCard p { font-size: 14px; }
+.sectorsSection { position: relative; isolation: isolate; overflow: hidden; padding-block: 68px; color: white; background: #04203e; text-align: center; }
+.sectorsBackground { z-index: -2; object-fit: cover; }
+.sectorsSection::before { position: absolute; z-index: -1; inset: 0; background: #04203ee6; content: ""; }
+.sectorsContent > h2 { font-size: clamp(26px, 2.5vw, 34px); }
+.sectorsContent > h2 > span { color: var(--project-yellow); }
+.sectorsGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 21px; margin-block: 36px 40px; }
+.sectorCard { position: relative; overflow: hidden; aspect-ratio: 4 / 3; border: 2px solid #ffffff9c; border-radius: 13px; background: #0a2941; }
+.sectorCard > img { object-fit: cover; transition: transform 300ms; }
+.sectorCard:hover > img { transform: scale(1.06); }
+.sectorCard::after { position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, #0009); content: ""; }
+.sectorCard h3 { position: absolute; z-index: 1; right: 9px; bottom: 10px; left: 9px; display: flex; min-height: 34px; align-items: center; justify-content: center; gap: 7px; padding: 7px; border-radius: 999px; color: var(--project-navy); background: #fffffff2; font-size: 12px; font-weight: 800; line-height: 1.3; }
+.sectorCard h3 > svg { width: 17px; height: 17px; flex: none; color: #0097b3; }
+.sectorCard:first-child h3 > svg { color: #059669; }
+.sectorCard:nth-child(3) h3 > svg { color: #c78310; }
+.footer { padding: 26px 6%; border-top: 1px solid #113558; color: #a8b6c7; background: #021122; font-size: 12px; line-height: 1.7; text-align: center; }
+
+@media (min-width: 1600px) {
+  .container { max-width: 1240px; }
+  .heroGrid { grid-template-columns: 1.08fr 1fr; gap: 100px; }
+  .heroTitle { font-size: 62px; }
+  .heroTitle > strong { font-size: 82px; }
+  .heroPhoto { height: 640px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container { width: 90%; }
+  .headerInner { min-height: 96px; }
+  .hero { padding-block: 30px 56px; }
+  .heroGrid { gap: 28px; }
+  .heroBadge { padding-inline: 12px; font-size: 10px; }
+  .heroTitle { font-size: 38px; }
+  .heroTitle > strong { font-size: 51px; }
+  .heroDescription { font-size: 17px; }
+  .heroPhoto { height: 490px; }
+  .heroPhoto .photoCaption { right: 8px; left: 8px; gap: 5px; padding-inline: 6px; font-size: 10px; }
+  .whatsapp { gap: 8px; padding-inline: 22px; font-size: 15px; }
+  .cardGrid { gap: 15px; }
+  .serviceCard, .stepCard { padding-inline: 17px; }
+  .serviceCard h3, .stepCard h3 { font-size: 16px; }
+  .serviceCard p, .stepCard p { font-size: 13px; }
+  .supportGrid { grid-template-columns: .8fr 1.2fr; gap: 30px; }
+  .supportPhoto { height: 440px; }
+  .supportCopy > h2 { font-size: 28px; }
+  .benefitGrid { gap: 10px; }
+  .benefitCard { padding: 15px 10px; }
+  .benefitCard h3 { font-size: 13px; }
+  .benefitCard p { font-size: 12px; }
+  .sectorsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 650px; margin-inline: auto; }
+}
+
+@media (max-width: 767px) {
+  .container { width: 88%; }
+  .headerInner { min-height: 90px; gap: 12px; }
+  .brand { font-size: 30px; }
+  .headerInner .headerContact { min-height: 43px; gap: 7px; padding: 10px 14px; font-size: 13px; white-space: nowrap; }
+  .headerContact > svg { width: 20px; height: 20px; }
+  .hero { padding-block: 28px 48px; }
+  .heroGrid { grid-template-columns: 1fr; gap: 34px; max-width: 560px; }
+  .heroCopy { padding: 0; }
+  .heroBadge { margin-bottom: 24px; padding: 8px 13px; font-size: 10px; }
+  .heroTitle { max-width: 500px; font-size: clamp(34px, 8.6vw, 52px); }
+  .heroTitle > strong { margin-block: 7px; font-size: clamp(47px, 12vw, 72px); }
+  .heroTitle .heroQuestion { max-width: 450px; font-size: .7em; }
+  .heroDescription { max-width: 380px; margin-block: 22px 26px; font-size: 17px; }
+  .whatsapp { min-height: 54px; gap: 10px; padding: 14px 23px; font-size: 15px; }
+  .heroPhoto { height: auto; max-height: 580px; aspect-ratio: 4 / 4.6; }
+  .photoCaption { right: 10px; left: 10px; font-size: 11px; }
+  .lightSection, .supportSection, .sectorsSection { padding-block: 48px; }
+  .sectionHeading { margin-bottom: 28px; }
+  .sectionHeading h2 { font-size: clamp(25px, 5.7vw, 32px); }
+  .sectionHeading > p { margin-top: 14px; font-size: 15px; }
+  .cardGrid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; gap: 17px; }
+  .serviceCard, .stepCard { padding: 28px 22px; }
+  .serviceCard h3, .stepCard h3 { font-size: 19px; }
+  .serviceCard p, .stepCard p { max-width: 320px; font-size: 15px; }
+  .centerCta { margin-top: 30px; }
+  .supportGrid { grid-template-columns: 1fr; gap: 30px; max-width: 560px; }
+  .supportPhoto { max-width: 420px; height: auto; aspect-ratio: 4 / 4.7; }
+  .supportCopy > h2 { font-size: clamp(27px, 5.7vw, 34px); }
+  .benefitGrid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 26px; }
+  .benefitCard { display: grid; grid-template-columns: 46px 1fr; column-gap: 15px; padding: 19px; }
+  .benefitCard .iconCircle { grid-row: span 2; width: 46px; height: 46px; margin: 0; align-self: center; }
+  .benefitCard h3 { font-size: 16px; }
+  .benefitCard p { margin-top: 5px; font-size: 14px; }
+  .sectionHeading > .sectionBadge { padding-inline: 12px; font-size: 10px; }
+  .sectorsContent > h2 { font-size: clamp(24px, 5.7vw, 32px); }
+  .sectorsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-block: 28px 30px; }
+  .sectorCard { aspect-ratio: 1 / 1; }
+  .sectorCard h3 { right: 6px; bottom: 7px; left: 6px; gap: 4px; min-height: 37px; padding: 6px; font-size: 10px; }
+  .sectorCard h3 > svg { width: 14px; height: 14px; }
+  .footer { padding-block: 22px; font-size: 11px; }
+}
+
+@media (max-width: 359px) {
+  .headerInner { width: 92%; gap: 8px; }
+  .brand { font-size: 27px; }
+  .headerInner .headerContact { padding-inline: 10px; font-size: 12px; }
+  .headerContact > svg { width: 18px; height: 18px; }
+  .heroTitle { font-size: 32px; }
+  .heroTitle > strong { font-size: 45px; }
+}
