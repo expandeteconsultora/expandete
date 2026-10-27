@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getCourseWhatsappUrl, marketingCourses } from "@/data/marketing-courses";
+import { courseLocation, getCourseWhatsappUrl, marketingCourses } from "@/data/marketing-courses";
 import styles from "./courses.module.css";
 
 export function CoursesHero() {
@@ -17,7 +17,17 @@ export function CoursesHero() {
           Videos, inteligencia artificial y publicidad para tu negocio.
         </p>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 min-[480px]:grid-cols-2 min-[1100px]:grid-cols-4 min-[1400px]:gap-6">
+        <div className={styles.locationBanner}>
+          <span className={styles.locationHeading}>
+            <span className={styles.locationPin} aria-hidden="true">📍</span>
+            {courseLocation.name} · {courseLocation.format}
+          </span>
+          <span className={styles.capacityBadge}>
+            Máximo {courseLocation.maxStudents} alumnos por curso
+          </span>
+        </div>
+
+        <div className={styles.courseGrid + " mt-8 grid grid-cols-1 gap-5 min-[640px]:grid-cols-2 min-[1100px]:grid-cols-3 min-[1400px]:gap-6"}>
           {marketingCourses.map((course, index) => (
             <a
               key={course.id}
@@ -32,19 +42,29 @@ export function CoursesHero() {
                   src={course.image}
                   alt={course.imageAlt}
                   fill
-                  sizes="(max-width: 479px) 88vw, (max-width: 1099px) 44vw, (max-width: 1636px) 22vw, 340px"
+                  sizes="(max-width: 639px) 88vw, (max-width: 1099px) 44vw, (max-width: 1636px) 29vw, 464px"
                   preload={index === 0}
                   loading={index > 0 ? "eager" : undefined}
-                  className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500"
                 />
               </div>
-              <div className="flex flex-1 flex-col px-3 pb-6 pt-1 sm:px-4">
-                <h2 className="flex-1 text-[clamp(20px,1.58vw,26px)] font-bold leading-[1.18] tracking-[-0.025em]">
-                  {course.titleLines.map((line) => <span key={line} className="block">{line}</span>)}
-                </h2>
-                <p className="mt-3 text-[clamp(16px,1.22vw,21px)] leading-snug text-[#dfecfa]">
-                  {course.modality}
+              <div className={styles.courseContent}>
+                <div className={styles.courseBadges}>
+                  <span className={styles.modalityBadge}>
+                    <span aria-hidden="true">📍</span> {course.modality}
+                  </span>
+                  <span className={styles.levelBadge}>
+                    <span aria-hidden="true">🌱</span> Nivel: {course.level}
+                  </span>
+                </div>
+                <h2 className="text-[clamp(20px,1.58vw,26px)] font-bold leading-[1.25] tracking-[-0.025em]">{course.title}</h2>
+                <p className={styles.courseDescription}>
+                  {course.description}
                 </p>
+                <span className={styles.courseCta}>
+                  <Image src="/icons/tools/whatsapp.svg" alt="" width={19} height={19} unoptimized />
+                  Más información
+                </span>
               </div>
             </a>
           ))}

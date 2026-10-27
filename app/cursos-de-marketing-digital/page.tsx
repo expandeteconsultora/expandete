@@ -9,7 +9,7 @@ import styles from "@/components/courses/courses.module.css";
 export const metadata: Metadata = {
   title: "Cursos de Marketing Digital para Emprendedores | Expándete Más",
   description:
-    "Cursos prácticos de marketing digital, CapCut, inteligencia artificial y publicidad para emprendedores. Capacítate con Expándete Más. Consulta por WhatsApp.",
+    "Cursos de Meta Ads, inteligencia artificial y CapCut para emprendedores. Clases 100% presenciales en Tarapoto, máximo 10 alumnos por curso. Consulta por WhatsApp.",
 };
 
 export default function MarketingCoursesPage() {

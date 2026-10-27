@@ -6,46 +6,48 @@
  */
 export const whatsappNumber = "51954989320";
 
+export const courseLocation = {
+  name: "Sede Tarapoto",
+  format: "Clases 100% presenciales",
+  maxStudents: 10,
+} as const;
+
 export const marketingCourses = [
   {
-    id: "marketing-digital",
-    title: "Marketing Digital Aplicado a Negocios",
-    titleLines: ["Marketing Digital", "Aplicado a Negocios"],
-    modality: "Presencial y virtual",
-    image: "/images/courses/course-marketing.webp",
-    imageAlt: "Ilustración de una laptop con estadísticas y un megáfono verde",
+    id: "meta-ads-ia",
+    title: "Publicidad en Meta Ads y diseño de anuncios con IA",
+    modality: "100% Presencial · Tarapoto",
+    level: "Básico / Intermedio",
+    description:
+      "Aprende paso a paso sin experiencia previa: crea tus diseños publicitarios con IA y lanza campañas efectivas en Facebook e Instagram.",
+    image: "/images/courses/course-meta-ads-tarapoto.webp",
+    imageAlt: "Laptop con gráficos de publicidad, un megáfono verde y estadísticas de campañas",
     whatsappMessage:
-      "¡Hola, Expándete Más! Me interesa el curso Marketing Digital Aplicado a Negocios. Quisiera información sobre fechas, horarios, modalidad y precios. ¡Gracias!",
+      "¡Hola, Expándete Más! Me interesa el curso Publicidad en Meta Ads y diseño de anuncios con IA, 100% presencial en la sede Tarapoto. Quisiera información sobre las próximas fechas, horarios, precios y cupos disponibles. ¡Gracias!",
+  },
+  {
+    id: "grabacion-video-ia-capcut",
+    title: "Grabación y edición de videos con IA y CapCut",
+    modality: "100% Presencial · Tarapoto",
+    level: "Básico / Intermedio",
+    description:
+      "Desde cero y 100% guiado: aprende a grabar con tu celular y editar videos con herramientas de IA para promocionar tu negocio.",
+    image: "/images/courses/course-video-ia-tarapoto.webp",
+    imageAlt: "Robot con una claqueta de cine junto a una pantalla de video con inteligencia artificial",
+    whatsappMessage:
+      "¡Hola, Expándete Más! Me interesa el curso Grabación y edición de videos con IA y CapCut, 100% presencial en la sede Tarapoto. Quisiera información sobre las próximas fechas, horarios, precios y cupos disponibles. ¡Gracias!",
   },
   {
     id: "edicion-capcut",
-    title: "Edición de Videos con CapCut",
-    titleLines: ["Edición de Videos", "con CapCut"],
-    modality: "Presencial y virtual",
-    image: "/images/courses/course-capcut.webp",
-    imageAlt: "Ilustración de un teléfono con una línea de edición de video y el icono de CapCut",
+    title: "Edición de videos con CapCut",
+    modality: "100% Presencial · Tarapoto",
+    level: "Básico / Intermedio",
+    description:
+      "Aprende desde cero: cortes, subtítulos dinámicos, música, transiciones y efectos profesionales.",
+    image: "/images/courses/course-capcut-tarapoto.webp",
+    imageAlt: "Editor de video en un teléfono con el icono de CapCut, tijeras y herramientas de edición",
     whatsappMessage:
-      "¡Hola, Expándete Más! Me interesa el curso Edición de Videos con CapCut. Quisiera información sobre fechas, horarios, modalidad y precios. ¡Gracias!",
-  },
-  {
-    id: "produccion-ia",
-    title: "Producción Audiovisual con Inteligencia Artificial",
-    titleLines: ["Producción Audiovisual", "con Inteligencia Artificial"],
-    modality: "Solo presencial",
-    image: "/images/courses/course-ai.webp",
-    imageAlt: "Ilustración de un robot junto a una pantalla de video y una claqueta de cine",
-    whatsappMessage:
-      "¡Hola, Expándete Más! Me interesa el curso Producción Audiovisual con Inteligencia Artificial. Quisiera información sobre las próximas fechas presenciales, horarios y precios. ¡Gracias!",
-  },
-  {
-    id: "publicidad-digital",
-    title: "Publicidad y Estrategia Digital",
-    titleLines: ["Publicidad y", "Estrategia Digital"],
-    modality: "Presencial y virtual",
-    image: "/images/courses/course-ads.webp",
-    imageAlt: "Ilustración de un panel de anuncios, una gráfica de crecimiento y un objetivo",
-    whatsappMessage:
-      "¡Hola, Expándete Más! Me interesa el curso Publicidad y Estrategia Digital. Quisiera información sobre fechas, horarios, modalidad y precios. ¡Gracias!",
+      "¡Hola, Expándete Más! Me interesa el curso Edición de videos con CapCut, 100% presencial en la sede Tarapoto. Quisiera información sobre las próximas fechas, horarios, precios y cupos disponibles. ¡Gracias!",
   },
 ] as const;
 
