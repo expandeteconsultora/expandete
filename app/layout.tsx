@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Suspense } from "react";
 import { MetaPixel } from "@/components/analytics/meta-pixel";
 import { META_PIXEL_ID } from "@/components/analytics/meta-pixel-config";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen font-sans">
           <a href="#contenido" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-5 focus:py-3 focus:font-semibold focus:text-navy">Saltar al contenido</a>
           {children}
+          <Analytics />
           <Suspense fallback={null}>
             <MetaPixel />
           </Suspense>
