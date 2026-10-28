@@ -7,9 +7,9 @@ export function businessContactUrl(message = businessContact.message) {
   return `https://wa.me/${businessContact.number}?text=${encodeURIComponent(message)}`;
 }
 
-export function BusinessContactLink({ children = "Conversar por WhatsApp" }: { children?: React.ReactNode }) {
+export function BusinessContactLink({ children = "Conversar con un asesor", message }: { children?: React.ReactNode; message?: string }) {
   return (
-    <a href={businessContactUrl()} target="_blank" rel="noopener noreferrer" className={styles.contactButton}>
+    <a href={businessContactUrl(message)} target="_blank" rel="noopener noreferrer" className={styles.contactButton}>
       <BusinessIcon name="whatsapp" />
       <span>{children}</span>
       <ArrowIcon />

@@ -23,8 +23,8 @@ La configuración utiliza el modo `workerThreads` de Turbopack para procesar Tai
 - `components/ui/`: marca, iconos y ventanas de vista previa.
 - `data/navigation.ts`: elementos del menú.
 - `data/services.ts`: contenido de las tres soluciones.
-- `components/business-growth/`: presentación, tarjetas de servicios, proceso de trabajo, iconos y enlace de contacto de Impulsa tu negocio.
-- `data/business-growth.ts`: fotografías, textos de servicios, pasos de trabajo y configuración de WhatsApp de Impulsa tu negocio.
+- `components/business-growth/`: presentación, servicios, sistema de canales digitales, proceso de trabajo, desarrollo comercial y contacto de Impulsa tu negocio.
+- `data/business-growth.ts`: textos, fotografías, etapas, áreas comerciales y configuración de WhatsApp de Impulsa tu negocio.
 - `components/courses/`: tarjetas, cinta continua y carrusel de fotos de la landing.
 - `data/marketing-courses.ts`: cursos, mensajes y número de WhatsApp, herramientas y fotos.
 - `public/images/`: fotografías de prueba generadas, optimizadas en WebP.
@@ -41,9 +41,11 @@ Las fotografías son demostrativas y se sirven localmente. Para reemplazarlas, c
 
 Ruta: `/impulsa-tu-negocio`.
 
-Editar `data/business-growth.ts` para actualizar los cuatro servicios, sus fotografías, los tres pasos de trabajo y el número o mensajes de WhatsApp. Los enlaces preparan la consulta y se abren en otra pestaña; no envían mensajes automáticamente.
+Editar `data/business-growth.ts` para actualizar la presentación, los cuatro servicios, las cuatro etapas del Sistema Expándete+, los cuatro pasos de trabajo, las tres áreas comerciales y el número o mensajes de WhatsApp. Los enlaces preparan la consulta y se abren en otra pestaña; no envían mensajes automáticamente.
 
-La página reutiliza las fotografías WebP, la tipografía y los colores de la portada. Sus estilos están aislados en `components/business-growth/business-growth.module.css` y usan las variables de marca de `app/globals.css`. Las tarjetas pasan de cuatro columnas a dos en tablet y a una en móvil; el proceso pasa de tres columnas a una. La cabecera y el pie se heredan de `app/(site)/layout.tsx`.
+La página reutiliza las fotografías WebP, la tipografía, los colores y los contenedores de la portada (`page-container` para el contenido y `section-container` para las tarjetas). Sus estilos están aislados en `components/business-growth/business-growth.module.css` y usan las variables de marca de `app/globals.css`. Las tarjetas pasan de cuatro columnas a dos en tablet y a una en móvil; las demás cuadrículas se adaptan según su contenido. La cabecera y el pie se heredan sin cambios de `app/(site)/layout.tsx`.
+
+`connected-channels.tsx` contiene la ilustración decorativa de publicidad, web y WhatsApp, construida en HTML/CSS. Los textos de las pantallas son ilustrativos; los botones reales de contacto están fuera de la ilustración.
 
 ## Landing de cursos
 
