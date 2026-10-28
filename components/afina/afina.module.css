@@ -1,0 +1,249 @@
+.hero, .methodology {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: white;
+  background: var(--color-navy);
+}
+.hero::before, .methodology::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(ellipse at 0 0, #064b9f80, transparent 65%), radial-gradient(ellipse at 100% 100%, #064b9f55, transparent 65%);
+  content: "";
+}
+.hero::after, .methodology::after {
+  position: absolute;
+  z-index: -1;
+  top: -280px;
+  left: -120px;
+  width: 780px;
+  height: 460px;
+  transform: rotate(-32deg);
+  border-radius: 45%;
+  background: #064b9f26;
+  box-shadow: 950px 650px 0 90px #064b9f1f;
+  content: "";
+}
+.hero { padding-block: clamp(134px, 12.5vw, 180px) clamp(48px, 5vw, 76px); }
+.heroGrid { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: clamp(28px, 4vw, 60px); }
+.heroCopy { min-width: 0; }
+.badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; padding: 7px 12px; border: 1px solid #40ad2e70; border-radius: 999px; background: #031f4070; color: #a5e69a; font-size: clamp(9px, .95vw, 12px); font-weight: 750; letter-spacing: .025em; text-transform: uppercase; }
+.badge > span, .liveDot { display: inline-block; width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--color-brand-green); }
+.hero h1 { max-width: 710px; font-size: clamp(38px, 4.1vw, 60px); font-weight: 850; line-height: 1.02; letter-spacing: -.045em; text-wrap: pretty; }
+.hero h1 > span { color: var(--color-brand-green); }
+.heroDescription { margin-top: 21px; color: #e1e9ff; font-size: clamp(16px, 1.55vw, 22px); line-height: 1.5; letter-spacing: -.02em; }
+.heroActions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+.primaryButton, .secondaryButton, .whatsappButton, .submitButton { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 14px; padding: 14px 24px; border-radius: 16px; font-size: 14px; font-weight: 750; line-height: 1.4; text-align: center; transition: background 200ms, transform 200ms; }
+.primaryButton { color: white; background: #0067ff; box-shadow: 0 8px 24px #0067ff25; }
+.primaryButton:hover { transform: translateY(-2px); background: #0055d4; }
+.secondaryButton { border: 1px solid #e1e9ff99; color: white; }
+.secondaryButton:hover { background: #ffffff0d; }
+.secondaryButton > svg { width: 18px; transform: rotate(90deg); }
+.primaryButton > svg, .whatsappButton > svg, .submitButton > svg { width: 20px; height: 20px; flex: none; }
+.heroPhoto { position: relative; min-width: 0; aspect-ratio: 1.48; overflow: hidden; border: 1px solid #ffffff26; border-radius: 23px; background: var(--color-brand-blue); box-shadow: 0 20px 50px #0000001a; }
+.heroPhoto > img { object-fit: cover; }
+.heroPhoto::after { position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, #031f4080); content: ""; }
+.heroPhotoLabel { position: absolute; z-index: 1; bottom: 16px; left: 16px; display: flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid #ffffff33; border-radius: 999px; background: #031f40db; font-size: 11px; font-weight: 650; }
+
+.programs { padding-block: clamp(40px, 4vw, 60px) 32px; }
+.sectionHeading { margin-bottom: 30px; text-align: center; }
+.eyebrow { margin-bottom: 11px; color: var(--color-brand-blue); font-size: 11px; font-weight: 800; letter-spacing: .065em; text-transform: uppercase; }
+.sectionHeading h2, .contactHeading h2 { font-size: clamp(30px, 3.15vw, 45px); font-weight: 850; line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
+.sectionHeading h2 > span { color: var(--color-brand-blue); }
+.sectionHeading > p:last-child:not(.eyebrow) { margin-top: 10px; color: var(--color-muted); font-size: clamp(15px, 1.3vw, 18px); line-height: 1.5; }
+.programGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 1.8vw, 25px); }
+.programCard { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid #dce5f1; border-bottom: 4px solid var(--color-brand-blue); border-radius: 18px; background: white; box-shadow: 0 8px 24px #031f4007; transition: transform 250ms, box-shadow 250ms; }
+.programCard:nth-child(even) { border-bottom-color: var(--color-brand-green); }
+.programCard:hover { transform: translateY(-4px); box-shadow: 0 14px 28px #031f4012; }
+.programPhoto { position: relative; aspect-ratio: 1.8; overflow: hidden; background: #dcecff; }
+.programPhoto > img { object-fit: cover; transition: transform 400ms; }
+.programCard:hover .programPhoto > img { transform: scale(1.035); }
+.programCopy { display: flex; flex: 1; flex-direction: column; padding: 17px 20px 16px; }
+.programCopy h3 { font-size: clamp(17px, 1.55vw, 22px); font-weight: 800; line-height: 1.18; letter-spacing: -.035em; }
+.programCopy > p { margin-block: 10px 18px; color: var(--color-muted); font-size: 14px; line-height: 1.4; }
+.programTags { display: flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 9px; margin-top: auto; padding-top: 13px; border-top: 1px solid #edf1f7; }
+.programTags > span { padding: 7px 10px; border-radius: 9px; color: var(--color-brand-blue); background: #edf4ff; font-size: 11px; font-weight: 750; line-height: 1.2; }
+.programCard:nth-child(even) .programTags > span { color: #2a7520; background: #eef8ec; }
+.programTags > small { color: var(--color-muted); font-size: 11px; line-height: 1.3; }
+.centeredContact { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 26px; text-align: center; }
+.whatsappButton, .submitButton { color: white; background: #2f8222; box-shadow: 0 7px 20px #40ad2e1a; }
+.whatsappButton:hover, .submitButton:hover { transform: translateY(-2px); background: #2a7520; }
+.centeredContact > p { max-width: 640px; color: var(--color-muted); font-size: 13px; line-height: 1.5; }
+
+.methodology { padding-block: clamp(38px, 4vw, 56px) 30px; }
+.methodology .eyebrow { color: #a5e69a; }
+.methodology .sectionHeading h2 > span { color: var(--color-brand-green); }
+.stepsGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 1.8vw, 25px); padding: 0; list-style: none; }
+.stepCard { display: flex; min-width: 0; flex-direction: column; padding: 23px; border: 1px solid #a3c7ff33; border-radius: 17px; background: linear-gradient(135deg, #064b9f50, #031f4033); }
+.stepTop { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 17px; }
+.stepTop > span { display: flex; width: 38px; height: 38px; align-items: center; justify-content: center; border: 1px solid #40ad2e55; border-radius: 50%; background: #40ad2e30; font-size: 17px; font-weight: 750; }
+.stepTop > small { color: #d2e0f4; font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
+.stepCard h3 { font-size: clamp(19px, 1.7vw, 24px); font-weight: 750; letter-spacing: -.025em; }
+.stepCard > p { margin-block: 7px 17px; color: #e1e9ff; font-size: 14px; line-height: 1.5; }
+.stepOutcome { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 14px; border-top: 1px solid #a3c7ff26; color: #a5e69a; font-size: 12px; font-weight: 700; }
+.stepOutcome > svg { width: 19px; height: 19px; flex: none; color: #87d578; }
+.methodology .centeredContact { gap: 12px; margin-top: 20px; }
+.methodology .centeredContact > p { color: #c6d7ec; }
+.methodology .centeredContact > .methodPromise { display: flex; align-items: center; justify-content: center; gap: 9px; padding: 7px 16px; border: 1px solid #40ad2e70; border-radius: 999px; color: #b4e9ab; font-size: 12px; font-weight: 650; }
+.methodology .whatsappButton { min-height: 49px; }
+
+.contact { padding-block: clamp(40px, 4vw, 60px); }
+.contactGrid { display: grid; grid-template-columns: 1.45fr 1fr; align-items: start; gap: clamp(26px, 3.2vw, 46px); }
+.contactGrid > div { min-width: 0; }
+.contactHeading { margin: 9px 0 20px; }
+.contactHeading h2 { max-width: 620px; font-size: clamp(29px, 2.7vw, 39px); }
+.contactHeading h2 > span { display: block; color: #328a24; }
+.contactHeading > p { max-width: 580px; margin-top: 9px; color: var(--color-muted); font-size: 16px; line-height: 1.4; }
+.form, .proposal { padding: 17px; border: 1px solid #dce5f1; border-radius: 19px; background: #ffffffed; box-shadow: 0 8px 25px #031f4006; }
+.quickContact { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding: 10px; border: 1px solid #40ad2e20; border-radius: 12px; background: #f1f9ef; }
+.whatsappCircle { display: flex; width: 33px; height: 33px; flex: none; align-items: center; justify-content: center; border-radius: 50%; color: white; background: var(--color-brand-green); }
+.whatsappCircle > svg { width: 22px; height: 22px; }
+.quickContact > div { flex: 1; }
+.quickContact strong { display: block; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+.quickContact p { margin-top: 2px; color: var(--color-muted); font-size: 11px; line-height: 1.3; }
+.quickContact > a { display: flex; min-height: 40px; flex: none; align-items: center; justify-content: center; gap: 7px; padding: 8px 10px; border-radius: 9px; color: white; background: #2f8222; font-size: 10px; font-weight: 750; transition: background 200ms; }
+.quickContact > a:hover { background: #2a7520; }
+.quickContact > a > svg { width: 16px; height: 16px; }
+.programFieldset, .detailsFieldset { min-width: 0; }
+.form legend { margin-bottom: 9px; color: var(--color-brand-blue); font-size: 10px; font-weight: 650; letter-spacing: .025em; line-height: 1.5; text-transform: uppercase; }
+.radioGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.radioOption { display: flex; min-height: 44px; align-items: center; gap: 9px; padding: 9px 10px; border: 1px solid #dce5f1; border-radius: 9px; cursor: pointer; transition: border-color 150ms, background 150ms; }
+.radioOption:has(input:checked) { border-color: var(--color-brand-green); background: #f1f9ef; }
+.radioOption:hover { border-color: var(--color-brand-blue); }
+.radioOption > input { width: 17px; height: 17px; flex: none; accent-color: var(--color-brand-green); cursor: pointer; }
+.radioOption > span { font-size: 12px; line-height: 1.3; }
+.radioOption small { display: block; margin-top: 3px; color: var(--color-muted); font-size: 10px; }
+.customOption { grid-column: 1 / -1; }
+.needField { display: block; margin-top: 12px; }
+.detailsFieldset { margin-top: 15px; padding-top: 12px; border-top: 1px solid #edf1f7; }
+.fieldsGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+.fieldsGrid > label, .needField { color: var(--color-foreground); font-size: 11px; line-height: 1.4; }
+.fieldsGrid input, .needField textarea { display: block; width: 100%; min-height: 42px; margin-top: 4px; padding: 10px 12px; border: 1px solid #dce5f1; border-radius: 9px; color: var(--color-foreground); background: #f8fbff; font: inherit; font-size: 12px; }
+.fieldsGrid input::placeholder, .needField textarea::placeholder { color: #7184a3; opacity: 1; }
+.needField textarea { min-height: 90px; resize: vertical; }
+.submitButton { min-height: 42px; align-self: end; gap: 10px; padding: 10px 14px; border-radius: 9px; font-size: 12px; }
+.formNote { margin-top: 10px; color: var(--color-muted); font-size: 10px; line-height: 1.5; text-align: right; }
+.formStatus { margin-top: 12px; padding: 12px; border-radius: 10px; color: #2a7520; background: #eef8ec; font-size: 12px; line-height: 1.6; }
+.formStatus a { display: inline-flex; align-items: center; gap: 6px; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+.formStatus svg { width: 16px; height: 16px; }
+.contactAside { display: grid; gap: 17px; }
+.contactPhoto { position: relative; aspect-ratio: 2.25; overflow: hidden; border: 1px solid #dce5f1; border-radius: 18px; background: #dcecff; box-shadow: 0 8px 25px #031f4009; }
+.contactPhoto > img { object-fit: cover; }
+.contactPhoto > p { position: absolute; right: 12px; bottom: 12px; left: 12px; display: flex; align-items: center; gap: 7px; padding: 10px 12px; border-radius: 12px; background: #fffffff2; font-size: 10px; font-weight: 700; line-height: 1.3; }
+.contactPhoto > p > svg { width: 19px; height: 19px; flex: none; color: #2a7520; }
+.proposalHeading { display: flex; align-items: center; gap: 11px; padding-bottom: 11px; border-bottom: 1px solid #edf1f7; }
+.proposalHeading > span, .proposal li > span { display: flex; width: 32px; height: 32px; flex: none; align-items: center; justify-content: center; border-radius: 9px; color: #328a24; background: #eef8ec; }
+.proposalHeading > span > svg, .proposal li > span > svg { width: 19px; height: 19px; }
+.proposal h3 { font-size: 14px; font-weight: 800; line-height: 1.3; letter-spacing: -.025em; }
+.proposalHeading p, .proposal li p { margin-top: 2px; color: var(--color-muted); font-size: 11px; line-height: 1.4; }
+.proposal ul { display: grid; gap: 13px; margin-block: 14px; padding: 0; list-style: none; }
+.proposal li { display: flex; align-items: center; gap: 11px; }
+.proposal h4 { font-size: 12px; font-weight: 650; line-height: 1.35; }
+.proposalHighlight { display: flex; align-items: center; gap: 15px; padding: 13px; border: 1px solid #40ad2e20; border-radius: 11px; background: #f1f9ef; }
+.proposalHighlight > strong { flex: none; color: #2a7520; font-size: clamp(18px, 1.8vw, 25px); font-weight: 850; letter-spacing: -.045em; }
+.proposalHighlight > p { font-size: 11px; line-height: 1.4; }
+.proposalNote { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 12px; color: var(--color-muted); font-size: 10px; line-height: 1.5; text-align: center; }
+.proposalNote > svg { width: 15px; height: 15px; flex: none; color: #328a24; }
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .heroGrid { grid-template-columns: 1.2fr 1fr; gap: 28px; }
+  .hero h1 { font-size: clamp(35px, 4.2vw, 48px); }
+  .heroActions { gap: 10px; }
+  .primaryButton, .secondaryButton { min-height: 48px; gap: 8px; padding: 12px 14px; font-size: 12px; }
+  .heroPhoto { aspect-ratio: 1.25; }
+  .contactGrid { grid-template-columns: 1.25fr 1fr; gap: 24px; }
+  .quickContact { flex-wrap: wrap; }
+  .quickContact > a { width: 100%; }
+  .contactPhoto { aspect-ratio: 1.65; }
+  .proposalHighlight { align-items: flex-start; flex-direction: column; gap: 5px; }
+}
+@media (max-width: 1023px) {
+  .programGrid, .stepsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .programCopy h3 { font-size: 21px; }
+  .programCopy > p { max-width: 320px; }
+  .programTags > span, .programTags > small { font-size: 12px; }
+}
+@media (max-width: 767px) {
+  .hero { padding-block: 132px 46px; }
+  .heroGrid { grid-template-columns: 1fr; gap: 32px; max-width: 560px; }
+  .badge { margin-bottom: 21px; font-size: 10px; }
+  .hero h1 { font-size: clamp(38px, 7.5vw, 54px); line-height: 1.04; }
+  .heroDescription { margin-top: 17px; font-size: 17px; }
+  .heroActions { gap: 12px; margin-top: 24px; }
+  .primaryButton, .secondaryButton { min-height: 50px; padding-inline: 18px; font-size: 13px; }
+  .heroPhoto { aspect-ratio: 1.65; border-radius: 19px; }
+  .heroPhotoLabel { bottom: 12px; left: 12px; font-size: 10px; }
+  .programs, .methodology, .contact { padding-block: 40px; }
+  .sectionHeading { margin-bottom: 25px; }
+  .eyebrow { font-size: 10px; }
+  .sectionHeading h2 { font-size: clamp(30px, 6.2vw, 40px); }
+  .programCopy { padding: 18px; }
+  .programCopy h3 { font-size: 20px; }
+  .programCopy > p { font-size: 14px; }
+  .programTags { flex-wrap: wrap; }
+  .centeredContact { margin-top: 25px; padding-inline: 8px; }
+  .centeredContact > p { font-size: 12px; }
+  .whatsappButton { max-width: 100%; gap: 9px; padding-inline: 18px; font-size: 13px; }
+  .stepCard { padding: 21px; }
+  .stepCard h3 { font-size: 21px; }
+  .methodology .centeredContact { margin-top: 24px; }
+  .methodology .centeredContact > .methodPromise { gap: 7px; padding-inline: 12px; font-size: 10px; }
+  .contactGrid { grid-template-columns: 1fr; max-width: 560px; gap: 28px; }
+  .contactHeading { margin-top: 0; }
+  .contactHeading h2 { font-size: clamp(29px, 6vw, 38px); }
+  .contactHeading > p { font-size: 15px; }
+  .quickContact { flex-wrap: wrap; gap: 10px; padding: 12px; }
+  .quickContact > a { width: 100%; font-size: 12px; }
+  .quickContact strong, .quickContact p { font-size: 11px; }
+  .form { padding: 15px; }
+  .form legend { font-size: 10px; }
+  .radioOption > span { font-size: 12px; }
+  .fieldsGrid input, .needField textarea { min-height: 46px; font-size: 16px; }
+  .submitButton { min-height: 46px; }
+  .formNote { text-align: center; }
+  .contactPhoto { aspect-ratio: 2; }
+  .contactPhoto > p { font-size: 11px; }
+  .proposal { padding: 19px; }
+  .proposal h3 { font-size: 16px; }
+  .proposal h4 { font-size: 13px; }
+  .proposalHeading p, .proposal li p { font-size: 12px; }
+  .proposalHighlight > strong { font-size: 25px; }
+  .proposalHighlight > p { font-size: 12px; }
+}
+@media (max-width: 539px) {
+  .heroActions { flex-direction: column; align-items: stretch; }
+  .programGrid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; gap: 20px; }
+  .programPhoto { aspect-ratio: 1.9; }
+  .programCopy { padding: 20px; }
+  .programCopy h3 { font-size: 22px; }
+  .programCopy > p { max-width: none; font-size: 15px; }
+  .programTags { flex-wrap: nowrap; }
+  .stepsGrid { gap: 12px; }
+  .stepCard { padding: 16px 13px; }
+  .stepTop { gap: 7px; margin-bottom: 13px; }
+  .stepTop > span { width: 33px; height: 33px; font-size: 15px; }
+  .stepTop > small { font-size: 9px; }
+  .stepCard h3 { font-size: 18px; }
+  .stepCard > p { font-size: 13px; }
+  .stepOutcome { gap: 5px; font-size: 10px; }
+  .stepOutcome > svg { width: 15px; height: 15px; }
+  .radioGrid, .fieldsGrid { grid-template-columns: 1fr; }
+  .form legend { font-size: 10px; }
+  .radioOption { min-height: 46px; }
+  .radioOption > span { font-size: 13px; }
+  .fieldsGrid > label { font-size: 12px; }
+  .submitButton { margin-top: 3px; font-size: 14px; }
+  .contactPhoto { aspect-ratio: 1.8; }
+  .contactPhoto > p { right: 9px; bottom: 9px; left: 9px; padding: 9px; font-size: 10px; }
+}
+@media (max-width: 359px) {
+  .hero h1 { font-size: 34px; }
+  .badge { padding-inline: 9px; font-size: 9px; }
+  .stepsGrid { grid-template-columns: 1fr; }
+  .stepCard { padding: 21px; }
+  .stepCard h3 { font-size: 21px; }
+  .stepCard > p { font-size: 14px; }
+  .stepOutcome { font-size: 12px; }
+  .proposalHighlight { align-items: flex-start; flex-direction: column; gap: 7px; }
+}

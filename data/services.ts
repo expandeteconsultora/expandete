@@ -22,6 +22,7 @@ export const services = [
   },
   {
     id: "afina",
+    href: "/afina",
     name: "AFINA",
     description: "Capacitaciones para elevar el desempeño.",
     image: "/images/training.webp",
