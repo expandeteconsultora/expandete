@@ -12,6 +12,7 @@ export const services = [
   },
   {
     id: "sincroniza",
+    href: "/sincroniza",
     name: "SINCRONIZA",
     description: "Personas, procesos y liderazgo.",
     image: "/images/team.webp",
