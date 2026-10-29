@@ -2,36 +2,50 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { META_PIXEL_ID } from "./meta-pixel-config";
-
-declare global {
-  interface Window {
-    fbq?: (...args: unknown[]) => void;
-  }
-}
+import { flushMetaPixelEvents, trackMetaEvent } from "@/lib/analytics/meta-client";
 
 export function MetaPixel() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [ready, setReady] = useState(false);
   const lastPageView = useRef<string | null>(null);
   const query = searchParams.toString();
   const url = pathname + (query ? `?${query}` : "");
 
   useEffect(() => {
-    if (!ready || !window.fbq || lastPageView.current === url) return;
+    if (lastPageView.current === url) return;
 
-    window.fbq("track", "PageView");
+    trackMetaEvent("PageView");
     // Avoid duplicate events from rerenders and React Strict Mode.
     lastPageView.current = url;
-  }, [ready, url]);
+  }, [url]);
+
+  useEffect(() => {
+    function handleWhatsAppClick(event: MouseEvent) {
+      if (event.button !== 0 && event.button !== 1) return;
+      const target = event.target;
+      const link = target instanceof Element ? target.closest("a[href]") : null;
+      if (!(link instanceof HTMLAnchorElement)) return;
+      const destination = new URL(link.href);
+      if (destination.protocol === "https:" && ["wa.me", "api.whatsapp.com", "web.whatsapp.com"].includes(destination.hostname)) {
+        trackMetaEvent("Contact");
+      }
+    }
+    // Delegation covers every WhatsApp link, including course cards and dynamic links.
+    document.addEventListener("click", handleWhatsAppClick);
+    document.addEventListener("auxclick", handleWhatsAppClick);
+    return () => {
+      document.removeEventListener("click", handleWhatsAppClick);
+      document.removeEventListener("auxclick", handleWhatsAppClick);
+    };
+  }, []);
 
   return (
     <Script
       id="meta-pixel"
       strategy="afterInteractive"
-      onReady={() => setReady(true)}
+      onReady={() => queueMicrotask(flushMetaPixelEvents)}
     >
       {`
         !function(f,b,e,v,n,t,s)

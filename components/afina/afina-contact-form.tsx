@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { trackMetaEvent } from "@/lib/analytics/meta-client";
 import { afinaPrograms, afinaWhatsAppUrl } from "@/data/afina";
 import { ArrowIcon } from "@/components/ui/icons";
 import { AfinaIcon } from "./afina-icon";
@@ -31,6 +32,7 @@ export function AfinaContactForm() {
       `Teléfono de contacto: ${phone.trim()}`,
     ].join("\n");
     const url = afinaWhatsAppUrl(message);
+    if (preparedUrl !== url) trackMetaEvent("Lead");
     setPreparedUrl(url);
     window.open(url, "_blank", "noopener,noreferrer");
   }

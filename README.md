@@ -10,6 +10,27 @@ Verificaciones: `npm run lint` y `npm run build`.
 
 La configuración utiliza el modo `workerThreads` de Turbopack para procesar Tailwind sin puertos TCP internos. Verificado con Node.js 22.
 
+## Meta Pixel y API de conversiones
+
+El píxel `640429655689051` y la API comparten `event_id` / `eventID` para deduplicar cada evento. Cubren toda la web, incluida `/cursos-de-marketing-digital`:
+
+- `PageView`: entrada y navegación entre páginas o cambios de parámetros de URL.
+- `Contact`: activación de enlaces de WhatsApp, incluidas las tarjetas de cursos. Mide la apertura del contacto, no un mensaje enviado ni una venta.
+- `Lead`: formulario válido de Afina completado para continuar en WhatsApp. Reenviarlo sin cambiar sus datos no genera otro Lead.
+
+Configurar estas variables privadas en `.env.local` y, al desplegar, en las variables del servidor del alojamiento:
+
+```dotenv
+META_CONVERSIONS_ACCESS_TOKEN=
+META_CONVERSIONS_TEST_EVENT_CODE=
+```
+
+El token se obtiene en la configuración del píxel en el Administrador de eventos. No usar el prefijo `NEXT_PUBLIC_`. El código de «Probar eventos» permite revisar los eventos del servidor en Meta; dejarlo vacío en producción. En desarrollo y localhost no se envían eventos del servidor sin ese código. Reiniciar el servidor después de modificar `.env.local`.
+
+`POST /api/meta/events` valida origen, tamaño y los tres nombres de evento admitidos. El servidor envía a Graph API v26.0 la URL sin consultas ni fragmentos, fecha, agente del navegador, IP reenviada válida y cookies `_fbp` / `_fbc` disponibles. Cuando hay un `fbclid` real y aún no existe `_fbc`, genera el identificador de clic correspondiente. No transmite los valores del formulario ni el mensaje de WhatsApp. El token permanece en el servidor y los errores no exponen la respuesta sin filtrar de Meta. Los fallos transitorios tienen un reintento con el mismo identificador.
+
+Ejecutar `npm run test:analytics`, `npm run lint` y `npm run build`. Las pruebas automatizadas simulan Meta y no envían eventos reales. Para comprobar la recepción, configurar el código de prueba, visitar la web y revisar «Probar eventos» en el píxel correspondiente. El servicio debe ejecutarse con Next.js en un servidor; una exportación de HTML estático no ejecuta la API.
+
 ## Estructura
 
 - `app/(site)/page.tsx`: composición de la portada; la URL sigue siendo `/`.
