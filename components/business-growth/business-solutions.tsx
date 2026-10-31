@@ -26,7 +26,10 @@ export function BusinessSolutions() {
               <span className={styles.serviceIcon}><BusinessIcon name={service.icon} /></span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <a href={businessContactUrl(service.message)} target="_blank" rel="noopener noreferrer" className={styles.serviceLink} aria-label={`Consultar sobre ${service.title} por WhatsApp`}><ArrowIcon /></a>
+              <a href={businessContactUrl(service.message)} target="_blank" rel="noopener noreferrer" className={styles.serviceLink} aria-label={`Conversar con un asesor sobre ${service.title} por WhatsApp`}>
+                <BusinessIcon name="whatsapp" />
+                <span>Conversar con un asesor</span>
+              </a>
             </div>
           </article>
         ))}

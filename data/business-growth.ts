@@ -28,7 +28,7 @@ export const businessServices = [
     image: "/images/team.webp",
     imageAlt: "Equipo preparando la estrategia de publicidad de una empresa",
     icon: "megaphone",
-    message: "Hola, quiero conocer el servicio de publicidad digital para atraer más clientes a mi empresa.",
+    message: "Interesado en publicidad digital.",
   },
   {
     id: "produccion-audiovisual",
@@ -37,7 +37,7 @@ export const businessServices = [
     image: "/images/marketing.webp",
     imageAlt: "Profesional preparando una cámara para producir contenido audiovisual",
     icon: "video",
-    message: "Hola, me interesa la producción audiovisual para destacar la marca y los productos de mi empresa.",
+    message: "Interesado en producción audiovisual.",
   },
   {
     id: "paginas-web-y-tiendas",
@@ -46,7 +46,7 @@ export const businessServices = [
     image: "/images/club.webp",
     imageAlt: "Sitio web de Expándete Más en una laptop",
     icon: "monitor",
-    message: "Hola, quiero conocer sus soluciones de páginas web y tiendas digitales para mi empresa.",
+    message: "Interesado en páginas web y tiendas digitales.",
   },
   {
     id: "automatizacion-whatsapp",
@@ -55,7 +55,7 @@ export const businessServices = [
     image: "/images/hero.webp",
     imageAlt: "Emprendedor gestionando las herramientas digitales de su empresa",
     icon: "whatsapp",
-    message: "Hola, quiero información sobre automatización de WhatsApp y seguimiento de consultas para mi empresa.",
+    message: "Interesado en automatización de WhatsApp.",
   },
 ] as const;
 
