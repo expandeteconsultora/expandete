@@ -8,8 +8,8 @@ export function SolutionsSection() {
     <section id="servicios" aria-labelledby="solutions-title" className="light-pattern py-10 md:pb-6 md:pt-6 lg:pb-9 lg:pt-9">
       <div className="section-container">
         <div className="mb-5 text-center lg:mb-8">
-          <p className="text-xs font-extrabold tracking-[-0.025em] text-brand-blue lg:text-base">NUESTRAS SOLUCIONES</p>
-          <span aria-hidden="true" className="mx-auto mb-2 mt-1.5 block h-[3px] w-12 rounded-full bg-brand-blue" />
+          <p className="text-xs font-extrabold tracking-tight text-brand-blue lg:text-base">NUESTRAS SOLUCIONES</p>
+          <span aria-hidden="true" className="mx-auto mb-2 mt-1.5 block h-0.75 w-12 rounded-full bg-brand-blue" />
           <h2 id="solutions-title" className="text-[30px] font-extrabold leading-[1.03] tracking-[-0.045em] sm:text-4xl md:text-[clamp(30px,3.5vw,50px)]">
             Cada empresa tiene sus desafíos.<br className="hidden sm:block" /> <span className="text-brand-blue">Tenemos formas de ayudarte.</span>
           </h2>
@@ -22,8 +22,8 @@ export function SolutionsSection() {
               </div>
               <div className="flex flex-1 flex-col px-5 pb-2 pt-4 md:px-[clamp(20px,3.1vw,40px)] md:pb-0 lg:pb-3 lg:pt-5">
                 <h3 className="text-[23px] font-extrabold leading-tight tracking-[-0.045em] md:text-[clamp(21px,2.23vw,32px)]">{service.name}</h3>
-                <p className="mb-4 mt-2 md:mb-2 lg:mb-4 max-w-[290px] text-[20px] font-medium leading-[1.15] tracking-[-0.035em] text-muted lg:text-[26px]">{service.description}</p>
-                <Link href={service.href} className="mt-auto flex min-h-10 md:min-h-8 lg:min-h-10 w-fit items-center gap-3 text-[18px] font-bold tracking-[-0.035em] text-brand-blue transition-colors hover:text-navy lg:text-[23px]" aria-label={"Conocer más sobre " + service.name}>Conocer más <ArrowIcon className="transition-transform group-hover:translate-x-1" /></Link>
+                <p className="mb-4 mt-2 md:mb-2 lg:mb-4 max-w-72.5 text-[20px] font-medium leading-[1.15] tracking-[-0.035em] text-muted lg:text-[26px]">{service.description}</p>
+                <Link href={service.href} className="mt-auto flex min-h-12 w-full items-center justify-center gap-3 rounded-xl bg-brand-green px-4 py-3 text-[18px] font-bold tracking-[-0.035em] text-white transition-colors hover:bg-[#359c25] lg:text-[23px]" aria-label={"Conocer más sobre " + service.name}>Conocer más <ArrowIcon className="shrink-0 transition-transform group-hover:translate-x-1" /></Link>
               </div>
             </article>
           ))}
