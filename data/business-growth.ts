@@ -20,6 +20,35 @@ export const businessHero = {
   ],
 } as const;
 
+// Reemplaza youtubeUrl y thumbnail por el video y la miniatura de cada empresa.
+// Edita service con el servicio que utilizó cada empresa.
+// Los videos actuales son demos de YouTube, no testimonios reales.
+// Al cargar el testimonio definitivo, cambia isDemo a false.
+export const businessTestimonials = {
+  title: "Empresas que confían en nosotros",
+  subtitle: "Conoce sus resultados.",
+  items: [
+    {
+      id: "tasty-chicken",
+      company: "Tasty Chicken",
+      service: "Marketing digital",
+      youtubeUrl: "https://youtube.com/shorts/7BvqGHUYq5c?feature=share",
+      thumbnail: "/images/projects/tasty-chicken.webp",
+      thumbnailAlt: "Imagen provisional de un negocio de alimentos",
+      isDemo: false,
+    },
+    {
+      id: "america-tour",
+      company: "America Tour",
+      service: "Marketing digital",
+      youtubeUrl: "https://youtube.com/shorts/ibwIGI2Y9mY",
+      thumbnail: "/images/projects/america-tour.webp",
+      thumbnailAlt: "Imagen provisional de visitantes en una catarata de San Martín",
+      isDemo: false,
+    },
+  ],
+} as const;
+
 export const businessServices = [
   {
     id: "publicidad-digital",
