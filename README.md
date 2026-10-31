@@ -68,7 +68,11 @@ La página reutiliza las fotografías WebP, la tipografía, los colores y los co
 
 `connected-channels.tsx` contiene la ilustración decorativa de publicidad, web y WhatsApp, construida en HTML/CSS. Los textos de las pantallas son ilustrativos; los botones reales de contacto están fuera de la ilustración.
 
-La sección de testimonios se encuentra entre el hero y las soluciones. En `businessTestimonials`, dentro de `data/business-growth.ts`, editar `youtubeUrl`, `thumbnail`, `thumbnailAlt`, `company` y `service` para cada empresa. El campo `service` siempre se muestra debajo del nombre de la empresa, independientemente de `isDemo`; inicialmente indica «Servicio por confirmar» hasta incorporar el servicio utilizado. Se aceptan enlaces de YouTube normales, cortos, Shorts, directos y de inserción. Las miniaturas actuales son imágenes locales provisionales y los videos son demos; cambiar `isDemo` a `false` al incorporar el testimonio real. El reproductor de YouTube se carga únicamente al pulsar la miniatura y se elimina al cerrar la ventana. Se puede cerrar con el botón, Escape o pulsando fuera de ella. Los estilos están aislados en `business-testimonials.module.css`.
+La sección de testimonios se encuentra entre el hero y las soluciones. En `businessTestimonials`, dentro de `data/business-growth.ts`, editar `youtubeUrl`, `thumbnail`, `thumbnailAlt`, `company` y `service` para cada empresa. El campo `service` siempre se muestra debajo del nombre de la empresa, independientemente de `isDemo`. Se aceptan enlaces de YouTube normales, cortos, Shorts, directos y de inserción. Para ejemplos provisionales, usar `isDemo: true`; cambiarlo a `false` al incorporar el testimonio real. El reproductor de YouTube se carga únicamente al pulsar la miniatura y se elimina al cerrar la ventana. Se puede cerrar con el botón, Escape o pulsando fuera de ella. El componente compartido vive en `components/ui/testimonials-section.tsx`, con estilos aislados en `testimonials-section.module.css`.
+
+## Testimonios de Sincroniza
+
+La ruta `/sincroniza` tiene su propia configuración `sincronizaTestimonials` en `data/sincroniza.ts`, independiente de los testimonios de Impulsa tu negocio. Editar `company`, `service`, `youtubeUrl`, `thumbnail`, `thumbnailAlt` e `isDemo` del único elemento inicial. La tarjeta se centra cuando hay un solo video; al añadir más elementos a `items`, se muestran dos columnas en escritorio y una en móvil. La sección se encuentra entre el hero y las soluciones.
 
 ## Landing de cursos
 

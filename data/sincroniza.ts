@@ -13,6 +13,25 @@ export const sincronizaImages = {
   contact: "/images/sincroniza/asesoria.webp",
 };
 
+// Testimonios exclusivos de Sincroniza. Completa los datos del cliente y su video.
+// Al reemplazar el enlace de prueba, cambia isDemo a false.
+// Para añadir otro testimonio, agrega un objeto más a items.
+export const sincronizaTestimonials = {
+  title: "Empresas que confían en nosotros",
+  subtitle: "Conoce sus resultados.",
+  items: [
+    {
+      id: "sincroniza-cliente-01",
+      company: "Vet House",
+      service: "Gestion y mejora de procesos",
+      youtubeUrl: "https://youtube.com/shorts/67yjdRh-oVs",
+      thumbnail: "/images/sincroniza/vet-house.webp",
+      thumbnailAlt: "Imagen provisional de un equipo definiendo sus objetivos de trabajo",
+      isDemo: true,
+    },
+  ],
+} as const;
+
 export const sincronizaBenefits = [
   { icon: "chart", label: "Implementación práctica" },
   { icon: "people", label: "Acompañamiento real" },

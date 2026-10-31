@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { sincronizaBenefits, sincronizaContactBenefits, sincronizaImages, sincronizaSolutions, sincronizaTools } from "@/data/sincroniza";
-import { ArrowIcon } from "@/components/ui/icons";
+import { sincronizaBenefits, sincronizaContactBenefits, sincronizaImages, sincronizaSolutions, sincronizaTestimonials, sincronizaTools } from "@/data/sincroniza";
+import { TestimonialsSection } from "@/components/ui/testimonials-section";
 import { SincronizaContactLink } from "@/components/sincroniza/contact-link";
 import { SincronizaIcon } from "@/components/sincroniza/sincroniza-icon";
 import styles from "@/components/sincroniza/sincroniza.module.css";
@@ -25,11 +25,12 @@ export default function SincronizaPage() {
           <ul className={styles.heroBenefits}>{sincronizaBenefits.map((benefit) => <li key={benefit.label}><SincronizaIcon name={benefit.icon} />{benefit.label}</li>)}</ul>
         </div>
       </section>
+      
+      <TestimonialsSection id="testimonios-sincroniza" {...sincronizaTestimonials} />
 
       <section className={`light-pattern ${styles.solutions}`} aria-labelledby="sincroniza-solutions-title">
         <div className={`page-container ${styles.solutionsHeading}`}>
           <div><p className={styles.eyebrow}>Nuestras soluciones</p><h2 id="sincroniza-solutions-title" className={styles.sectionTitle}>Tres soluciones <span>para fortalecer tu empresa.</span></h2></div>
-          <a className={styles.textLink} href="#soluciones-sincroniza">Conoce nuestros servicios <ArrowIcon /></a>
           <p className={styles.sectionDescription}>Dirección, procesos y equipos para una gestión más sólida.</p>
         </div>
         <div id="soluciones-sincroniza" className={`section-container ${styles.solutionGrid}`}>

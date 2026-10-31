@@ -32,6 +32,12 @@
 
 .card { min-width: 0; }
 
+.singleGrid {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 540px;
+  margin-inline: auto;
+}
+
 .thumbnail {
   position: relative;
   display: block;
