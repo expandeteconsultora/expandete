@@ -13,7 +13,6 @@ export function BusinessSolutions() {
           <p className={styles.eyebrow}>Nuestras soluciones</p>
           <h2 id="business-solutions-title" className={styles.sectionTitle}>Soluciones digitales <span>para tu empresa.</span></h2>
         </div>
-        <a href="#servicios-digitales" className={styles.textLink}>Conoce nuestros servicios <ArrowIcon /></a>
         <p className={styles.sectionDescription}>Servicios que puedes contratar por separado o integrar para atraer clientes y generar oportunidades de venta.</p>
       </div>
       <div id="servicios-digitales" className={`section-container ${styles.serviceGrid}`}>
