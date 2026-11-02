@@ -123,8 +123,11 @@
 .fieldsGrid input::placeholder, .needField textarea::placeholder { color: #7184a3; opacity: 1; }
 .needField textarea { min-height: 90px; resize: vertical; }
 .submitButton { min-height: 42px; align-self: end; gap: 10px; padding: 10px 14px; border-radius: 9px; font-size: 12px; }
+.fieldsGrid > .submitButton { grid-column: 1 / -1; }
+.submitButton:disabled { cursor: default; opacity: .7; transform: none; }
 .formNote { margin-top: 10px; color: var(--color-muted); font-size: 10px; line-height: 1.5; text-align: right; }
 .formStatus { margin-top: 12px; padding: 12px; border-radius: 10px; color: #2a7520; background: #eef8ec; font-size: 12px; line-height: 1.6; }
+.formError { color: #9f1d1d; background: #fff1f1; }
 .formStatus a { display: inline-flex; align-items: center; gap: 6px; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
 .formStatus svg { width: 16px; height: 16px; }
 .contactAside { display: grid; gap: 17px; }

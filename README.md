@@ -16,7 +16,7 @@ El píxel `640429655689051` y la API comparten `event_id` / `eventID` para dedup
 
 - `PageView`: entrada y navegación entre páginas o cambios de parámetros de URL.
 - `Contact`: activación de enlaces de WhatsApp, incluidas las tarjetas de cursos. Mide la apertura del contacto, no un mensaje enviado ni una venta.
-- `Lead`: formulario válido de Afina completado para continuar en WhatsApp. Reenviarlo sin cambiar sus datos no genera otro Lead.
+- `Lead`: solicitud de Afina aceptada por Resend para su envío por correo. El botón se deshabilita tras el éxito hasta que cambien los datos.
 
 Configurar estas variables privadas en `.env.local` y, al desplegar, en las variables del servidor del alojamiento:
 
@@ -30,6 +30,22 @@ El token se obtiene en la configuración del píxel en el Administrador de event
 `POST /api/meta/events` valida origen, tamaño y los tres nombres de evento admitidos. El servidor envía a Graph API v26.0 la URL sin consultas ni fragmentos, fecha, agente del navegador, IP reenviada válida y cookies `_fbp` / `_fbc` disponibles. Cuando hay un `fbclid` real y aún no existe `_fbc`, genera el identificador de clic correspondiente. No transmite los valores del formulario ni el mensaje de WhatsApp. El token permanece en el servidor y los errores no exponen la respuesta sin filtrar de Meta. Los fallos transitorios tienen un reintento con el mismo identificador.
 
 Ejecutar `npm run test:analytics`, `npm run lint` y `npm run build`. Las pruebas automatizadas simulan Meta y no envían eventos reales. Para comprobar la recepción, configurar el código de prueba, visitar la web y revisar «Probar eventos» en el píxel correspondiente. El servicio debe ejecutarse con Next.js en un servidor; una exportación de HTML estático no ejecuta la API.
+
+## Formulario de Afina
+
+El formulario de `/afina` envía las solicitudes por `POST /api/afina/contact` a Resend. Configurar en `.env.local` y en las variables del servidor del alojamiento:
+
+```dotenv
+RESEND_API_KEY=tu_clave_privada
+AFINA_EMAIL_FROM=Afina <onboarding@resend.dev>
+AFINA_EMAIL_TO=expandeteconsultora@gmail.com
+```
+
+El remitente `onboarding@resend.dev` sirve para pruebas y solo puede enviar al correo de la cuenta de Resend. Para producción, verificar un dominio en Resend y cambiar `AFINA_EMAIL_FROM` a una dirección de ese dominio. No utilizar el prefijo `NEXT_PUBLIC_` para estas variables. Reiniciar el servidor tras modificarlas; al publicar, añadirlas al alojamiento y desplegar nuevamente. `.env.local` está excluido de Git.
+
+El servidor valida los campos, el origen y el tamaño de la solicitud. El destinatario y el remitente se obtienen exclusivamente del servidor. Los reintentos con los mismos datos usan una clave de idempotencia para evitar correos duplicados durante 24 horas, mientras se conserve la página abierta. El mensaje de éxito indica que Resend aceptó el envío; la entrega final se consulta en el panel de Resend. El acceso rápido por WhatsApp sigue disponible.
+
+Ejecutar `npm run test:afina`, `npm run lint` y `npm run build`. Las pruebas de Afina simulan Resend y no envían correos reales. Para una prueba real, completar el formulario y comprobar el panel de Resend y el buzón destinatario, incluida la carpeta de spam.
 
 ## Estructura
 
