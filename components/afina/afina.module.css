@@ -35,8 +35,8 @@
 .heroDescription { margin-top: 21px; color: #e1e9ff; font-size: clamp(16px, 1.55vw, 22px); line-height: 1.5; letter-spacing: -.02em; }
 .heroActions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
 .primaryButton, .secondaryButton, .whatsappButton, .submitButton { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 14px; padding: 14px 24px; border-radius: 16px; font-size: 14px; font-weight: 750; line-height: 1.4; text-align: center; transition: background 200ms, transform 200ms; }
-.primaryButton { color: white; background: #0067ff; box-shadow: 0 8px 24px #0067ff25; }
-.primaryButton:hover { transform: translateY(-2px); background: #0055d4; }
+.primaryButton { color: white; background: #2f8222; box-shadow: 0 8px 24px #40ad2e25; }
+.primaryButton:hover { transform: translateY(-2px); background: #2a7520; }
 .secondaryButton { border: 1px solid #e1e9ff99; color: white; }
 .secondaryButton:hover { background: #ffffff0d; }
 .secondaryButton > svg { width: 18px; transform: rotate(90deg); }
