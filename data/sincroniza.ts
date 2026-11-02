@@ -47,7 +47,7 @@ export const sincronizaSolutions = [
     icon: "target",
     image: "/images/sincroniza/direccion.webp",
     imageAlt: "Asesor trabajando con un equipo para definir objetivos y responsabilidades",
-    message: "Hola, me interesa la solución de dirección y gestión organizacional de Sincroniza. Quiero definir objetivos, responsabilidades e indicadores para mi empresa.",
+    message: "Interesado en dirección y gestión organizacional",
   },
   {
     id: "procesos",
@@ -57,7 +57,7 @@ export const sincronizaSolutions = [
     icon: "settings",
     image: "/images/sincroniza/procesos.webp",
     imageAlt: "Facilitador explicando una metodología de trabajo y sus pasos a un equipo",
-    message: "Hola, quiero conocer la solución de gestión y mejora de procesos de Sincroniza para organizar el trabajo y fortalecer el control en mi empresa.",
+    message: "Interesado en gestión y mejora de procesos",
   },
   {
     id: "liderazgo",
@@ -67,7 +67,7 @@ export const sincronizaSolutions = [
     icon: "people",
     image: "/images/sincroniza/liderazgo.webp",
     imageAlt: "Profesionales compartiendo ideas y coordinando el trabajo de su equipo",
-    message: "Hola, me interesa la solución de liderazgo y autonomía organizacional de Sincroniza para mejorar la delegación y la coordinación de mi equipo.",
+    message: "Interesado en liderazgo y autonomía organizacional",
   },
 ] as const;
 
