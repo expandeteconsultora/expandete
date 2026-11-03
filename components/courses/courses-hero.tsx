@@ -57,7 +57,7 @@ export function CoursesHero() {
                     <span aria-hidden="true">🌱</span> Nivel: {course.level}
                   </span>
                 </div>
-                <h2 className="text-[clamp(20px,1.58vw,26px)] font-bold leading-[1.25] tracking-[-0.025em]">{course.title}</h2>
+                <h2 className="text-[clamp(20px,1.58vw,26px)] font-bold leading-tight tracking-tight">{course.title}</h2>
                 <p className={styles.courseDescription}>
                   {course.description}
                 </p>
@@ -70,7 +70,7 @@ export function CoursesHero() {
           ))}
         </div>
 
-        <p className="mx-auto mt-8 max-w-[970px] text-pretty text-[clamp(17px,1.45vw,24px)] leading-[1.4] text-[#dce9f8] lg:mt-9">
+        <p className="mx-auto mt-8 max-w-242.5 text-pretty text-[clamp(17px,1.45vw,24px)] leading-[1.4] text-[#dce9f8] lg:mt-9">
           Cursos prácticos para emprendedores que ya utilizan herramientas digitales
           <br className="hidden lg:block" /> y quieren aprovecharlas mejor en sus negocios.
         </p>

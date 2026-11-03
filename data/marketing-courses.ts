@@ -15,7 +15,7 @@ export const courseLocation = {
 export const marketingCourses = [
   {
     id: "meta-ads-ia",
-    title: "Publicidad en Meta Ads y diseño de anuncios con IA",
+    title: "Publicidad en Facebook e Instagram y diseños con inteligencia artificial",
     modality: "100% Presencial · Tarapoto",
     level: "Básico / Intermedio",
     description:
@@ -23,7 +23,7 @@ export const marketingCourses = [
     image: "/images/courses/course-meta-ads-tarapoto.webp",
     imageAlt: "Laptop con gráficos de publicidad, un megáfono verde y estadísticas de campañas",
     whatsappMessage:
-      "¡Hola, Expándete Más! Me interesa el curso Publicidad en Meta Ads y diseño de anuncios con IA, 100% presencial en la sede Tarapoto. Quisiera información sobre las próximas fechas, horarios, precios y cupos disponibles. ¡Gracias!",
+      "Estoy interesado en Publicidad en Facebook e Instagram y diseños con inteligencia artificial",
   },
   {
     id: "grabacion-video-ia-capcut",
@@ -35,7 +35,7 @@ export const marketingCourses = [
     image: "/images/courses/course-video-ia-tarapoto.webp",
     imageAlt: "Robot con una claqueta de cine junto a una pantalla de video con inteligencia artificial",
     whatsappMessage:
-      "¡Hola, Expándete Más! Me interesa el curso Grabación y edición de videos con IA y CapCut, 100% presencial en la sede Tarapoto. Quisiera información sobre las próximas fechas, horarios, precios y cupos disponibles. ¡Gracias!",
+      "Estoy interesado en Grabación y edición de videos con IA y CapCut",
   },
   {
     id: "edicion-capcut",
@@ -47,7 +47,7 @@ export const marketingCourses = [
     image: "/images/courses/course-capcut-tarapoto.webp",
     imageAlt: "Editor de video en un teléfono con el icono de CapCut, tijeras y herramientas de edición",
     whatsappMessage:
-      "¡Hola, Expándete Más! Me interesa el curso Edición de videos con CapCut, 100% presencial en la sede Tarapoto. Quisiera información sobre las próximas fechas, horarios, precios y cupos disponibles. ¡Gracias!",
+      "Estoy interesado en Edición de videos con CapCut",
   },
 ] as const;
 
