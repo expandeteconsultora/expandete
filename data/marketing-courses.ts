@@ -23,7 +23,7 @@ export const marketingCourses = [
     image: "/images/courses/course-meta-ads-tarapoto.webp",
     imageAlt: "Laptop con gráficos de publicidad, un megáfono verde y estadísticas de campañas",
     whatsappMessage:
-      "Estoy interesado en Publicidad en Facebook e Instagram y diseños con inteligencia artificial",
+      "Información del curso de Publicidad en Facebook e Instagram y diseños con inteligencia artificial",
   },
   {
     id: "grabacion-video-ia-capcut",
@@ -35,7 +35,7 @@ export const marketingCourses = [
     image: "/images/courses/course-video-ia-tarapoto.webp",
     imageAlt: "Robot con una claqueta de cine junto a una pantalla de video con inteligencia artificial",
     whatsappMessage:
-      "Estoy interesado en Grabación y edición de videos con IA y CapCut",
+      "Información del curso de Grabación y edición de videos con IA y CapCut",
   },
   {
     id: "edicion-capcut",
@@ -47,7 +47,7 @@ export const marketingCourses = [
     image: "/images/courses/course-capcut-tarapoto.webp",
     imageAlt: "Editor de video en un teléfono con el icono de CapCut, tijeras y herramientas de edición",
     whatsappMessage:
-      "Estoy interesado en Edición de videos con CapCut",
+      "Información del curso de Edición de videos con CapCut",
   },
 ] as const;
 
