@@ -27,7 +27,7 @@ export function BusinessSolutions() {
               <p>{service.description}</p>
               <a href={businessContactUrl(service.message)} target="_blank" rel="noopener noreferrer" className={styles.serviceLink} aria-label={`Conversar con un asesor sobre ${service.title} por WhatsApp`}>
                 <BusinessIcon name="whatsapp" />
-                <span>Conversar con un asesor</span>
+                <span>Consultar este servicio</span>
               </a>
             </div>
           </article>
