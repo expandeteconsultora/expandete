@@ -8,7 +8,7 @@ import { BusinessCommercial } from "@/components/business-growth/business-commer
 import { BusinessContact } from "@/components/business-growth/business-contact";
 
 export const metadata: Metadata = {
-  title: "Impulsa tu negocio | Expándete Más",
+  title: "IMPULSA | Expándete Más",
   description: "Integramos marketing, ventas y tecnología para fortalecer el crecimiento de tu empresa. Soluciones digitales, Sistema Expándete+ y desarrollo comercial integral.",
 };
 

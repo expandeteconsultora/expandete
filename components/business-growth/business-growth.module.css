@@ -55,6 +55,10 @@
 .heroBenefits li { display: flex; align-items: center; gap: 8px; color: #e1e9ff; font-size: 12px; font-weight: 600; }
 .heroBenefits svg { width: 23px; height: 23px; flex: none; }
 
+@media (min-width: 768px) {
+  .heroImage { object-fit: contain; object-position: right center; }
+}
+
 /* Soluciones: textos en page-container y tarjetas en section-container. */
 .solutions { padding-block: 38px 30px; }
 .solutionsHeading { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 25px; margin-bottom: 25px; }

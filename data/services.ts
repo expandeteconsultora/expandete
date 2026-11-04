@@ -2,7 +2,7 @@ export const services = [
   {
     id: "impulsa",
     href: "/impulsa-tu-negocio",
-    name: "Impulsa tu negocio",
+    name: "IMPULSA",
     description: "Publicidad para atraer más clientes.",
     image: "/images/marketing.webp",
     imageAlt: "Creador audiovisual preparando una cámara para producir contenido de un negocio",

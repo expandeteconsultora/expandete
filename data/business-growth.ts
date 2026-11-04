@@ -53,7 +53,7 @@ export const businessServices = [
   {
     id: "publicidad-digital",
     title: "Publicidad digital",
-    description: "Campañas en Facebook, Instagram y Google para atraer clientes.",
+    description: "Campañas en redes sociales y Google para atraer clientes.",
     image: "/images/team.webp",
     imageAlt: "Equipo preparando la estrategia de publicidad de una empresa",
     icon: "megaphone",
