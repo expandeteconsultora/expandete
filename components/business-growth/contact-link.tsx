@@ -1,6 +1,7 @@
 import { businessContact } from "@/data/business-growth";
 import { ArrowIcon } from "@/components/ui/icons";
 import { BusinessIcon } from "./business-icon";
+import { BusinessScheduleButton } from "./schedule-button";
 import styles from "./business-growth.module.css";
 
 export function businessContactUrl(message = businessContact.message) {
@@ -15,10 +16,7 @@ export function BusinessContactLink({ children = "Consultar nuestros servicios",
         <span>{children}</span>
         <ArrowIcon />
       </a>
-      <a href={businessContact.schedulingUrl || undefined} role="link" aria-disabled={!businessContact.schedulingUrl} tabIndex={businessContact.schedulingUrl ? undefined : -1} target="_blank" rel="noopener noreferrer" className={`${styles.contactButton} ${styles.scheduleButton}`}>
-        <BusinessIcon name="calendar" />
-        <span>Agendar una asesoría</span>
-      </a>
+      <BusinessScheduleButton />
     </div>
   );
 }
