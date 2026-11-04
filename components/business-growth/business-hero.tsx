@@ -14,9 +14,9 @@ export function BusinessHero() {
         <h1 id="business-title">{businessHero.title} <span>{businessHero.highlight}</span></h1>
         <p className={styles.heroDescription}>{businessHero.description}</p>
         <BusinessContactLink />
-        <ul className={styles.heroBenefits}>
+        {/* <ul className={styles.heroBenefits}>
           {businessHero.benefits.map((benefit) => <li key={benefit.label}><BusinessIcon name={benefit.icon} />{benefit.label}</li>)}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 // Contenido de /impulsa-tu-negocio. Edita aquí textos, recursos y contacto.
 export const businessContact = {
   number: "51954989320",
+  schedulingUrl: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ07Oio0j8TWEfMbt8qGcmHXNacPhhBwvDidcv_sh_JBIoeBMuVGt400Nvg34yzelNMF18LuxTo2?gv=true",
   message: "Hola, quiero impulsar mi empresa. Me gustaría conversar con un asesor sobre sus soluciones.",
   systemMessage: "Hola, quiero conocer el Sistema Expándete+ para conectar los canales digitales de mi empresa.",
   commercialMessage: "Hola, me interesa el desarrollo comercial integral para fortalecer el crecimiento de mi empresa.",
@@ -54,7 +55,7 @@ export const businessServices = [
     id: "publicidad-digital",
     title: "Publicidad digital",
     description: "Campañas en redes sociales y Google para atraer clientes.",
-    image: "/images/team.webp",
+    image: "/images/courses/course-meta-ads-tarapoto.webp",
     imageAlt: "Equipo preparando la estrategia de publicidad de una empresa",
     icon: "megaphone",
     message: "Interesado en publicidad digital.",
@@ -63,7 +64,7 @@ export const businessServices = [
     id: "produccion-audiovisual",
     title: "Producción audiovisual",
     description: "Videos y fotografías profesionales que destacan tu marca y productos.",
-    image: "/images/marketing.webp",
+    image: "/images/impulsa/produccion-audiovisual.webp",
     imageAlt: "Profesional preparando una cámara para producir contenido audiovisual",
     icon: "video",
     message: "Interesado en producción audiovisual.",
