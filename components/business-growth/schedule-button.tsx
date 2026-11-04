@@ -6,7 +6,7 @@ import { CloseIcon } from "@/components/ui/icons";
 import { BusinessIcon } from "./business-icon";
 import styles from "./business-growth.module.css";
 
-export function BusinessScheduleButton() {
+export function BusinessScheduleButton({ variant = "default", children = "Agendar una asesoría" }: { variant?: "default" | "outline"; children?: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const titleId = useId();
@@ -27,9 +27,14 @@ export function BusinessScheduleButton() {
 
   return (
     <>
-      <button type="button" className={`${styles.contactButton} ${styles.scheduleButton}`} aria-haspopup="dialog" disabled={!businessContact.schedulingUrl} onClick={() => setOpen(true)}>
+      <button type="button" className={variant === "outline" ? styles.scheduleOutlineButton : `${styles.contactButton} ${styles.scheduleButton}`} aria-haspopup="dialog" disabled={!businessContact.schedulingUrl} onClick={() => setOpen(true)}>
         <BusinessIcon name="calendar" />
-        <span>Agendar una asesoría</span>
+        <span>{children}</span>
+        {variant === "outline" && (
+          <svg className={styles.scheduleAccent} width="52" height="44" viewBox="0 0 52 44" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" aria-hidden="true">
+            <path d="M8 24 14 5M22 30 36 15M31 40 49 34" />
+          </svg>
+        )}
       </button>
       <dialog ref={dialogRef} className={styles.scheduleDialog} aria-labelledby={titleId} onClose={() => setOpen(false)} onCancel={() => setOpen(false)} onClick={(event) => {
         if (event.target !== event.currentTarget) return;

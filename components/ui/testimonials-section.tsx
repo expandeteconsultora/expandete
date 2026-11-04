@@ -20,6 +20,7 @@ type TestimonialsSectionProps = {
   title: string;
   subtitle: string;
   items: readonly Testimonial[];
+  children?: React.ReactNode;
 };
 
 function youtubeVideoId(videoUrl: string) {
@@ -38,7 +39,7 @@ function youtubeVideoId(videoUrl: string) {
   }
 }
 
-export function TestimonialsSection({ id = "testimonios", title, subtitle, items }: TestimonialsSectionProps) {
+export function TestimonialsSection({ id = "testimonios", title, subtitle, items, children }: TestimonialsSectionProps) {
   const [selected, setSelected] = useState<Testimonial | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const videoId = selected ? youtubeVideoId(selected.youtubeUrl) : null;
@@ -82,6 +83,7 @@ export function TestimonialsSection({ id = "testimonios", title, subtitle, items
             </article>
           ))}
         </div>
+        {children}
       </div>
 
       <dialog ref={dialogRef} className={styles.dialog} aria-labelledby={dialogTitleId} onCancel={() => setSelected(null)} onClose={() => setSelected(null)} onClick={(event) => {

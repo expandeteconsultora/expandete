@@ -2,7 +2,7 @@
 export const businessContact = {
   number: "51954989320",
   schedulingUrl: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ07Oio0j8TWEfMbt8qGcmHXNacPhhBwvDidcv_sh_JBIoeBMuVGt400Nvg34yzelNMF18LuxTo2?gv=true",
-  message: "Hola, quiero impulsar mi empresa. Me gustaría conversar con un asesor sobre sus soluciones.",
+  message: "Quiero información sobre publicidad en redes sociales.",
   systemMessage: "Hola, quiero conocer el Sistema Expándete+ para conectar los canales digitales de mi empresa.",
   commercialMessage: "Hola, me interesa el desarrollo comercial integral para fortalecer el crecimiento de mi empresa.",
 };

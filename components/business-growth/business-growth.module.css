@@ -47,6 +47,14 @@
 .scheduleButton:disabled { cursor: default; opacity: .6; }
 .scheduleButton:disabled:hover { transform: none; background: var(--color-brand-blue); }
 
+.testimonialsSchedule { display: flex; justify-content: center; margin-top: 42px; padding-inline: 22px; }
+.scheduleOutlineButton { position: relative; display: inline-flex; width: 100%; max-width: 740px; min-height: 88px; align-items: center; justify-content: center; gap: clamp(14px, 3vw, 28px); padding: 16px 22px; border: 3px solid var(--color-brand-green); border-radius: 40px; color: var(--color-navy); background: white; font-size: clamp(17px, 3vw, 32px); font-weight: 800; line-height: 1.2; letter-spacing: -.025em; text-align: center; transition: background 200ms, transform 200ms; }
+.scheduleOutlineButton > svg:first-child { width: clamp(28px, 4vw, 50px); height: clamp(28px, 4vw, 50px); flex: none; stroke-width: 2; }
+.scheduleOutlineButton:hover { transform: translateY(-2px); background: #f3fbef; }
+.scheduleOutlineButton:disabled { cursor: default; opacity: .6; }
+.scheduleOutlineButton:disabled:hover { transform: none; background: white; }
+.scheduleAccent { position: absolute; top: -21px; right: -29px; width: clamp(30px, 4vw, 52px); height: auto; color: #19b5a0; pointer-events: none; }
+
 .scheduleDialog { width: min(1000px, calc(100% - 24px)); height: min(820px, calc(100dvh - 32px)); max-width: none; max-height: none; margin: auto; padding: 0; overflow: hidden; border: 0; border-radius: 18px; color: var(--foreground); background: white; box-shadow: 0 24px 80px #031f4040; }
 .scheduleDialog[open] { display: flex; flex-direction: column; }
 .scheduleDialog::backdrop { background: #031f40bf; backdrop-filter: blur(5px); }
