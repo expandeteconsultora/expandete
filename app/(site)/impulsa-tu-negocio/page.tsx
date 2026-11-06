@@ -19,9 +19,7 @@ export default function BusinessGrowthPage() {
       <BusinessTestimonials />
       <BusinessSolutions />
       <BusinessSystem />
-      <BusinessProcess />
-      <BusinessCommercial />
-      <BusinessContact />
+      {/* <BusinessContact /> */}
     </main>
   );
 }

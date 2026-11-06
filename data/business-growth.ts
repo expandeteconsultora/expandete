@@ -2,7 +2,7 @@
 export const businessContact = {
   number: "51954989320",
   schedulingUrl: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ07Oio0j8TWEfMbt8qGcmHXNacPhhBwvDidcv_sh_JBIoeBMuVGt400Nvg34yzelNMF18LuxTo2?gv=true",
-  message: "Quiero información sobre publicidad en redes sociales.",
+  message: "Información del servicio de publicidad digital (redes sociales , videos, diseños)",
   systemMessage: "Hola, quiero conocer el Sistema Expándete+ para conectar los canales digitales de mi empresa.",
   commercialMessage: "Hola, me interesa el desarrollo comercial integral para fortalecer el crecimiento de mi empresa.",
 };
@@ -12,7 +12,7 @@ export const businessHero = {
   title: "Haz que más personas conozcan tu empresa y",
   highlight: "se conviertan en clientes.",
   description: "Integramos marketing, ventas y tecnología para fortalecer el crecimiento de tu empresa.",
-  image: "/images/hero.webp",
+  image: "/images/impulsa/produccion-audiovisual.webp",
   imageAlt: "Emprendedor trabajando con su laptop para hacer crecer su empresa",
   benefits: [
     { label: "Soluciones prácticas", icon: "chart" },
@@ -73,7 +73,7 @@ export const businessServices = [
     id: "paginas-web-y-tiendas",
     title: "Páginas web y tiendas digitales",
     description: "Sitios web que presentan tu oferta y facilitan las ventas.",
-    image: "/images/club.webp",
+    image: "/images/impulsa/pagina-web.webp",
     imageAlt: "Sitio web de Expándete Más en una laptop",
     icon: "monitor",
     message: "Interesado en páginas web y tiendas digitales.",
@@ -82,7 +82,7 @@ export const businessServices = [
     id: "automatizacion-whatsapp",
     title: "Automatización de WhatsApp",
     description: "Soluciones para mejorar la atención, automatizar respuestas y dar seguimiento.",
-    image: "/images/hero.webp",
+    image: "/images/impulsa/automatizacion-whatsapp.webp",
     imageAlt: "Emprendedor gestionando las herramientas digitales de su empresa",
     icon: "whatsapp",
     message: "Interesado en automatización de WhatsApp.",
@@ -90,16 +90,18 @@ export const businessServices = [
 ] as const;
 
 export const businessSystem = {
-  eyebrow: "Sistema Expándete+",
-  title: "Tus canales digitales,",
-  highlight: "trabajando juntos.",
-  description: "Conectamos publicidad, contenido, web y WhatsApp para que más personas te encuentren, confíen en tu negocio y se conviertan en clientes.",
+  eyebrow: "Sistema IMPULSA",
+  title: "De la estrategia comercial",
+  highlight: "al crecimiento de tu negocio",
+  description: "Marketing, ventas y tecnología para atraer más clientes y aumentar tus resultados.",
   measurement: "Medimos y mejoramos cada etapa",
   stages: [
-    { title: "Atraer", subtitle: "Publicidad digital y contenido", description: "Las personas descubren tu negocio en Facebook, Instagram y Google.", icon: "megaphone" },
-    { title: "Convertir", subtitle: "Web y WhatsApp", description: "Visitan tu página web o escriben por WhatsApp para conocer más.", icon: "cursor" },
-    { title: "Fidelizar", subtitle: "Seguimiento y comunicación", description: "Brindamos una atención ágil y damos seguimiento a cada oportunidad.", icon: "people" },
-    { title: "Optimizar", subtitle: "Medición y mejora continua", description: "Analizamos resultados y optimizamos las campañas y procesos.", icon: "chart" },
+    { title: "Planeación comercial", icon: "target" },
+    { title: "Contenido publicitario", icon: "video" },
+    { title: "Campañas digitales", icon: "megaphone" },
+    { title: "Sitio web o WhatsApp", icon: "monitor" },
+    { title: "CRM", icon: "people" },
+    { title: "Análisis de ventas", icon: "chart" },
   ],
 } as const;
 

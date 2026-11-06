@@ -14,7 +14,7 @@ export function ContactSection() {
           <BusinessScheduleButton className={`${styles.button} ${styles.schedule}`}>
             Agendar una reunión <ArrowIcon />
           </BusinessScheduleButton>
-          <a href={businessContactUrl()} target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.whatsapp}`}>
+          <a href={businessContactUrl("¿Que servicios brindan?")} target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.whatsapp}`}>
             <BusinessIcon name="whatsapp" />
             <span>Consultar por WhatsApp <ArrowIcon /></span>
           </a>
