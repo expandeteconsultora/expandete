@@ -40,12 +40,22 @@ button { cursor: pointer; }
     right: -220px; bottom: -200px; border-radius: 48% 52% 36% 64%; background: #dcecff; transform: rotate(-25deg);
   }
   .hero-shade { background: linear-gradient(90deg, #031c3a 0%, #031e40f5 29%, #031e4080 49%, #031e4000 68%); }
+  .hero-reference { clip-path: inset(0 0 0 38%); }
+  .hero-reference-shade { background: linear-gradient(90deg, #00234d 0%, #00234d 31%, #00234d00 45%); }
+  .hero-reference-shade::after {
+    content: ""; position: absolute; top: 0; right: 0; width: 40%;
+    height: clamp(70px, 5.5vw, 100px);
+    background: linear-gradient(180deg, #303640 70%, #30364000);
+  }
   .club-shade { background: linear-gradient(90deg, #031e40 0%, #031e40f5 31%, #031e40a6 44%, #031e4000 63%); }
   .nav-link[aria-current="page"]::after { content: ""; @apply absolute inset-x-0 bottom-0 h-[3px] rounded-full bg-brand-green; }
   .preview-dialog::backdrop { background: #00172cbf; backdrop-filter: blur(6px); }
 }
 
 @media (max-width: 767px) {
+  .hero-reference { clip-path: none; }
+  .hero-reference-shade { background: linear-gradient(180deg, #00234d 0%, #00234d 49%, #00234d00 67%); }
+  .hero-reference-shade::after { display: none; }
   .hero-shade { background: linear-gradient(180deg, #031e40 0%, #031e40 42%, #031e40d9 57%, #031e4022 79%, #031e4033 100%); }
   .club-shade { background: linear-gradient(180deg, #031e40 0%, #031e40 48%, #031e40b3 63%, #031e4000 82%); }
 }

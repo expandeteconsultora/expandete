@@ -8,7 +8,7 @@ export function SolutionsSection() {
     <section id="servicios" aria-labelledby="solutions-title" className="light-pattern py-10 md:pb-6 md:pt-6 lg:pb-9 lg:pt-9">
       <div className="section-container">
         <div className="mb-5 text-center lg:mb-8">
-          <p className="text-xs font-extrabold tracking-tight text-brand-blue lg:text-base">NUESTRAS SOLUCIONES</p>
+          <p className="text-xs font-extrabold tracking-tight text-brand-blue lg:text-base">CADA EMPRESA TIENE SUS DESAFIOS, CONOCE NUESTROS SERVICIOS</p>
           <span aria-hidden="true" className="mx-auto mb-2 mt-1.5 block h-0.75 w-12 rounded-full bg-brand-blue" />
           <h2 id="solutions-title" className="text-[30px] font-extrabold leading-[1.03] tracking-[-0.045em] sm:text-4xl md:text-[clamp(30px,3.5vw,50px)]">
             Cada empresa tiene sus desafíos.<br className="hidden sm:block" /> <span className="text-brand-blue">Tenemos formas de ayudarte.</span>
