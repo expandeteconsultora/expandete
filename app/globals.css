@@ -48,11 +48,15 @@ button { cursor: pointer; }
     background: linear-gradient(180deg, #303640 70%, #30364000);
   }
   .club-shade { background: linear-gradient(90deg, #031e40 0%, #031e40f5 31%, #031e40a6 44%, #031e4000 63%); }
+  .club-reference-photo { clip-path: inset(0 0 0 57%); }
+  .club-reference-shade { background: linear-gradient(90deg, #003a79 0%, #002958 24%, #002958 52%, #00295800 62%); }
   .nav-link[aria-current="page"]::after { content: ""; @apply absolute inset-x-0 bottom-0 h-[3px] rounded-full bg-brand-green; }
   .preview-dialog::backdrop { background: #00172cbf; backdrop-filter: blur(6px); }
 }
 
 @media (max-width: 767px) {
+  .club-reference-photo { clip-path: none; }
+  .club-reference-shade { background: linear-gradient(180deg, #002958 0%, #002958 55%, #00295800 70%); }
   .hero-reference { clip-path: none; }
   .hero-reference-shade { background: linear-gradient(180deg, #00234d 0%, #00234d 49%, #00234d00 67%); }
   .hero-reference-shade::after { display: none; }
