@@ -1,11 +1,25 @@
 import { ArrowIcon } from "@/components/ui/icons";
+import { BusinessIcon } from "@/components/business-growth/business-icon";
+import { businessContactUrl } from "@/components/business-growth/contact-link";
+import { BusinessScheduleButton } from "@/components/business-growth/schedule-button";
+import styles from "./contact-section.module.css";
 
 export function ContactSection() {
   return (
-    <section aria-labelledby="contact-title" className="light-pattern px-5 py-10 text-center md:py-5 lg:py-9">
-      <h2 id="contact-title" className="text-[30px] font-extrabold leading-[1.1] tracking-[-0.05em] md:text-[28px] lg:text-[39px]">¿Listo para <span className="text-brand-blue">hacer crecer tu negocio?</span></h2>
-      <p className="mx-auto mt-2 md:mt-1 lg:mt-2 max-w-[800px] text-base font-medium leading-snug tracking-[-0.025em] text-muted lg:text-[21px]">Conoce nuestras soluciones y encuentra la que mejor se adapta a tu empresa.</p>
-      <a href="#servicios" className="action-button mt-4 md:mt-3 md:min-h-11 md:py-3 lg:mt-4 lg:py-4 bg-[#0067ff] hover:bg-[#0055d4] lg:min-h-16 lg:px-12 lg:text-xl">Conocer servicios <ArrowIcon /></a>
+    <section aria-labelledby="contact-title" className={styles.section}>
+      <div className={styles.content}>
+        <h2 id="contact-title">¿Listo para <span>hacer crecer tu empresa?</span></h2>
+        <p>Conversemos sobre cómo impulsar su crecimiento.</p>
+        <div className={styles.actions}>
+          <BusinessScheduleButton className={`${styles.button} ${styles.schedule}`}>
+            Agendar una reunión <ArrowIcon />
+          </BusinessScheduleButton>
+          <a href={businessContactUrl()} target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.whatsapp}`}>
+            <BusinessIcon name="whatsapp" />
+            <span>Consultar por WhatsApp <ArrowIcon /></span>
+          </a>
+        </div>
+      </div>
     </section>
   );
 }

@@ -1,0 +1,50 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(72px, 10.5vw, 168px) 24px clamp(72px, 6.5vw, 104px);
+  background: radial-gradient(ellipse at center, #fff 0%, #f3f7fe 65%, #eaf3ff 100%);
+  text-align: center;
+}
+
+.section::before,
+.section::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  background: #dcecff;
+  border-radius: 50%;
+}
+
+.section::before { width: 700px; height: 420px; top: -255px; left: -390px; transform: rotate(-32deg); opacity: .65; }
+.section::after { width: 850px; height: 380px; right: -340px; bottom: -230px; transform: rotate(-26deg); }
+.content { max-width: 1280px; margin-inline: auto; }
+.content h2 { font-size: clamp(32px, 4.25vw, 68px); font-weight: 800; line-height: 1.12; letter-spacing: -.05em; color: #051737; }
+.content h2 span { color: #0061f5; }
+.content > p { margin-top: 18px; color: #687b9d; font-size: clamp(18px, 2.25vw, 36px); font-weight: 500; line-height: 1.3; letter-spacing: -.035em; }
+.actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 1112px; margin: clamp(32px, 4vw, 64px) auto 0; }
+.button { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 1.7vw, 28px); min-height: clamp(72px, 6.2vw, 100px); padding: 18px clamp(18px, 2.8vw, 44px); border: 2px solid #0061f5; border-radius: 23px; font-size: clamp(18px, 1.95vw, 31px); font-weight: 750; line-height: 1.2; letter-spacing: -.045em; transition: background-color .2s, transform .2s; }
+.button:hover { transform: translateY(-2px); }
+.button > svg { width: clamp(32px, 3vw, 48px); height: clamp(32px, 3vw, 48px); flex-shrink: 0; }
+.button > span { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex: 1; }
+.button > span > svg { width: 32px; height: 32px; flex-shrink: 0; }
+.schedule { background: #0061ff; color: white; }
+.schedule:hover { background: #0054db; }
+.schedule:disabled { cursor: not-allowed; opacity: .6; }
+.whatsapp { background: #ffffff80; color: #0061f5; }
+.whatsapp > svg { color: #29b441; }
+.whatsapp:hover { background: #e7f0ff; }
+
+@media (max-width: 767px) {
+  .section { padding-inline: 20px; }
+  .content > p { max-width: 440px; margin-inline: auto; }
+  .actions { grid-template-columns: 1fr; max-width: 440px; gap: 16px; }
+  .button { border-radius: 18px; padding: 18px 20px; }
+  .button > span { gap: 8px; }
+  .button > span > svg { width: 24px; height: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+  .button:hover { transform: none; }
+}

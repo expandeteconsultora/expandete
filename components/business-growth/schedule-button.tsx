@@ -6,7 +6,7 @@ import { CloseIcon } from "@/components/ui/icons";
 import { BusinessIcon } from "./business-icon";
 import styles from "./business-growth.module.css";
 
-export function BusinessScheduleButton({ variant = "default", children = "Agendar una asesoría" }: { variant?: "default" | "outline"; children?: React.ReactNode }) {
+export function BusinessScheduleButton({ variant = "default", children = "Agendar una asesoría", className }: { variant?: "default" | "outline"; children?: React.ReactNode; className?: string }) {
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const titleId = useId();
@@ -27,7 +27,7 @@ export function BusinessScheduleButton({ variant = "default", children = "Agenda
 
   return (
     <>
-      <button type="button" className={variant === "outline" ? styles.scheduleOutlineButton : `${styles.contactButton} ${styles.scheduleButton}`} aria-haspopup="dialog" disabled={!businessContact.schedulingUrl} onClick={() => setOpen(true)}>
+      <button type="button" className={className ?? (variant === "outline" ? styles.scheduleOutlineButton : `${styles.contactButton} ${styles.scheduleButton}`)} aria-haspopup="dialog" disabled={!businessContact.schedulingUrl} onClick={() => setOpen(true)}>
         <BusinessIcon name="calendar" />
         <span>{children}</span>
         {variant === "outline" && (
