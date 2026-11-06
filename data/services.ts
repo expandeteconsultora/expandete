@@ -26,7 +26,7 @@ export const services = [
     href: "/afina",
     name: "AFINA",
     description: "Capacitaciones para elevar el desempeño.",
-    image: "/images/courses/course-meta-ads-tarapoto.webp",
+    image: "/images/afina/afina.webp",
     imageAlt: "Facilitador compartiendo una capacitación práctica con un grupo de profesionales",
     accent: "border-[#153eab]",
     detail: "Formación práctica para desarrollar las habilidades que tu equipo necesita y llevar lo aprendido al trabajo de cada día.",
