@@ -52,14 +52,16 @@
   .options a:hover, .close:hover { background: #1344870b; }
 }
 @media (min-width: 768px) {
-  .trigger { min-height: 64px; gap: 12px; padding: 12px 24px 12px 14px; font-size: 16px; }
-  .whatsappIcon { width: 40px; height: 40px; }
-  .whatsappIcon svg { width: 28px; height: 28px; }
+  .trigger { min-height: 100px; gap: 18px; padding: 20px 36px 20px 22px; font-size: 24px; }
+  .whatsappIcon { width: 60px; height: 60px; }
+  .whatsappIcon svg { width: 42px; height: 42px; }
+  .panel { max-height: calc(100dvh - 160px - env(safe-area-inset-bottom)); }
 }
 @media (max-width: 767px) {
   .widget { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
-  .trigger { min-height: 48px; padding: 8px 14px 8px 8px; font-size: 13px; }
-  .whatsappIcon { width: 32px; height: 32px; }
+  .trigger { min-height: 64px; gap: 12px; padding: 10px 20px 10px 10px; font-size: 16px; max-width: calc(100vw - 24px - env(safe-area-inset-right) - env(safe-area-inset-left)); }
+  .whatsappIcon { width: 44px; height: 44px; flex-shrink: 0; }
+  .whatsappIcon svg { width: 30px; height: 30px; }
   .panel { width: min(350px, calc(100vw - 24px - env(safe-area-inset-right) - env(safe-area-inset-left))); }
 }
 @media (prefers-reduced-motion: reduce) {
