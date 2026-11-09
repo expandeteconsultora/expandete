@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Suspense } from "react";
 import { MetaPixel } from "@/components/analytics/meta-pixel";
 import { META_PIXEL_ID } from "@/components/analytics/meta-pixel-config";
+import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen font-sans">
           <a href="#contenido" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-5 focus:py-3 focus:font-semibold focus:text-navy">Saltar al contenido</a>
           {children}
+          <WhatsAppWidget />
           <Analytics />
           <Suspense fallback={null}>
             <MetaPixel />
