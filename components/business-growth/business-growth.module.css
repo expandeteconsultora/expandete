@@ -108,6 +108,10 @@
 .serviceLink svg { width: 21px; height: 21px; flex: none; }
 .serviceLink:hover { background: #359c25; }
 
+.servicesIntegration { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 38px; color: var(--color-navy); text-align: center; }
+.servicesIntegration .sectionTitle { font-style: italic; }
+.integrationArrow { width: clamp(64px, 7vw, 90px); height: auto; color: var(--color-brand-green); }
+
 /* Sistema conectado y recorrido comercial. */
 .system { padding-block: 35px 26px; }
 .systemOverview { display: grid; grid-template-columns: .95fr 1.3fr; align-items: center; gap: 45px; margin-bottom: 26px; }

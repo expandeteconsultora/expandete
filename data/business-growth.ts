@@ -92,15 +92,20 @@ export const businessServices = [
 export const businessSystem = {
   eyebrow: "Sistema IMPULSA",
   title: "De la estrategia comercial",
-  highlight: "al crecimiento de tu negocio",
-  description: "Marketing, ventas y tecnología para atraer más clientes y aumentar tus resultados.",
+  highlight: "hacer crecer tu negocio.",
+  description: "Un sistema integral que conecta marketing, ventas y tecnología para",
+  image: "/images/impulsa/sistema-impulsa-computadora.png",
+  imageAlt: "Computadora con indicadores de crecimiento y herramientas de Meta, Instagram, TikTok, Google, clientes y ventas",
   measurement: "Medimos y mejoramos cada etapa",
   stages: [
     { title: "Planeación comercial", icon: "target" },
-    { title: "Contenido publicitario", icon: "video" },
+    { title: "Videos y diseños publicitarios", icon: "video" },
     { title: "Campañas digitales", icon: "megaphone" },
-    { title: "Sitio web o WhatsApp", icon: "monitor" },
-    { title: "CRM", icon: "people" },
+    { title: "Canales de venta", alternatives: [
+      { title: "Página de venta", icon: "monitor" },
+      { title: "WhatsApp automatizado", icon: "whatsapp" },
+    ] },
+    { title: "Control de clientes y ventas", icon: "people" },
     { title: "Análisis de ventas", icon: "chart" },
   ],
 } as const;

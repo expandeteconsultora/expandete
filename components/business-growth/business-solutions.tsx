@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { businessServices } from "@/data/business-growth";
-import { ArrowIcon } from "@/components/ui/icons";
 import { BusinessIcon } from "./business-icon";
 import { businessContactUrl } from "./contact-link";
 import styles from "./business-growth.module.css";
@@ -10,10 +9,9 @@ export function BusinessSolutions() {
     <section id="soluciones" className={`light-pattern ${styles.solutions}`} aria-labelledby="business-solutions-title">
       <div className={`page-container ${styles.solutionsHeading}`}>
         <div>
-          <p className={styles.eyebrow}>Nuestras soluciones</p>
-          <h2 id="business-solutions-title" className={styles.sectionTitle}>Soluciones digitales <span>para tu empresa.</span></h2>
+          <h2 id="business-solutions-title" className={styles.sectionTitle}>Servicios <span>para tu empresa.</span></h2>
         </div>
-        <p className={styles.sectionDescription}>Servicios que puedes contratar por separado o integrar para atraer clientes y generar oportunidades de venta.</p>
+        <p className={styles.sectionDescription}>Contrátalos por separado o intégralos para atraer más clientes y generar oportunidades de venta.</p>
       </div>
       <div id="servicios-digitales" className={`section-container ${styles.serviceGrid}`}>
         {businessServices.map((service) => (
@@ -32,6 +30,12 @@ export function BusinessSolutions() {
             </div>
           </article>
         ))}
+      </div>
+      <div className={`page-container ${styles.servicesIntegration}`}>
+        <p className={styles.sectionTitle}>¿Y si integráramos todo para <span>hacer crecer tu empresa?</span></p>
+        <svg className={styles.integrationArrow} width="90" height="70" viewBox="0 0 90 70" fill="currentColor" aria-hidden="true">
+          <path d="M8 12C35 1 64 8 71 37l13-7-13 34-27-23 15 1C55 21 33 12 8 17Z" />
+        </svg>
       </div>
     </section>
   );
