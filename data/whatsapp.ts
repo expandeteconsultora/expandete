@@ -7,9 +7,9 @@ export const whatsappConfig = {
   icon: "whatsapp" as WhatsAppIconName,
   colors: { blue: "#134487", green: "#42AA34", white: "#FFFFFF" },
   options: [
-    { icon: "megaphone", label: "Publicidad para tu negocio", message: "Información sobre publicidad para mi negocio." },
-    { icon: "graduation", label: "Cursos de marketing", message: "Información sobre cursos de marketing digital." },
-    { icon: "team", label: "Equipos y procesos empresariales", message: "Información sobre mejora de equipos y procesos empresariales." },
+    { icon: "megaphone", label: "Publicidad para tu negocio", message: "Información del servicio de publicidad." },
+    { icon: "graduation", label: "Cursos de marketing", message: "Información de cursos de marketing digital." },
+    { icon: "team", label: "Equipos y procesos empresariales", message: "Información del servicio de equipos y procesos empresariales." },
   ] satisfies { icon: WhatsAppIconName; label: string; message: string }[],
 };
 

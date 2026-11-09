@@ -51,6 +51,11 @@
   .trigger:hover { transform: translateY(-2px); box-shadow: 0 8px 26px #06234a33; }
   .options a:hover, .close:hover { background: #1344870b; }
 }
+@media (min-width: 768px) {
+  .trigger { min-height: 64px; gap: 12px; padding: 12px 24px 12px 14px; font-size: 16px; }
+  .whatsappIcon { width: 40px; height: 40px; }
+  .whatsappIcon svg { width: 28px; height: 28px; }
+}
 @media (max-width: 767px) {
   .widget { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
   .trigger { min-height: 48px; padding: 8px 14px 8px 8px; font-size: 13px; }
