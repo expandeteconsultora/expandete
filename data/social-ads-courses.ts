@@ -46,8 +46,8 @@ export const socialAdsCourses = [
 
 export function socialAdsWhatsappUrl(courseName: string, action: "reserve" | "consult") {
   return whatsappUrl(action === "reserve"
-    ? `Quiero reservar mi vacante de ${courseName}`
-    : `Quiero consultar sobre ${courseName}`);
+    ? `Quiero reservar mi vacante en el curso de ${courseName}`
+    : `Quiero consultar sobre el curso de ${courseName}`);
 }
 
 export const socialAdsLearning = [
