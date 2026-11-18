@@ -18,7 +18,8 @@ type Testimonial = {
 type TestimonialsSectionProps = {
   id?: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
+  carousel?: boolean;
   items: readonly Testimonial[];
   children?: React.ReactNode;
 };
@@ -39,12 +40,41 @@ function youtubeVideoId(videoUrl: string) {
   }
 }
 
-export function TestimonialsSection({ id = "testimonios", title, subtitle, items, children }: TestimonialsSectionProps) {
+export function TestimonialsSection({ id = "testimonios", title, subtitle, items, children, carousel = false }: TestimonialsSectionProps) {
   const [selected, setSelected] = useState<Testimonial | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [scrollState, setScrollState] = useState({ previous: false, next: items.length > 1 });
   const videoId = selected ? youtubeVideoId(selected.youtubeUrl) : null;
   const headingId = `${id}-title`;
   const dialogTitleId = `${id}-video-title`;
+  const carouselId = `${id}-carousel`;
+
+  useEffect(() => {
+    const track = carouselRef.current;
+    if (!carousel || !track) return;
+    const update = () => setScrollState({
+      previous: track.scrollLeft > 2,
+      next: track.scrollLeft + track.clientWidth < track.scrollWidth - 2,
+    });
+    const observer = new ResizeObserver(update);
+    observer.observe(track);
+    track.addEventListener("scroll", update, { passive: true });
+    return () => {
+      observer.disconnect();
+      track.removeEventListener("scroll", update);
+    };
+  }, [carousel, items.length]);
+
+  function moveCarousel(direction: number) {
+    const track = carouselRef.current;
+    if (!track) return;
+    const cards = track.children;
+    const step = cards.length > 1
+      ? (cards[1] as HTMLElement).offsetLeft - (cards[0] as HTMLElement).offsetLeft
+      : track.clientWidth;
+    track.scrollBy({ left: direction * step, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+  }
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -67,9 +97,9 @@ export function TestimonialsSection({ id = "testimonios", title, subtitle, items
       <div className="page-container">
         <div className={styles.heading}>
           <h2 id={headingId}>{title}</h2>
-          <p>{subtitle}</p>
+          {subtitle && <p>{subtitle}</p>}
         </div>
-        <div className={`${styles.grid} ${items.length === 1 ? styles.singleGrid : ""}`}>
+        <div id={carouselId} ref={carouselRef} className={`${styles.grid} ${items.length === 1 ? styles.singleGrid : ""} ${carousel ? styles.carousel : ""}`} role={carousel ? "region" : undefined} aria-roledescription={carousel ? "carrusel" : undefined} aria-label={carousel ? "Videos de testimonios" : undefined}>
           {items.map((testimonial) => (
             <article key={testimonial.id} className={styles.card}>
               <button type="button" className={styles.thumbnail} aria-label={`Reproducir video de ${testimonial.company}`} aria-haspopup="dialog" onClick={() => setSelected(testimonial)}>
@@ -83,6 +113,12 @@ export function TestimonialsSection({ id = "testimonios", title, subtitle, items
             </article>
           ))}
         </div>
+        {carousel && items.length > 1 && (
+          <div className={`${styles.carouselControls} ${items.length <= 2 ? styles.mobileControls : ""}`}>
+            <button type="button" aria-label="Testimonio anterior" aria-controls={carouselId} disabled={!scrollState.previous} onClick={() => moveCarousel(-1)}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="m15 5-7 7 7 7" /></svg></button>
+            <button type="button" aria-label="Testimonio siguiente" aria-controls={carouselId} disabled={!scrollState.next} onClick={() => moveCarousel(1)}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg></button>
+          </div>
+        )}
         {children}
       </div>
 

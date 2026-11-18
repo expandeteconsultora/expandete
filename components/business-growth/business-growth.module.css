@@ -47,7 +47,6 @@
 .scheduleButton:disabled { cursor: default; opacity: .6; }
 .scheduleButton:disabled:hover { transform: none; background: var(--color-brand-blue); }
 
-.testimonialsSchedule { display: flex; justify-content: center; margin-top: 42px; padding-inline: 22px; }
 .scheduleOutlineButton { position: relative; display: inline-flex; width: 100%; max-width: 740px; min-height: 88px; align-items: center; justify-content: center; gap: clamp(14px, 3vw, 28px); padding: 16px 22px; border: 3px solid var(--color-brand-green); border-radius: 40px; color: var(--color-navy); background: white; font-size: clamp(17px, 3vw, 32px); font-weight: 800; line-height: 1.2; letter-spacing: -.025em; text-align: center; transition: background 200ms, transform 200ms; }
 .scheduleOutlineButton > svg:first-child { width: clamp(28px, 4vw, 50px); height: clamp(28px, 4vw, 50px); flex: none; stroke-width: 2; }
 .scheduleOutlineButton:hover { transform: translateY(-2px); background: #f3fbef; }

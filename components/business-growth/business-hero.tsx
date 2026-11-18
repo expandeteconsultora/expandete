@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { businessHero } from "@/data/business-growth";
-import { BusinessIcon } from "./business-icon";
-import { BusinessContactLink } from "./contact-link";
+import { BusinessScheduleButton } from "./schedule-button";
 import styles from "./business-growth.module.css";
 
 export function BusinessHero() {
@@ -13,7 +12,10 @@ export function BusinessHero() {
         <p className={styles.eyebrow}>{businessHero.eyebrow}</p>
         <h1 id="business-title">{businessHero.title} <span>{businessHero.highlight}</span></h1>
         <p className={styles.heroDescription}>{businessHero.description}</p>
-        <BusinessContactLink />
+        <div className={styles.contactActions}>
+          <a href="#planes-publicidad" className={styles.contactButton}>Ver servicios e inversión</a>
+          <BusinessScheduleButton />
+        </div>
         {/* <ul className={styles.heroBenefits}>
           {businessHero.benefits.map((benefit) => <li key={benefit.label}><BusinessIcon name={benefit.icon} />{benefit.label}</li>)}
         </ul> */}

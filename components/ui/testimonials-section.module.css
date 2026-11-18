@@ -32,6 +32,28 @@
 
 .card { min-width: 0; }
 
+.carousel {
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 30px) / 2);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 6px;
+  margin: -6px;
+}
+.carousel::-webkit-scrollbar { display: none; }
+.carousel .card { scroll-snap-align: start; scroll-snap-stop: always; }
+.carouselControls { display: flex; justify-content: center; gap: 14px; margin-top: 24px; }
+.carouselControls button { display: flex; width: 46px; height: 46px; align-items: center; justify-content: center; border: 1px solid #064b9f30; border-radius: 50%; color: var(--color-brand-blue); background: white; transition: background 200ms; }
+.carouselControls button:hover:not(:disabled) { color: white; background: var(--color-brand-blue); }
+.carouselControls button:disabled { cursor: default; opacity: .35; }
+
+@media (min-width: 768px) {
+  .mobileControls { display: none; }
+}
+
 .singleGrid {
   grid-template-columns: minmax(0, 1fr);
   max-width: 540px;
@@ -123,12 +145,14 @@
   .section { padding-block: 35px; }
   .heading { margin-bottom: 25px; }
   .grid { gap: 22px; }
+  .carousel { grid-auto-columns: 100%; }
   .play { width: 64px; height: 64px; }
   .play svg { width: 20px; height: 24px; }
 }
 
 @media (max-width: 639px) {
   .grid { grid-template-columns: 1fr; gap: 28px; }
+  .carousel { grid-template-columns: none; }
   .thumbnail { aspect-ratio: 4 / 3; }
   .card h3 { margin-top: 13px; font-size: 23px; }
   .dialogHeader { gap: 10px; padding-left: 16px; }

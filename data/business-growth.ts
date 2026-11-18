@@ -26,8 +26,7 @@ export const businessHero = {
 // Los videos actuales son demos de YouTube, no testimonios reales.
 // Al cargar el testimonio definitivo, cambia isDemo a false.
 export const businessTestimonials = {
-  title: "Empresas que confían en nosotros",
-  subtitle: "Conoce sus resultados.",
+  title: "LA EXPERIENCIA DE TRABAJAR CON EXPÁNDETE MÁS",
   items: [
     {
       id: "tasty-chicken",
