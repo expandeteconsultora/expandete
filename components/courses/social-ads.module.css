@@ -98,7 +98,7 @@
 .pricing { scroll-margin-top: 24px; background: linear-gradient(180deg, white, #f2f7fe); }
 .pricingGrid { display: grid; max-width: 1120px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-inline: auto; }
 .priceCard { display: flex; min-width: 0; flex-direction: column; padding: clamp(22px, 2.4vw, 34px); border: 1px solid #dce6f2; border-radius: 25px; background: white; box-shadow: 0 16px 35px #031f400d, 0 3px 5px #031f4008; }
-.featuredCard { border: 2px solid var(--course-green); padding: calc(clamp(22px, 2.4vw, 34px) - 1px); }
+.featuredCard { border: 2px solid var(--course-blue); padding: calc(clamp(22px, 2.4vw, 34px) - 1px); color: white; background: linear-gradient(145deg, #031f40, #073b7d); }
 .cardBadges { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 24px; }
 .durationBadge { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid #064b9f26; border-radius: 999px; color: var(--course-blue); background: #064b9f08; font-size: 11px; font-weight: 750; line-height: 1.4; text-transform: uppercase; }
 .durationBadge svg { width: 18px; height: 18px; flex: none; }
@@ -116,9 +116,6 @@
 .schedule dt { margin-bottom: 3px; color: #5c6e87; font-size: 10px; font-weight: 700; text-transform: uppercase; }
 .schedule dd { font-size: 14px; font-weight: 750; line-height: 1.5; letter-spacing: -.02em; }
 .schedule .scheduleFull { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid #e0e9f4; }
-.otherSchedule { margin-top: 12px; padding: 13px 15px; border-radius: 12px; color: #5c6e87; background: #f2f6fb; font-size: 13px; line-height: 1.65; }
-.otherSchedule strong { color: var(--color-navy); }
-.otherSchedule a { color: var(--course-blue); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .learningList { margin-top: 28px; }
 .learningList h4 { margin-bottom: 15px; font-size: 11px; font-weight: 800; letter-spacing: .025em; text-transform: uppercase; }
 .learningList ul { display: grid; gap: 13px; }
@@ -140,14 +137,56 @@
 .reservationAmount > strong { color: #8bd976; font-size: 34px; font-weight: 800; line-height: 1.2; letter-spacing: -.04em; }
 .reservationAmount > strong > span { font-size: 19px; }
 .reservationAmount > span { color: #c9d8e9; font-size: 11px; }
-.investment { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; padding: 15px; border: 1px solid #e0e9f4; border-radius: 14px; background: #f7f9fc; }
-.investment h4 { color: #5c6e87; font-size: 10px; font-weight: 800; text-transform: uppercase; }
-.investment p { margin-top: 5px; color: #5c6e87; font-size: 10px; line-height: 1.4; }
-.investment > strong { flex: none; font-size: clamp(35px, 3.4vw, 50px); font-weight: 800; line-height: 1.1; letter-spacing: -.06em; }
-.investment > strong > span { font-size: 20px; letter-spacing: -.03em; }
-.cardActions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-.cardActions .primaryButton { flex: 1 1 220px; padding-inline: 15px; font-size: 14px; }
-.cardActions .consultButton { flex: 1 1 120px; padding-inline: 16px; font-size: 14px; }
+.investmentHeading { margin-bottom: 16px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+.investmentOptions { display: grid; gap: 13px; margin-top: 14px; }
+.investmentTier { padding: 16px; border: 1px solid #dce6f2; border-radius: 16px; background: #f1f6fc; }
+.tierInfo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.investmentTier h4 { font-size: 15px; font-weight: 750; line-height: 1.4; }
+.investmentTier p { margin-top: 9px; color: #5c6e87; font-size: 12px; line-height: 1.5; }
+.savingBadge { display: inline-block; max-width: 130px; padding: 4px 9px; border: 1px solid #a6cfff; border-radius: 999px; color: var(--course-blue); background: #edf6ff; font-size: 10px; font-weight: 650; line-height: 1.3; }
+.tierPrice { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 8px; margin-top: 12px; }
+.tierPrice strong { font-size: 27px; font-weight: 850; line-height: 1.2; letter-spacing: -.035em; }
+.tierPrice > span { font-size: 11px; }
+.tierPrice p { margin: 0; color: var(--color-navy); font-size: 11px; font-weight: 650; }
+.corporateTier { border-color: #b9e9cd; }
+.corporateTier .savingBadge { border-color: #a1e5bc; color: #176b3c; background: #dcf8e7; }
+.expandedOptions .corporateTier .tierPrice strong { color: #008e67; }
+.personalInvestment { padding: 20px; border-radius: 16px; color: white; background: var(--color-navy); }
+.personalPrice { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-block: 20px 15px; }
+.personalPrice h4 { font-size: 16px; font-weight: 750; }
+.personalPrice p { flex: none; text-align: right; }
+.personalPrice strong { display: block; color: #8bd976; font-size: 27px; font-weight: 850; letter-spacing: -.035em; }
+.personalPrice p > span { display: block; margin-top: 2px; font-size: 10px; }
+.depositNote { padding: 10px 12px; border-radius: 11px; background: #ffffff10; font-size: 12px; line-height: 1.4; }
+.depositNote strong { color: #8bd976; }
+.compactOptions .investmentTier { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2px 12px; padding: 14px; }
+.compactOptions .tierInfo { flex-wrap: wrap; justify-content: flex-start; gap: 5px 8px; }
+.compactOptions .investmentTier h4 { font-size: 11px; text-transform: uppercase; }
+.compactOptions .investmentTier p { grid-column: 1; margin-top: 3px; font-size: 11px; }
+.compactOptions .tierPrice { grid-column: 2; grid-row: 1 / 3; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0; }
+.compactOptions .tierPrice strong { font-size: 27px; }
+.compactOptions .tierPrice > span { font-size: 9px; text-transform: uppercase; }
+.compactOptions .savingBadge { font-size: 9px; padding: 3px 7px; }
+.featuredCard h3 > span { color: white; }
+.featuredCard .courseDescription, .featuredCard .learningList li { color: #d5e3f4; }
+.featuredCard .durationBadge { border-color: #8bd97655; color: #b4eca3; background: #8bd97612; }
+.featuredCard .schedule { border-color: #ffffff26; color: white; background: #ffffff0c; }
+.featuredCard .schedule dt { color: #b9cee7; }
+.featuredCard .scheduleFull { border-color: #ffffff26; }
+.featuredCard .detailIcon { color: #a4e492; background: #ffffff12; }
+.featuredCard .bonus { border-color: #8bd97655; background: #8bd9760d; }
+.featuredCard .bonus h4, .featuredCard .bonus > svg { color: #a4e492; }
+.featuredCard .bonus p { color: #e0ecf8; }
+.featuredCard .reservation { border: 1px solid #ffffff26; background: #00172f99; }
+.featuredCard .investmentTier { border-color: #ffffff2b; color: white; background: #ffffff0b; }
+.featuredCard .investmentTier p { color: #c5d8ef; }
+.featuredCard .savingBadge { border-color: #8bd97655; color: #b4eca3; background: #8bd97612; }
+.featuredCard .consultButton { border-color: #ffffff40; color: white; background: #ffffff0b; }
+.featuredCard .consultButton svg { color: #a4e492; }
+.featuredCard .consultButton:hover { background: #ffffff20; }
+.cardActions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.cardActions .primaryButton { flex: none; padding-inline: 15px; font-size: 14px; }
+.cardActions .consultButton { flex: none; padding-inline: 16px; font-size: 14px; }
 .pricingNote { display: flex; max-width: 900px; align-items: flex-start; justify-content: center; gap: 10px; margin: 30px auto 0; color: #5c6e87; font-size: 15px; line-height: 1.6; text-align: center; }
 
 @media (min-width: 640px) { .carousel { --videos-visible: 2; } }
@@ -193,7 +232,6 @@
   .priceCard h3 { font-size: clamp(24px, 5.4vw, 32px); }
   .schedule { padding: 16px; }
   .schedule dd { font-size: 14px; }
-  .cardActions .primaryButton { flex-basis: 200px; }
   .pricingNote { font-size: 14px; }
 }
 
@@ -212,9 +250,9 @@
   .featuredCard { padding: 17px; }
   .schedule { grid-template-columns: 1fr; gap: 14px; padding: 13px; }
   .schedule .scheduleFull { padding-top: 12px; }
-  .cardActions .primaryButton, .cardActions .consultButton { flex-basis: 100%; }
-  .investment { padding: 12px; }
-  .investment > strong { font-size: 34px; }
+  .compactOptions .investmentTier { padding: 12px; gap: 3px 8px; }
+  .compactOptions .tierPrice strong { font-size: 24px; }
+  .personalInvestment { padding: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

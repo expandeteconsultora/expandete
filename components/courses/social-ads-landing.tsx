@@ -42,11 +42,6 @@ function CoursePricing() {
                 <div className={styles.scheduleFull}><span className={styles.detailIcon}><BusinessIcon name="calendar" /></span><dl><dt>Días y horario</dt><dd>{course.schedule}</dd></dl></div>
               </div>
 
-              <p className={styles.otherSchedule}>
-                <strong>¿No puedes en este horario?</strong> Consulta disponibilidad para grupos en la mañana, tarde o sábados. {" "}
-                <a href={socialAdsWhatsappUrl(course.name, "consult")} target="_blank" rel="noopener noreferrer">Consultar aquí <span aria-hidden="true">→</span></a>
-              </p>
-
               <div className={styles.learningList}>
                 <h4>Todo lo que aprenderás</h4>
                 <ul>{course.learning.map((item) => <li key={item}><span className={styles.checkIcon}><BusinessIcon name="check" /></span><span>{item}</span></li>)}</ul>
@@ -58,18 +53,37 @@ function CoursePricing() {
               </div>
 
               <div className={styles.cardBottom}>
-                <div className={styles.reservation}>
+                {!course.featured && <h4 className={styles.investmentHeading}>Opciones de inversión</h4>}
+                {course.featured ? <div className={styles.reservation}>
                   <div className={styles.reservationLabels}><span>Cupos limitados</span><span><BusinessIcon name="check" /> Reserva tu lugar</span></div>
                   <p>Separa hoy tu vacante con solo</p>
                   <div className={styles.reservationAmount}><strong><span>S/ </span>{course.reservation}</strong><span>Saldo al iniciar</span></div>
-                </div>
-                <div className={styles.investment}>
-                  <div><h4>Inversión completa</h4><p>Pago único sin costos adicionales</p></div>
-                  <strong><span>S/ </span>{course.price}</strong>
+                </div> : <div className={styles.personalInvestment}>
+                  <div className={styles.reservationLabels}><span>Cupos limitados</span><span><BusinessIcon name="check" /> Reserva tu lugar</span></div>
+                  <div className={styles.personalPrice}><h4>Personal (1 persona)</h4><p><strong>S/ {course.price}</strong><span>Inversión completa</span></p></div>
+                  <p className={styles.depositNote}>Separa hoy tu vacante con solo <strong>S/ {course.reservation}</strong> (Saldo al iniciar)</p>
+                </div>}
+                <div className={`${styles.investmentOptions} ${course.featured ? styles.compactOptions : styles.expandedOptions}`}>
+                  {course.featured && <div className={styles.investmentTier}>
+                    <div><h4>Plan individual</h4><p>1 persona · Pago único completo</p></div>
+                    <div className={styles.tierPrice}><strong>S/ {course.price}</strong></div>
+                  </div>}
+                  <div className={`${styles.investmentTier} ${styles.duoTier}`}>
+                    <div className={styles.tierInfo}><h4>{course.featured ? "Plan dúo" : "Plan Dúo (2 personas)"}</h4><span className={styles.savingBadge}>Ahorra S/ {course.price - course.duoPrice} {course.featured ? "" : "c/u"}</span></div>
+                    {course.featured ? <p>2 personas · Total: S/ {course.duoPrice * 2}</p> : null}
+                    <div className={styles.tierPrice}><strong>S/ {course.duoPrice}</strong><span>por persona</span>{!course.featured && <p>Total para ambos: S/ {course.duoPrice * 2}</p>}</div>
+                    {!course.featured && <p>Inscríbete con un acompañante</p>}
+                  </div>
+                  <div className={`${styles.investmentTier} ${styles.corporateTier}`}>
+                    <div className={styles.tierInfo}><h4>{course.featured ? "Plan corporativo" : "Plan Corporativo (3 o más personas)"}</h4><span className={styles.savingBadge}>{course.featured ? `Ahorra S/ ${course.price - course.corporatePrice} c/u` : "Mejor precio grupal"}</span></div>
+                    {course.featured && <p>3 a más personas · Tarifa grupal</p>}
+                    <div className={styles.tierPrice}><strong>S/ {course.corporatePrice}</strong><span>por persona</span></div>
+                    {!course.featured && <p>Ideal para empresas, socios o equipos de trabajo</p>}
+                  </div>
                 </div>
                 <div className={styles.cardActions}>
                   <a href={socialAdsWhatsappUrl(course.name, "reserve")} target="_blank" rel="noopener noreferrer" className={styles.primaryButton} aria-label={`Reservar mi vacante: ${course.name}`}><BusinessIcon name="whatsapp" /> Reservar mi vacante</a>
-                  <a href={socialAdsWhatsappUrl(course.name, "consult")} target="_blank" rel="noopener noreferrer" className={styles.consultButton} aria-label={`Consultar: ${course.name}`}><MessageIcon /> Consultar</a>
+                  <a href={socialAdsWhatsappUrl(course.name, "consult")} target="_blank" rel="noopener noreferrer" className={styles.consultButton} aria-label={`Consultar: ${course.name}`}><MessageIcon /> {course.featured ? "Consultar con un asesor" : "Consultar"}</a>
                 </div>
               </div>
             </article>

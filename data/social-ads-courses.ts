@@ -13,13 +13,15 @@ export const socialAdsCourses = [
     description:
       "Aprende de manera práctica en Tarapoto para dominar anuncios y generación de videos con IA.",
     learning: [
-      "Generación de videos con IA para crear anuncios atractivos para tu negocio.",
+      "Generación de videos con IA para crear anuncios efectivos para tu negocio.",
       "Campañas que lleven clientes directamente a tu WhatsApp, Facebook e Instagram.",
       "Creación de contenido publicitario con IA listo para publicar.",
       "Lanzamiento de campañas en TikTok Ads para llegar a más clientes.",
       "Análisis e interpretación de métricas, costo por lead y retorno de inversión.",
     ],
     price: 250,
+    duoPrice: 220,
+    corporatePrice: 200,
     reservation: 50,
   },
   {
@@ -40,6 +42,8 @@ export const socialAdsCourses = [
       "Seguimiento e interpretación de los resultados clave de tus campañas.",
     ],
     price: 150,
+    duoPrice: 120,
+    corporatePrice: 100,
     reservation: 50,
   },
 ] as const;
