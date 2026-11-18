@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BusinessHero } from "@/components/business-growth/business-hero";
 import { BusinessTestimonials } from "@/components/business-growth/business-testimonials";
+import { BusinessCreativity } from "@/components/business-growth/business-creativity";
 import { BusinessSolutions } from "@/components/business-growth/business-solutions";
 import { BusinessPlans } from "@/components/business-growth/business-plans";
 
@@ -14,6 +15,7 @@ export default function BusinessGrowthPage() {
     <main id="contenido">
       <BusinessHero />
       <BusinessTestimonials />
+      <BusinessCreativity />
       <BusinessPlans />
       <BusinessSolutions />
     </main>

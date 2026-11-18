@@ -1,0 +1,17 @@
+.section {
+  --course-green: var(--color-brand-green);
+  padding-block: clamp(40px, 5vw, 72px);
+  color: white;
+  background: linear-gradient(120deg, var(--color-navy), #073b7d);
+}
+
+.title {
+  max-width: 850px;
+  margin: 0 auto 32px;
+  font-size: clamp(30px, 3.4vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.045em;
+  text-align: center;
+  text-wrap: balance;
+}

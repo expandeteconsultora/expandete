@@ -49,6 +49,14 @@ export const businessTestimonials = {
   ],
 } as const;
 
+// Nombres de empresas verificados en los títulos públicos de YouTube.
+export const businessCreativeVideos = [
+  { id: "bqi0CWPDIrg", label: "D’ Cecy Cafetería" },
+  { id: "p7_JmWW1oMA", label: "Corporación Romero Abogados & Consultores" },
+  { id: "Wnk14zMMNmY", label: "Brigithe Podología" },
+  { id: "o7CFfrIXepw", label: "Tasty Chicken" },
+] as const;
+
 export const businessServices = [
   {
     id: "publicidad-digital",
