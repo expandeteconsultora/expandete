@@ -46,6 +46,7 @@ export function TestimonialsSection({ id = "testimonios", title, subtitle, items
   const carouselRef = useRef<HTMLDivElement>(null);
   const [scrollState, setScrollState] = useState({ previous: false, next: items.length > 1 });
   const videoId = selected ? youtubeVideoId(selected.youtubeUrl) : null;
+  const isShort = selected?.youtubeUrl.includes("/shorts/") ?? false;
   const headingId = `${id}-title`;
   const dialogTitleId = `${id}-video-title`;
   const carouselId = `${id}-carousel`;
@@ -122,7 +123,7 @@ export function TestimonialsSection({ id = "testimonios", title, subtitle, items
         {children}
       </div>
 
-      <dialog ref={dialogRef} className={styles.dialog} aria-labelledby={dialogTitleId} onCancel={() => setSelected(null)} onClose={() => setSelected(null)} onClick={(event) => {
+      <dialog ref={dialogRef} className={`${styles.dialog} ${isShort ? styles.verticalDialog : ""}`} aria-labelledby={dialogTitleId} onCancel={() => setSelected(null)} onClose={() => setSelected(null)} onClick={(event) => {
         if (event.target !== event.currentTarget) return;
         const rect = event.currentTarget.getBoundingClientRect();
         if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) setSelected(null);
@@ -136,7 +137,7 @@ export function TestimonialsSection({ id = "testimonios", title, subtitle, items
             <div className={styles.player}>
               {videoId ? (
                 <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
+                  src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1`}
                   title={`Video de ${selected.company}`}
                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   referrerPolicy="strict-origin-when-cross-origin"
