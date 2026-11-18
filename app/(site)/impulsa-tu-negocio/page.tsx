@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BusinessHero } from "@/components/business-growth/business-hero";
 import { BusinessTestimonials } from "@/components/business-growth/business-testimonials";
 import { BusinessSolutions } from "@/components/business-growth/business-solutions";
+import { BusinessPlans } from "@/components/business-growth/business-plans";
 
 export const metadata: Metadata = {
   title: "IMPULSA | Expándete Más",
@@ -13,6 +14,7 @@ export default function BusinessGrowthPage() {
     <main id="contenido">
       <BusinessHero />
       <BusinessTestimonials />
+      <BusinessPlans />
       <BusinessSolutions />
     </main>
   );

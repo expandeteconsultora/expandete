@@ -1,0 +1,87 @@
+.section { padding-bottom: clamp(36px, 4vw, 64px); color: var(--color-navy); background: linear-gradient(135deg, #eaf5ff, #fff 45%, #f0fbf2); }
+.heading { margin-bottom: 40px; padding: 32px 20px; background: #ffffffd9; text-align: center; }
+.heading h2 { font-size: clamp(28px, 3vw, 44px); font-weight: 850; line-height: 1.15; letter-spacing: -.045em; text-transform: uppercase; text-wrap: balance; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: clamp(18px, 2.5vw, 40px); }
+.card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; margin-top: 10px; border: 1px solid #dce5ef; border-radius: 22px; background: white; box-shadow: 0 8px 28px #031f4008; }
+.cardBody { display: flex; flex: 1; min-width: 0; flex-direction: column; padding: clamp(18px, 1.9vw, 28px); }
+.intro { text-align: center; }
+.option { display: table; margin: 0 auto 18px; padding: 5px 24px; border: 1px solid #b7d9f7; border-radius: 30px; color: var(--color-brand-blue); background: #f0f8ff; font-size: 14px; font-weight: 800; line-height: 1.2; text-transform: uppercase; }
+.intro h3 { font-size: clamp(23px, 2.3vw, 32px); font-weight: 850; line-height: 1.1; letter-spacing: -.04em; text-transform: uppercase; }
+.description { margin-top: 9px; color: var(--color-muted); font-size: 14px; line-height: 1.4; text-wrap: pretty; }
+.pricing { margin-top: 20px; padding: 18px; border-radius: 19px; color: white; background: linear-gradient(135deg, #064b9f, #086bb4); text-align: center; }
+.monthly { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; column-gap: 6px; margin-bottom: 14px; line-height: 1.15; }
+.monthly strong { font-size: clamp(34px, 3.4vw, 48px); font-weight: 900; letter-spacing: -.045em; white-space: nowrap; }
+.monthly > span { font-size: 17px; font-weight: 650; }
+.quarterly { padding: 13px 10px; border: 1px solid #ffffff45; border-radius: 14px; background: #ffffff30; font-size: 13px; font-weight: 600; line-height: 1.4; }
+.paymentLabel { font-size: 13px; font-weight: 800; text-transform: uppercase; }
+.quarterlyPrice { margin-block: 7px; font-size: clamp(27px, 2.5vw, 34px); font-weight: 900; line-height: 1.15; letter-spacing: -.035em; }
+.savings { display: table; margin: 9px auto 0; padding: 4px 12px; border-radius: 30px; color: var(--color-navy); background: #73d45c; font-weight: 800; }
+.channels { margin-block: 18px 24px; padding: 16px 10px; border: 1px solid #edf2f8; border-radius: 14px; background: #f8fafd; text-align: center; }
+.channels p { font-size: 15px; font-weight: 650; line-height: 1.4; }
+.channels strong { color: var(--color-brand-blue); }
+.channelIcons { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-top: 10px; }
+.channel { display: inline-flex; width: 35px; height: 35px; flex: none; align-items: center; justify-content: center; border-radius: 50%; color: white; font-size: 19px; font-weight: 800; }
+.channel svg { width: 22px; height: 22px; }
+.facebook { background: #2465ef; }
+.instagram { background: linear-gradient(35deg, #ffb227, #ff3f65, #a634cf); }
+.tiktok { background: #090909; }
+.google { background: #387cf2; }
+.web { background: #0865a0; }
+.calendar { background: #259b43; }
+.features, .bonuses { display: grid; gap: 15px; margin: 0; padding: 0; list-style: none; }
+.features li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 0 10px; color: #3d4e65; font-size: 16px; line-height: 1.5; }
+.features li > svg { width: 19px; height: 19px; margin-top: 3px; color: var(--color-brand-green); stroke-width: 2.3; }
+.features strong, .bonuses strong { font-weight: 750; }
+.whatsapp { display: flex; grid-column: 1 / -1; align-items: flex-start; gap: 10px; margin-top: 14px; padding: 13px 11px; border: 1px solid #a0dbae; border-radius: 13px; background: #effbf3; }
+.whatsapp > svg { width: 22px; height: 22px; flex: none; margin-top: 2px; color: #2e9424; }
+.whatsapp strong { color: #2e9424; }
+.bonuses { gap: 13px; margin-top: 16px; }
+.bonuses li { display: flex; align-items: flex-start; gap: 12px; padding: 14px; border: 1px solid #94d6a2; border-radius: 13px; color: #3d4e65; background: #effbf3; font-size: 16px; line-height: 1.45; }
+.bonuses li > span { flex: none; font-size: 22px; }
+.bonusLabel { color: #2e9424; font-weight: 850; text-transform: uppercase; }
+.actions { display: grid; gap: 12px; margin-top: auto; padding-top: 28px; }
+.choose, .advisor { display: flex; min-height: 54px; align-items: center; justify-content: center; gap: 9px; padding: 12px 10px; border-radius: 13px; font-weight: 750; line-height: 1.3; text-align: center; transition: background 200ms, transform 200ms; }
+.choose { color: white; background: var(--color-brand-green); box-shadow: 0 3px 5px #031f4015; font-size: 18px; }
+.choose:hover { transform: translateY(-2px); background: #359c25; }
+.advisor { border: 2px solid #b8e1c0; color: var(--color-navy); font-size: 15px; }
+.advisor svg { width: 22px; height: 22px; flex: none; color: var(--color-brand-green); }
+.advisor:hover { background: #effbf3; }
+.recommended { margin-top: 0; border: 2px solid var(--color-brand-blue); color: white; background: var(--color-navy); box-shadow: 0 18px 38px #031f4026; }
+.ribbon { padding: 10px; color: var(--color-navy); background: var(--color-brand-green); font-size: 13px; font-weight: 850; line-height: 1.4; letter-spacing: .04em; text-align: center; text-transform: uppercase; }
+.ribbon span { margin-inline: 3px; }
+.recommended .description { color: #c5d7e9; }
+.recommended .option { border-color: #65b75c66; color: #91df70; background: #ffffff20; }
+.recommended .pricing, .recommended .channels { border: 1px solid #ffffff30; background: #ffffff18; }
+.recommended .features li, .recommended .bonuses li { color: #edf4fc; }
+.recommended .channels strong, .recommended .whatsapp strong, .recommended .bonusLabel { color: #91df70; }
+.recommended .whatsapp, .recommended .bonuses li { border-color: #40ad2e99; background: #40ad2e12; }
+.recommended .advisor { border-color: #8faec566; color: white; }
+.recommended .advisor:hover { background: #ffffff15; }
+.system { border: 2px solid #6abe79; }
+.system .option { border-color: #a0dbae; color: #2e9424; background: #effbf3; }
+.system .channels strong { color: #2e9424; }
+.note { max-width: 620px; margin: 48px auto 0; padding-inline: 20px; color: var(--color-muted); font-size: 13px; line-height: 1.5; text-align: center; }
+
+@media (min-width: 1024px) {
+  .intro { min-height: 143px; }
+}
+
+@media (max-width: 1023px) {
+  .grid { grid-template-columns: 1fr; max-width: 560px; gap: 28px; }
+  .card { margin-top: 0; }
+  .cardBody { padding: 26px; }
+  .intro h3 { font-size: 30px; }
+  .description { font-size: 16px; }
+  .monthly strong { font-size: 46px; }
+  .quarterlyPrice { font-size: 32px; }
+  .heading { margin-bottom: 28px; }
+}
+
+@media (max-width: 399px) {
+  .cardBody { padding: 20px 16px; }
+  .intro h3 { font-size: 27px; }
+  .pricing { padding: 16px 12px; }
+  .monthly strong { font-size: 40px; }
+  .advisor { font-size: 14px; }
+  .ribbon { font-size: 12px; letter-spacing: 0; }
+}
