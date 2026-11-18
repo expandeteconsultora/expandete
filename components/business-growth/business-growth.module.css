@@ -84,10 +84,10 @@
 }
 
 /* Servicios individuales. */
-.solutions { padding-block: clamp(44px, 6vw, 82px) clamp(44px, 4.5vw, 64px); background: radial-gradient(ellipse at center, #fff 0%, #f1f5f9 100%); }
+.solutions { padding-block: clamp(44px, 6vw, 82px) clamp(44px, 4.5vw, 64px); background: linear-gradient(120deg, var(--color-navy), #073b7d); }
 .solutionsHeading { margin-bottom: clamp(28px, 3vw, 44px); text-align: center; }
-.solutionsTitle { color: #2057a4; font-size: clamp(30px, 4.8vw, 68px); font-weight: 850; line-height: 1.12; letter-spacing: -.04em; text-transform: uppercase; text-wrap: balance; }
-.solutionsTitle span { color: #09b543; }
+.solutionsTitle { color: white; font-size: clamp(30px, 4.8vw, 68px); font-weight: 850; line-height: 1.12; letter-spacing: -.04em; text-transform: uppercase; text-wrap: balance; }
+.solutionsTitle span { color: #8bd976; }
 .textLink { display: inline-flex; min-height: 44px; align-items: center; gap: 10px; color: var(--color-brand-blue); font-size: 13px; font-weight: 700; }
 .textLink svg { width: 27px; height: 27px; padding: 5px; border-radius: 50%; color: white; background: var(--color-brand-blue); }
 .textLink:hover { text-decoration: underline; text-underline-offset: 4px; }
