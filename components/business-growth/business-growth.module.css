@@ -84,33 +84,28 @@
   .heroImage { object-fit: contain; object-position: right center; }
 }
 
-/* Soluciones: textos en page-container y tarjetas en section-container. */
-.solutions { padding-block: 38px 30px; }
-.solutionsHeading { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 25px; margin-bottom: 25px; }
-.solutionsHeading .sectionDescription { grid-column: 1 / -1; }
+/* Servicios individuales. */
+.solutions { padding-block: clamp(44px, 6vw, 82px) clamp(44px, 4.5vw, 64px); background: radial-gradient(ellipse at center, #fff 0%, #f1f5f9 100%); }
+.solutionsHeading { margin-bottom: clamp(28px, 3vw, 44px); text-align: center; }
+.solutionsTitle { color: #2057a4; font-size: clamp(30px, 4.8vw, 68px); font-weight: 850; line-height: 1.12; letter-spacing: -.04em; text-transform: uppercase; text-wrap: balance; }
+.solutionsTitle span { color: #09b543; }
 .textLink { display: inline-flex; min-height: 44px; align-items: center; gap: 10px; color: var(--color-brand-blue); font-size: 13px; font-weight: 700; }
 .textLink svg { width: 27px; height: 27px; padding: 5px; border-radius: 50%; color: white; background: var(--color-brand-blue); }
 .textLink:hover { text-decoration: underline; text-underline-offset: 4px; }
-.serviceGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; scroll-margin-top: 24px; }
-.serviceCard { display: flex; min-width: 0; flex-direction: column; padding: 6px; border-bottom: 5px solid var(--color-brand-blue); border-radius: 18px; background: white; box-shadow: 0 8px 24px #0732680c; transition: transform 200ms; }
-.serviceCard:nth-child(even) { border-bottom-color: var(--color-brand-green); }
-.serviceCard:hover { transform: translateY(-4px); }
-.servicePhoto { position: relative; aspect-ratio: 1.65; overflow: hidden; border-radius: 13px 13px 0 0; background: #dcecff; }
+.serviceGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; scroll-margin-top: 24px; }
+.serviceCard { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid #e5eaf0; border-radius: 22px; background: white; box-shadow: 0 10px 22px #20365420; }
+.servicePhoto { position: relative; aspect-ratio: 1.85; overflow: hidden; border-radius: 20px; background: #dcecff; }
 .servicePhoto img { object-fit: cover; }
-.serviceCard:last-child .servicePhoto img { object-position: 80% center; }
-.serviceCopy { position: relative; display: flex; flex: 1; flex-direction: column; padding: 26px 16px 12px; }
-.serviceIcon { position: absolute; top: -32px; left: 14px; display: flex; width: 52px; height: 52px; align-items: center; justify-content: center; border: 5px solid white; border-radius: 50%; color: white; background: var(--color-brand-blue); }
-.serviceIcon svg { width: 26px; height: 26px; }
-.serviceCard:nth-child(even) .serviceIcon { background: var(--color-brand-green); }
-.serviceCopy h3 { font-size: clamp(17px, 1.65vw, 23px); font-weight: 800; line-height: 1.12; letter-spacing: -.035em; }
-.serviceCopy > p { margin-block: 11px 10px; color: var(--color-muted); font-size: 15px; line-height: 1.35; }
-.serviceLink { display: flex; width: 100%; min-height: 48px; align-items: center; justify-content: center; gap: 8px; margin-top: auto; padding: 12px 10px; border-radius: 10px; color: white; background: var(--color-brand-green); font-size: 13px; font-weight: 650; line-height: 1.3; text-align: center; transition: background 200ms; }
-.serviceLink svg { width: 21px; height: 21px; flex: none; }
-.serviceLink:hover { background: #359c25; }
-
-.servicesIntegration { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 38px; color: var(--color-navy); text-align: center; }
-.servicesIntegration .sectionTitle { font-style: italic; }
-.integrationArrow { width: clamp(64px, 7vw, 90px); height: auto; color: var(--color-brand-green); }
+.serviceCopy { display: flex; flex: 1; flex-direction: column; padding: 20px clamp(18px, 1.9vw, 28px) 26px; }
+.serviceCopy h3 { color: #244563; font-size: clamp(21px, 2.05vw, 29px); font-weight: 800; line-height: 1.15; letter-spacing: -.045em; }
+.serviceBenefits { display: grid; gap: 9px; margin-block: 15px 20px; padding: 0; list-style: none; }
+.serviceBenefits li { display: flex; align-items: flex-start; gap: 9px; color: #151b22; font-size: clamp(15px, 1.45vw, 20px); line-height: 1.3; letter-spacing: -.035em; }
+.serviceCheck { display: inline-flex; width: 19px; height: 19px; flex: none; align-items: center; justify-content: center; margin-top: 3px; border-radius: 50%; color: white; background: #36a557; box-shadow: 0 0 7px #35c45b66; }
+.serviceCheck svg { width: 14px; height: 14px; stroke-width: 2.5; }
+.serviceLink { display: inline-flex; align-self: center; min-height: 50px; max-width: 100%; align-items: center; justify-content: center; gap: 8px; margin-top: auto; padding: 10px 14px; border: 1px solid #82d893; border-radius: 15px; color: white; background: linear-gradient(180deg, #31ba52, #21a443); box-shadow: 0 0 0 3px #2fba5115, 0 3px 8px #239e3b33; font-size: clamp(16px, 1.55vw, 21px); font-weight: 750; line-height: 1.3; text-align: center; transition: background 200ms, transform 200ms; }
+.serviceLink > svg { width: 26px; height: 26px; flex: none; }
+.serviceLink > svg:last-child { width: 16px; height: 16px; }
+.serviceLink:hover { transform: translateY(-2px); background: #188735; }
 
 /* Sistema conectado y recorrido comercial. */
 .system { padding-block: 35px 26px; }
@@ -212,8 +207,6 @@
 .contactGrid > p { color: #e1e9ff; font-size: 17px; line-height: 1.35; }
 
 @media (max-width: 1100px) {
-  .solutionsHeading { grid-template-columns: 1fr; gap: 5px; }
-  .solutionsHeading .sectionDescription { grid-row: 2; }
   .textLink { margin-top: 6px; }
   .systemOverview, .commercialOverview { gap: 27px; }
   .funnelGrid { gap: 24px; }
@@ -230,8 +223,6 @@
 }
 
 @media (max-width: 1023px) {
-  .serviceGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .serviceCopy h3 { font-size: 23px; }
   .heroBenefits { gap: 12px 18px; }
   .heroBenefits li { font-size: 11px; }
   .systemOverview { grid-template-columns: 1fr 1fr; gap: 23px; }
@@ -261,11 +252,13 @@
   .heroBenefits { max-width: 510px; gap: 12px 17px; margin-top: 22px; }
   .heroBenefits li { font-size: 11px; }
   .heroBenefits svg { width: 20px; height: 20px; }
-  .solutions { padding-block: 33px; }
-  .solutionsHeading { margin-bottom: 22px; }
-  .serviceGrid { gap: 20px; }
-  .serviceCopy { padding-inline: 14px; }
-  .serviceCopy h3 { font-size: 21px; }
+  .solutions { padding-block: 44px; }
+  .solutionsHeading { margin-bottom: 28px; }
+  .serviceGrid { grid-template-columns: 1fr; max-width: 480px; gap: 24px; }
+  .serviceCopy { padding: 20px 24px 26px; }
+  .serviceCopy h3 { font-size: clamp(23px, 4.6vw, 29px); }
+  .serviceBenefits li { font-size: 18px; }
+  .serviceLink { font-size: 19px; }
   .system { padding-block: 35px; }
   .systemOverview { grid-template-columns: 1fr; gap: 30px; }
   .systemOverview .sectionDescription { max-width: 560px; }
@@ -304,11 +297,6 @@
 }
 
 @media (max-width: 539px) {
-  .serviceGrid { grid-template-columns: 1fr; max-width: 420px; }
-  .servicePhoto { aspect-ratio: 1.85; }
-  .serviceCopy { padding-inline: 20px; }
-  .serviceCopy h3 { font-size: 23px; }
-  .serviceCopy > p { font-size: 17px; }
   .channelBrands img { width: 23px; height: 23px; padding: 8px; }
   .browserDevice { border-width: 4px; border-radius: 8px; }
   .adScreen, .webScreen { padding: 8px; min-height: 110px; }

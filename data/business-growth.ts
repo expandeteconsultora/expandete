@@ -53,39 +53,36 @@ export const businessTestimonials = {
 export const businessServices = [
   {
     id: "publicidad-digital",
-    title: "Publicidad digital",
-    description: "Campañas en redes sociales y Google para atraer clientes.",
+    title: "Campañas Publicitarias",
+    benefits: [
+      "Tú nos entregas los videos y diseños",
+      "Publicidad en tus redes activas (Facebook, Instagram, TikTok o Google Ads)",
+      "Integración directa con tu sitio web o tienda online para maximizar ventas",
+    ],
     image: "/images/courses/course-meta-ads-tarapoto.webp",
     imageAlt: "Equipo preparando la estrategia de publicidad de una empresa",
-    icon: "megaphone",
-    message: "Interesado en publicidad digital.",
   },
   {
     id: "produccion-audiovisual",
-    title: "Producción audiovisual",
-    description: "Videos y fotografías profesionales que destacan tu marca y productos.",
+    title: "Producción Audiovisual",
+    benefits: [
+      "Incluye guionización estratégica",
+      "Grabación profesional y dirección en cámara",
+      "Edición dinámica de alto impacto para redes sociales (Reels y TikTok)",
+    ],
     image: "/images/impulsa/produccion-audiovisual.webp",
     imageAlt: "Profesional preparando una cámara para producir contenido audiovisual",
-    icon: "video",
-    message: "Interesado en producción audiovisual.",
   },
   {
     id: "paginas-web-y-tiendas",
-    title: "Páginas web y tiendas digitales",
-    description: "Sitios web que presentan tu oferta y facilitan las ventas.",
+    title: "Sitios Web y Tiendas Online",
+    benefits: [
+      "Páginas web y tiendas optimizadas para celular",
+      "Carga ultrarrápida y diseño vendedor",
+      "Integración directa con WhatsApp y pasarelas de pago",
+    ],
     image: "/images/impulsa/pagina-web.webp",
-    imageAlt: "Sitio web de Expándete Más en una laptop",
-    icon: "monitor",
-    message: "Interesado en páginas web y tiendas digitales.",
-  },
-  {
-    id: "automatizacion-whatsapp",
-    title: "Automatización de WhatsApp",
-    description: "Soluciones para mejorar la atención, automatizar respuestas y dar seguimiento.",
-    image: "/images/impulsa/automatizacion-whatsapp.webp",
-    imageAlt: "Emprendedor gestionando las herramientas digitales de su empresa",
-    icon: "whatsapp",
-    message: "Interesado en automatización de WhatsApp.",
+    imageAlt: "Tienda online y página web adaptadas a una laptop y un celular",
   },
 ] as const;
 
