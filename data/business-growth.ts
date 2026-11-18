@@ -80,7 +80,7 @@ export const businessServices = [
       "Carga ultrarrápida y diseño vendedor",
       "Integración directa con WhatsApp y pasarelas de pago",
     ],
-    image: "/images/impulsa/pagina-web.webp",
+    image: "/images/impulsa/sitios-web-tiendas-online.webp",
     imageAlt: "Tienda online y página web adaptadas a una laptop y un celular",
   },
 ] as const;
