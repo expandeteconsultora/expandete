@@ -139,7 +139,6 @@
 .reservationAmount > strong { color: #8bd976; font-size: 34px; font-weight: 800; line-height: 1.2; letter-spacing: -.04em; }
 .reservationAmount > strong > span { font-size: 19px; }
 .reservationAmount > span { color: #c9d8e9; font-size: 11px; }
-.investmentHeading { margin-bottom: 16px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
 .investmentOptions { display: grid; gap: 13px; margin-top: 14px; }
 .investmentTier { padding: 16px; border: 1px solid #dce6f2; border-radius: 16px; background: #f1f6fc; }
 .tierInfo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
@@ -152,15 +151,6 @@
 .tierPrice p { margin: 0; color: var(--color-navy); font-size: 11px; font-weight: 650; }
 .corporateTier { border-color: #b9e9cd; }
 .corporateTier .savingBadge { border-color: #a1e5bc; color: #176b3c; background: #dcf8e7; }
-.expandedOptions .corporateTier .tierPrice strong { color: #008e67; }
-.personalInvestment { padding: 20px; border-radius: 16px; color: white; background: var(--color-navy); }
-.personalPrice { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-block: 20px 15px; }
-.personalPrice h4 { font-size: 16px; font-weight: 750; }
-.personalPrice p { flex: none; text-align: right; }
-.personalPrice strong { display: block; color: #8bd976; font-size: 27px; font-weight: 850; letter-spacing: -.035em; }
-.personalPrice p > span { display: block; margin-top: 2px; font-size: 10px; }
-.depositNote { padding: 10px 12px; border-radius: 11px; background: #ffffff10; font-size: 12px; line-height: 1.4; }
-.depositNote strong { color: #8bd976; }
 .compactOptions .investmentTier { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2px 12px; padding: 14px; }
 .compactOptions .tierInfo { flex-wrap: wrap; justify-content: flex-start; gap: 5px 8px; }
 .compactOptions .investmentTier h4 { font-size: 11px; text-transform: uppercase; }
@@ -179,7 +169,6 @@
 .featuredCard .bonus { border-color: #8bd97655; background: #8bd9760d; }
 .featuredCard .bonus h4, .featuredCard .bonus > svg { color: #a4e492; }
 .featuredCard .bonus p { color: #e0ecf8; }
-.cardBottom .personalInvestment { border: 1px solid #ffffff26; background: #00172f99; }
 .cardBottom .investmentTier { border-color: #ffffff2b; color: white; background: #ffffff0b; }
 .cardBottom .investmentTier p, .cardBottom .tierPrice > span { color: #d5e3f4; }
 .cardBottom .tierPrice strong { color: white; }
@@ -281,7 +270,6 @@
   .schedule .scheduleFull { padding-top: 12px; }
   .compactOptions .investmentTier { padding: 12px; gap: 3px 8px; }
   .compactOptions .tierPrice strong { font-size: 24px; }
-  .personalInvestment { padding: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
