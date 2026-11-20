@@ -46,6 +46,7 @@
 .sectionHeading h2 > span { color: var(--course-blue); }
 .sectionHeading > p { max-width: 690px; margin: 15px auto 0; color: #5c6e87; font-size: clamp(17px, 1.5vw, 22px); line-height: 1.5; letter-spacing: -.02em; }
 .learningGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.learningControls { display: none; }
 .learningCard { min-width: 0; padding: 18px 18px 24px; border: 1px solid #e4ebf4; border-radius: 20px; background: white; box-shadow: 0 5px 15px #031f4008, 0 2px 3px #031f4005; }
 .learningImage { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border-radius: 12px; }
 .learningImage img { object-fit: cover; }
@@ -223,9 +224,19 @@
   .heroTools { margin-block: 25px; }
   .sectionHeading { margin-bottom: 30px; }
   .sectionHeading > p { font-size: 17px; }
-  .learningGrid, .pricingGrid { grid-template-columns: 1fr; }
-  .learningGrid { max-width: 520px; gap: 22px; margin-inline: auto; }
-  .learningCard { padding: 18px 18px 25px; }
+  .pricingGrid { grid-template-columns: 1fr; }
+  .learningGrid { max-width: 520px; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 100%; gap: 22px; margin-inline: auto; padding-bottom: 14px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .learningGrid::-webkit-scrollbar { display: none; }
+  .learningControls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 10px; }
+  .learningArrow { display: flex; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid #064b9f20; border-radius: 50%; color: var(--course-blue); background: white; transition: background 200ms; }
+  .learningArrow svg { width: 18px; height: 18px; }
+  .learningArrow:hover:enabled { background: #eaf3ff; }
+  .learningArrow:disabled { cursor: default; opacity: .3; }
+  .learningDots { display: flex; }
+  .learningDot { display: flex; width: 28px; height: 44px; align-items: center; justify-content: center; }
+  .learningDot span { width: 7px; height: 7px; border-radius: 50%; background: #a9bbd0; }
+  .learningDot[aria-current="true"] span { width: 19px; border-radius: 5px; background: var(--course-green); }
+  .learningCard { padding: 18px 18px 25px; scroll-snap-align: start; scroll-snap-stop: always; }
   .learningCard h3 { font-size: 23px; }
   .learningCard > p:last-child { font-size: 16px; }
   .pricingGrid { max-width: 560px; gap: 28px; }

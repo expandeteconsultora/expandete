@@ -4,6 +4,7 @@ import { GraduationIcon } from "@/components/ui/icons";
 import { courseTools } from "@/data/marketing-courses";
 import { socialAdsCourses, socialAdsLearning, socialAdsWhatsappUrl } from "@/data/social-ads-courses";
 import { SocialAdsVideos } from "./social-ads-videos";
+import { LearningCarousel } from "./learning-carousel";
 import styles from "./social-ads.module.css";
 
 function InvestmentLink() {
@@ -132,7 +133,7 @@ export function SocialAdsLanding() {
             <h2 id="learning-title">Lo que <span>aprenderás</span></h2>
             <p>Una metodología 100% práctica y en vivo para crear y optimizar tus campañas desde cero.</p>
           </div>
-          <div className={styles.learningGrid}>
+          <LearningCarousel count={socialAdsLearning.length}>
             {socialAdsLearning.map((step, index) => (
               <article key={step.title} className={styles.learningCard}>
                 <div className={styles.learningImage}><Image src={step.image} alt={step.imageAlt} fill sizes="(max-width: 767px) 87vw, 29vw" /></div>
@@ -142,7 +143,7 @@ export function SocialAdsLanding() {
                 <p>{step.description}</p>
               </article>
             ))}
-          </div>
+          </LearningCarousel>
           <div className={styles.centeredCta}><InvestmentLink /></div>
         </div>
       </section>
