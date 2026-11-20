@@ -127,7 +127,8 @@
 .bonus > svg { width: 20px; height: 20px; flex: none; color: #328b24; }
 .bonus h4 { color: #247c1c; font-size: 11px; font-weight: 800; text-transform: uppercase; }
 .bonus p { margin-top: 6px; font-size: 14px; line-height: 1.65; }
-.cardBottom { margin-top: auto; padding-top: 34px; }
+.cardBottom { margin-top: auto; padding: 24px; border-radius: 20px; color: white; background: linear-gradient(145deg, #031f40, #073b7d); }
+.bonus + .cardBottom { margin-top: 34px; }
 .reservation { padding: 18px; border-radius: 15px; color: white; background: var(--color-navy); }
 .reservationLabels { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 9px; font-size: 9px; font-weight: 800; line-height: 1.4; text-transform: uppercase; }
 .reservationLabels > span:first-child { padding: 4px 8px; border-radius: 999px; background: #b73530; }
@@ -178,13 +179,29 @@
 .featuredCard .bonus { border-color: #8bd97655; background: #8bd9760d; }
 .featuredCard .bonus h4, .featuredCard .bonus > svg { color: #a4e492; }
 .featuredCard .bonus p { color: #e0ecf8; }
-.featuredCard .reservation { border: 1px solid #ffffff26; background: #00172f99; }
-.featuredCard .investmentTier { border-color: #ffffff2b; color: white; background: #ffffff0b; }
-.featuredCard .investmentTier p { color: #c5d8ef; }
-.featuredCard .savingBadge { border-color: #8bd97655; color: #b4eca3; background: #8bd97612; }
-.featuredCard .consultButton { border-color: #ffffff40; color: white; background: #ffffff0b; }
-.featuredCard .consultButton svg { color: #a4e492; }
-.featuredCard .consultButton:hover { background: #ffffff20; }
+.cardBottom .personalInvestment { border: 1px solid #ffffff26; background: #00172f99; }
+.cardBottom .investmentTier { border-color: #ffffff2b; color: white; background: #ffffff0b; }
+.cardBottom .investmentTier p, .cardBottom .tierPrice > span { color: #d5e3f4; }
+.cardBottom .tierPrice strong { color: white; }
+.cardBottom .corporateTier .tierPrice strong { color: #a4e492; }
+.cardBottom .savingBadge { border-color: #8bd97655; color: #b4eca3; background: #8bd97612; }
+.cardBottom .consultButton { border-color: #ffffff40; color: white; background: #ffffff0b; }
+.cardBottom .consultButton svg { color: #a4e492; }
+.cardBottom .consultButton:hover { background: #ffffff20; }
+.featuredCard .cardBottom { color: var(--color-navy); background: white; }
+.featuredCard .reservation { border: 1px solid #dce6f2; color: var(--color-navy); background: #f1f6fc; }
+.featuredCard .reservationLabels > span:first-child { color: white; }
+.featuredCard .reservationLabels > span:last-child { color: #247c1c; }
+.featuredCard .reservation > p, .featuredCard .reservationAmount > span { color: #5c6e87; }
+.featuredCard .reservationAmount > strong { color: #247c1c; }
+.featuredCard .investmentTier { border-color: #dce6f2; color: var(--color-navy); background: #f7f9fc; }
+.featuredCard .investmentTier p { color: #5c6e87; }
+.featuredCard .cardBottom .tierPrice strong { color: var(--color-navy); }
+.featuredCard .tierPrice > span { color: #5c6e87; }
+.featuredCard .savingBadge { border-color: #a1e5bc; color: #176b3c; background: #e8faee; }
+.featuredCard .consultButton { border-color: #dce6f2; color: var(--color-navy); background: #f1f6fc; }
+.featuredCard .consultButton svg { color: var(--course-blue); }
+.featuredCard .consultButton:hover { background: #e4effb; }
 .cardActions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
 .cardActions .primaryButton { flex: none; padding-inline: 15px; font-size: 14px; }
 .cardActions .consultButton { flex: none; padding-inline: 16px; font-size: 14px; }
@@ -213,6 +230,7 @@
 }
 
 @media (max-width: 767px) {
+  .cardBottom { padding: 18px 14px; }
   .hero { padding-top: 118px; padding-bottom: 65px; }
   .heroGrid { grid-template-columns: 1fr; gap: 36px; }
   .hero h1 { max-width: 570px; margin-top: 20px; font-size: clamp(38px, 8.6vw, 58px); }
