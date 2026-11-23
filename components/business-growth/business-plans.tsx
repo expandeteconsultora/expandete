@@ -16,14 +16,14 @@ const campaigns = <>Gestión, segmentación y optimización diaria de campañas 
 const consulting = <><strong>1 asesoría mensual</strong> en gestión de personal, procesos y liderazgo</>;
 
 const plans: {
-  id: string; title: string; description: string; monthly: string; quarterly: string;
-  savings: string; channelCount?: number; channels: Channel[]; features: ReactNode[];
+  id: string; title: string; description: string; monthly: string;
+  channelCount?: number; channels: Channel[]; features: ReactNode[];
   bonuses: ReactNode[]; message: string; recommended?: boolean;
 }[] = [
   {
     id: "opcion-1", title: "Para comenzar",
     description: "Si tu negocio necesita empezar a tener presencia digital y atraer nuevos clientes.",
-    monthly: "600", quarterly: "1,500", savings: "300", channelCount: 2,
+    monthly: "600", channelCount: 2,
     channels: ["facebook", "instagram", "tiktok"],
     features: [alignment, <>Creación y configuración profesional de canales digitales seleccionados</>,
       <>Guionización, grabación y edición de <strong>1 video profesional en alta calidad</strong></>,
@@ -34,7 +34,7 @@ const plans: {
   {
     id: "opcion-2", title: "Fortalece tu marca", recommended: true,
     description: "Si ya tienes presencia digital y quieres mejorar tu publicidad y la imagen de tu negocio.",
-    monthly: "950", quarterly: "2,300", savings: "550", channelCount: 3,
+    monthly: "950", channelCount: 3,
     channels: ["facebook", "instagram", "tiktok", "google"],
     features: [alignment, <>Creación y configuración profesional de canales digitales seleccionados</>,
       videos, photography, posts, catalog, campaigns, tracking, report],
@@ -43,7 +43,7 @@ const plans: {
   {
     id: "sistema-impulsa", title: "Sistema Impulsa",
     description: "Si tu negocio está creciendo y necesitas mejorar tus procesos de marketing, ventas y atención comercial.",
-    monthly: "1,600", quarterly: "4,000", savings: "800",
+    monthly: "1,600",
     channels: ["facebook", "instagram", "tiktok", "google", "web", "calendar"],
     features: [alignment, <>Creación y configuración profesional de <strong>todos los canales digitales</strong></>,
       videos, photography, posts, catalog, campaigns,
@@ -91,12 +91,6 @@ export function BusinessPlans() {
               </header>
               <div className={styles.pricing}>
                 <p className={styles.monthly}><strong>S/ {plan.monthly}</strong><span>/mes</span></p>
-                <div className={styles.quarterly}>
-                  <p className={styles.paymentLabel}>O pago trimestral anticipado:</p>
-                  <p className={styles.quarterlyPrice}>S/ {plan.quarterly}</p>
-                  <p>cobertura completa por 3 meses</p>
-                  <p className={styles.savings}><span aria-hidden="true">⚡</span> ¡Ahorras S/ {plan.savings}!</p>
-                </div>
               </div>
               <div className={styles.channels}>
                 <p>{plan.channelCount ? <>Hasta <strong>{plan.channelCount} canales digitales</strong> a elegir:</> : <>Todos los <strong>canales digitales</strong> incluidos:</>}</p>

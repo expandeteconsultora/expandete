@@ -96,7 +96,8 @@
 .servicePhoto { position: relative; aspect-ratio: 1.85; overflow: hidden; border-radius: 20px; background: #dcecff; }
 .servicePhoto img { object-fit: cover; }
 .serviceCopy { display: flex; flex: 1; flex-direction: column; padding: 20px clamp(18px, 1.9vw, 28px) 26px; }
-.serviceCopy h3 { color: #244563; font-size: clamp(21px, 2.05vw, 29px); font-weight: 800; line-height: 1.15; letter-spacing: -.045em; }
+.serviceCopy h3, .servicePrice { color: #244563; font-size: clamp(21px, 2.05vw, 29px); font-weight: 800; line-height: 1.15; letter-spacing: -.045em; }
+.servicePrice { margin-top: 10px; color: var(--color-brand-blue); }
 .serviceBenefits { display: grid; gap: 9px; margin-block: 15px 20px; padding: 0; list-style: none; }
 .serviceBenefits li { display: flex; align-items: flex-start; gap: 9px; color: #151b22; font-size: clamp(15px, 1.45vw, 20px); line-height: 1.3; letter-spacing: -.035em; }
 .serviceCheck { display: inline-flex; width: 19px; height: 19px; flex: none; align-items: center; justify-content: center; margin-top: 3px; border-radius: 50%; color: white; background: #36a557; box-shadow: 0 0 7px #35c45b66; }
@@ -255,7 +256,7 @@
   .solutionsHeading { margin-bottom: 28px; }
   .serviceGrid { grid-template-columns: 1fr; max-width: 480px; gap: 24px; }
   .serviceCopy { padding: 20px 24px 26px; }
-  .serviceCopy h3 { font-size: clamp(23px, 4.6vw, 29px); }
+  .serviceCopy h3, .servicePrice { font-size: clamp(23px, 4.6vw, 29px); }
   .serviceBenefits li { font-size: 18px; }
   .serviceLink { font-size: 19px; }
   .system { padding-block: 35px; }

@@ -18,6 +18,7 @@ export function BusinessSolutions() {
             </div>
             <div className={styles.serviceCopy}>
               <h3>{service.title}</h3>
+              <p className={styles.servicePrice}>Desde S/ {service.startingPrice}</p>
               <ul className={styles.serviceBenefits}>
                 {service.benefits.map((benefit) => (
                   <li key={benefit}>

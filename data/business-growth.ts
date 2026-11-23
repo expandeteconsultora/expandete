@@ -61,6 +61,7 @@ export const businessServices = [
   {
     id: "publicidad-digital",
     title: "Campañas Publicitarias",
+    startingPrice: 300,
     benefits: [
       "Tú nos entregas los videos y diseños",
       "Publicidad en tus redes activas (Facebook, Instagram, TikTok o Google Ads)",
@@ -72,6 +73,7 @@ export const businessServices = [
   {
     id: "produccion-audiovisual",
     title: "Producción Audiovisual",
+    startingPrice: 300,
     benefits: [
       "Incluye guionización estratégica",
       "Grabación profesional y dirección en cámara",
@@ -83,6 +85,7 @@ export const businessServices = [
   {
     id: "paginas-web-y-tiendas",
     title: "Sitios Web y Tiendas Online",
+    startingPrice: 400,
     benefits: [
       "Páginas web y tiendas optimizadas para celular",
       "Carga ultrarrápida y diseño vendedor",

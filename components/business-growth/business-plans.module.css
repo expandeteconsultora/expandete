@@ -9,13 +9,9 @@
 .intro h3 { font-size: clamp(23px, 2.3vw, 32px); font-weight: 850; line-height: 1.1; letter-spacing: -.04em; text-transform: uppercase; }
 .description { margin-top: 9px; color: var(--color-muted); font-size: 14px; line-height: 1.4; text-wrap: pretty; }
 .pricing { margin-top: 20px; padding: 18px; border-radius: 19px; color: white; background: linear-gradient(135deg, #064b9f, #086bb4); text-align: center; }
-.monthly { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; column-gap: 6px; margin-bottom: 14px; line-height: 1.15; }
+.monthly { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; column-gap: 6px; line-height: 1.15; }
 .monthly strong { font-size: clamp(34px, 3.4vw, 48px); font-weight: 900; letter-spacing: -.045em; white-space: nowrap; }
 .monthly > span { font-size: 17px; font-weight: 650; }
-.quarterly { padding: 13px 10px; border: 1px solid #ffffff45; border-radius: 14px; background: #ffffff30; font-size: 13px; font-weight: 600; line-height: 1.4; }
-.paymentLabel { font-size: 13px; font-weight: 800; text-transform: uppercase; }
-.quarterlyPrice { margin-block: 7px; font-size: clamp(27px, 2.5vw, 34px); font-weight: 900; line-height: 1.15; letter-spacing: -.035em; }
-.savings { display: table; margin: 9px auto 0; padding: 4px 12px; border-radius: 30px; color: var(--color-navy); background: #73d45c; font-weight: 800; }
 .channels { margin-block: 18px 24px; padding: 16px 10px; border: 1px solid #edf2f8; border-radius: 14px; background: #f8fafd; text-align: center; }
 .channels p { font-size: 15px; font-weight: 650; line-height: 1.4; }
 .channels strong { color: var(--color-brand-blue); }
@@ -73,7 +69,6 @@
   .intro h3 { font-size: 30px; }
   .description { font-size: 16px; }
   .monthly strong { font-size: 46px; }
-  .quarterlyPrice { font-size: 32px; }
   .heading { margin-bottom: 28px; }
 }
 
