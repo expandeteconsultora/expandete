@@ -47,14 +47,10 @@
 .sectionHeading > p { max-width: 690px; margin: 15px auto 0; color: #5c6e87; font-size: clamp(17px, 1.5vw, 22px); line-height: 1.5; letter-spacing: -.02em; }
 .learningGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
 .learningControls { display: none; }
-.learningCard { min-width: 0; padding: 18px 18px 24px; border: 1px solid #e4ebf4; border-radius: 20px; background: white; box-shadow: 0 5px 15px #031f4008, 0 2px 3px #031f4005; }
-.learningImage { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border-radius: 12px; }
-.learningImage img { object-fit: cover; }
-.stepIcon { display: flex; width: 42px; height: 42px; align-items: center; justify-content: center; margin-top: 22px; border-radius: 50%; color: white; background: var(--course-blue); }
-.stepIcon svg { width: 23px; height: 23px; }
-.stepLabel { margin-top: 15px; color: var(--course-blue); font-size: 12px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
-.learningCard h3 { margin-top: 8px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 750; line-height: 1.3; letter-spacing: -.035em; }
-.learningCard > p:last-child { margin-top: 12px; color: #5c6e87; font-size: 16px; line-height: 1.65; }
+.learningCard { display: flex; min-width: 0; flex-direction: column; gap: 24px; padding: 32px 18px 24px; border: 1px solid #edf0f4; border-radius: 24px; background: white; box-shadow: 0 12px 20px #031f401a, 0 3px 6px #031f400d; }
+.learningCard h3 { display: flex; min-height: 112px; align-items: center; justify-content: center; margin: 0; color: var(--color-navy); font-size: clamp(21px, 2vw, 28px); font-weight: 750; line-height: 1.2; letter-spacing: -.035em; text-align: center; text-wrap: balance; }
+.learningImage { position: relative; width: 100%; aspect-ratio: 345 / 243; margin-top: auto; overflow: hidden; border-radius: 8px; }
+.learningImage img { object-fit: contain; }
 .centeredCta { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 38px; text-align: center; }
 
 .experiences { padding-block: clamp(55px, 5vw, 80px); color: white; background: linear-gradient(120deg, #031f40, #073b7d); }
@@ -206,9 +202,8 @@
   .heroGrid { gap: 32px; }
   .hero h1 { font-size: clamp(36px, 5vw, 52px); }
   .learningGrid { gap: 15px; }
-  .learningCard { padding: 12px 12px 22px; }
+  .learningCard { padding: 26px 14px 20px; }
   .learningCard h3 { font-size: 21px; }
-  .learningCard > p:last-child { font-size: 14px; }
   .pricingGrid { gap: 20px; }
   .priceCard { padding: 22px; }
   .featuredCard { padding: 21px; }
@@ -243,9 +238,8 @@
   .learningDot { display: flex; width: 28px; height: 44px; align-items: center; justify-content: center; }
   .learningDot span { width: 7px; height: 7px; border-radius: 50%; background: #a9bbd0; }
   .learningDot[aria-current="true"] span { width: 19px; border-radius: 5px; background: var(--course-green); }
-  .learningCard { padding: 18px 18px 25px; scroll-snap-align: start; scroll-snap-stop: always; }
-  .learningCard h3 { font-size: 23px; }
-  .learningCard > p:last-child { font-size: 16px; }
+  .learningCard { padding: 28px 16px 22px; gap: 20px; scroll-snap-align: start; scroll-snap-stop: always; }
+  .learningCard h3 { min-height: 112px; font-size: clamp(23px, 5.8vw, 28px); }
   .pricingGrid { max-width: 560px; gap: 28px; }
   .priceCard h3 { font-size: clamp(24px, 5.4vw, 32px); }
   .schedule { padding: 16px; }

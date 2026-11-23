@@ -127,13 +127,10 @@ export function SocialAdsLanding() {
             <p>Una metodología 100% práctica y en vivo para crear y optimizar tus campañas desde cero.</p>
           </div>
           <LearningCarousel count={socialAdsLearning.length}>
-            {socialAdsLearning.map((step, index) => (
+            {socialAdsLearning.map((step) => (
               <article key={step.title} className={styles.learningCard}>
-                <div className={styles.learningImage}><Image src={step.image} alt={step.imageAlt} fill sizes="(max-width: 767px) 87vw, 29vw" /></div>
-                <div className={styles.stepIcon}><BusinessIcon name={step.icon} /></div>
-                <p className={styles.stepLabel}>Paso 0{index + 1}</p>
                 <h3>{step.title}</h3>
-                <p>{step.description}</p>
+                <div className={styles.learningImage}><Image src={step.image} alt={step.imageAlt} fill sizes="(max-width: 767px) 87vw, 29vw" /></div>
               </article>
             ))}
           </LearningCarousel>

@@ -56,25 +56,19 @@ export function socialAdsWhatsappUrl(courseName: string, action: "reserve" | "co
 
 export const socialAdsLearning = [
   {
-    title: "Generación de videos con IA para tus anuncios",
-    description: "Crearás contenido publicitario con herramientas de inteligencia artificial de forma práctica y sencilla.",
-    image: "/images/courses/aprendizaje-videos-ia.webp",
-    imageAlt: "Participantes de una capacitación de Expándete Más trabajando con sus laptops",
-    icon: "video",
+    title: "Configurarás campañas publicitarias en Facebook, Instagram y TikTok",
+    image: "/images/courses/aprendizaje-campanas-laptop.webp",
+    imageAlt: "Laptop con un administrador de campañas publicitarias y métricas de rendimiento",
   },
   {
-    title: "Configurarás campañas publicitarias",
-    description: "Aprenderás a lanzar campañas en redes sociales, desde la configuración hasta la publicación de tus anuncios.",
-    image: "/images/courses/aprendizaje-campanas.webp",
-    imageAlt: "Participante diseñando contenido publicitario en su laptop durante una clase",
-    icon: "megaphone",
+    title: "Generación de diseños publicitarios con INTELIGENCIA ARTIFICIAL",
+    image: "/images/courses/aprendizaje-disenos-ia-laptop.webp",
+    imageAlt: "Laptop con herramientas de inteligencia artificial para diseñar anuncios publicitarios",
   },
   {
-    title: "Analizarás y optimizarás tus resultados",
-    description: "Interpretarás las métricas y aprenderás a mejorar el rendimiento de tus campañas para tu negocio.",
-    image: "/images/courses/aprendizaje-optimizacion.webp",
-    imageAlt: "Alumnos en una clase sobre creatividad y optimización de campañas publicitarias",
-    icon: "trend",
+    title: "Generación de videos con INTELIGENCIA ARTIFICIAL",
+    image: "/images/courses/aprendizaje-videos-ia-laptop.webp",
+    imageAlt: "Laptop con un editor de videos publicitarios con inteligencia artificial",
   },
 ] as const;
 
