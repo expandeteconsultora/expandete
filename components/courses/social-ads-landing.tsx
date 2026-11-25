@@ -114,8 +114,7 @@ export function SocialAdsLanding() {
             <InvestmentLink />
           </div>
           <figure className={styles.heroPhoto}>
-            <Image src="/images/courses/equipo-expandete.png" alt="Equipo de especialistas de Expándete Más que acompaña las capacitaciones" width={1520} height={910} sizes="(max-width: 767px) 87vw, 43vw" preload />
-            <figcaption><GraduationIcon /><span>Aprende haciendo.<strong>Impulsa tu negocio.</strong></span></figcaption>
+            <Image src="/images/courses/banner-publicidad-redes.webp" alt="Equipo de Expándete Más y herramientas de publicidad digital, redes sociales y creación con inteligencia artificial" fill sizes="(max-width: 767px) 100vw, 50vw" preload />
           </figure>
         </div>
       </section>
