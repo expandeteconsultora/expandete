@@ -28,8 +28,8 @@
 .heroTools ul { display: flex; flex-wrap: wrap; gap: 8px; }
 .heroTools li { display: flex; width: 34px; height: 34px; align-items: center; justify-content: center; border-radius: 50%; background: white; }
 .heroTools img { width: 22px; height: 22px; object-fit: contain; }
-.heroPhoto { position: absolute; z-index: 0; inset: 0 0 0 auto; width: 50%; margin: 0; overflow: hidden; background: #fff8f1; }
-.heroPhoto > img { display: block; object-fit: cover; object-position: center; }
+.heroPhoto { position: absolute; z-index: 0; top: 50%; right: clamp(12px, 2vw, 36px); width: min(50%, 900px); height: min(78%, 680px); margin: 0; transform: translateY(-50%); overflow: visible; background: transparent; }
+.heroPhoto > img { display: block; object-fit: contain; object-position: center; }
 .heroPhoto figcaption { position: absolute; right: -12px; bottom: -28px; display: flex; align-items: center; gap: 12px; padding: 15px 22px; border: 1px solid #80bbf34d; border-radius: 16px; color: #dbeaff; background: #031f40; box-shadow: 0 14px 30px #00162f26; font-size: 13px; line-height: 1.5; }
 .heroPhoto figcaption > svg { width: 32px; height: 32px; color: #8bd976; }
 .heroPhoto figcaption strong { display: block; color: white; font-size: 17px; }
@@ -222,7 +222,7 @@
   .heroContent { width: 100%; max-width: none; padding-right: 0; }
   .hero h1 { max-width: 570px; margin-top: 20px; font-size: clamp(38px, 8.6vw, 58px); }
   .heroDescription { max-width: 540px; font-size: 18px; }
-  .heroPhoto { position: relative; inset: auto; width: 100vw; aspect-ratio: 1520 / 1046; margin-left: calc(50% - 50vw); background: #fff; }
+  .heroPhoto { position: relative; top: auto; right: auto; width: 100vw; height: auto; aspect-ratio: 1520 / 1046; margin-left: calc(50% - 50vw); transform: none; background: transparent; }
   .heroPhoto > img { object-fit: contain; }
   .eyebrow { gap: 7px; padding: 8px 12px; font-size: 10px; }
   .heroTools { margin-block: 25px; }
