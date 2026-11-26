@@ -20,8 +20,6 @@ export const socialAdsCourses = [
       "Análisis e interpretación de métricas, costo por lead y retorno de inversión.",
     ],
     price: 250,
-    duoPrice: 220,
-    corporatePrice: 200,
     reservation: 50,
   },
   {
@@ -42,8 +40,6 @@ export const socialAdsCourses = [
       "Seguimiento e interpretación de los resultados clave de tus campañas.",
     ],
     price: 150,
-    duoPrice: 120,
-    corporatePrice: 100,
     reservation: 50,
   },
 ] as const;

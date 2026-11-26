@@ -54,25 +54,17 @@ function CoursePricing() {
               </div>
 
               <div className={styles.cardBottom}>
-                <div className={styles.reservation}>
-                  <div className={styles.reservationLabels}><span>Cupos limitados</span><span><BusinessIcon name="check" /> Reserva tu lugar</span></div>
-                  <p>Separa hoy tu vacante con solo</p>
-                  <div className={styles.reservationAmount}><strong><span>S/ </span>{course.reservation}</strong><span>Saldo al iniciar</span></div>
-                </div>
-                <div className={`${styles.investmentOptions} ${styles.compactOptions}`}>
+                <div className={styles.investmentOptions}>
                   <div className={styles.investmentTier}>
-                    <div><h4>Plan individual</h4><p>1 persona · Pago único completo</p></div>
-                    <div className={styles.tierPrice}><strong>S/ {course.price}</strong></div>
+                    <h4>Inversión total</h4>
+                    <div className={styles.tierPrice}><strong><span>S/</span> {course.price}</strong></div>
                   </div>
-                  <div className={styles.investmentTier}>
-                    <div className={styles.tierInfo}><h4>Plan dúo</h4><span className={styles.savingBadge}>Ahorra S/ {course.price - course.duoPrice} c/u</span></div>
-                    <p>2 personas · Total: S/ {course.duoPrice * 2}</p>
-                    <div className={styles.tierPrice}><strong>S/ {course.duoPrice}</strong><span>por persona</span></div>
-                  </div>
-                  <div className={`${styles.investmentTier} ${styles.corporateTier}`}>
-                    <div className={styles.tierInfo}><h4>Plan corporativo</h4><span className={styles.savingBadge}>Ahorra S/ {course.price - course.corporatePrice} c/u</span></div>
-                    <p>3 a más personas · Tarifa grupal</p>
-                    <div className={styles.tierPrice}><strong>S/ {course.corporatePrice}</strong><span>por persona</span></div>
+                  <div className={`${styles.investmentTier} ${styles.reservationTier}`}>
+                    <div className={styles.reservationInfo}>
+                      <h4>Separa tu lugar</h4>
+                      <span className={styles.limitedBadge}>Cupos limitados</span>
+                    </div>
+                    <div className={styles.tierPrice}><strong><span>S/</span> {course.reservation}</strong></div>
                   </div>
                 </div>
                 <div className={styles.cardActions}>
